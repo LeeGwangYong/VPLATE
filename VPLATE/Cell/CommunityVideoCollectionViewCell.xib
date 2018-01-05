@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommunityVideoCollectionViewCell" id="gTV-IL-0wX" customClass="CommunityVideoCollectionViewCell" customModule="VPLATE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="182" height="254"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="182" height="254"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTz-b7-nvD">
+                        <rect key="frame" x="0.0" y="0.0" width="182" height="254"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목 제목 제목 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx6-Kp-eev">
+                                <rect key="frame" x="20" y="213" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lx6-Kp-eev" secondAttribute="trailing" constant="20" id="9aO-eG-KIy"/>
+                            <constraint firstItem="lx6-Kp-eev" firstAttribute="leading" secondItem="MTz-b7-nvD" secondAttribute="leading" constant="20" id="Wv4-x8-p2r"/>
+                            <constraint firstAttribute="bottom" secondItem="lx6-Kp-eev" secondAttribute="bottom" constant="20" id="oLZ-nK-uEf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="MTz-b7-nvD" secondAttribute="bottom" id="25Y-CR-EOe"/>
+                <constraint firstItem="MTz-b7-nvD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="G65-cC-wdF"/>
+                <constraint firstItem="MTz-b7-nvD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eBb-Rl-wBU"/>
+                <constraint firstAttribute="trailing" secondItem="MTz-b7-nvD" secondAttribute="trailing" id="zzF-ij-8cx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="182" height="254"/>
+            <connections>
+                <outlet property="playerView" destination="MTz-b7-nvD" id="WM7-EN-AOU"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="156"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -7,13 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0184BEC1E911CC89722962D /* Pods_VPLATETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95FAABCC066D397DCE4CCE7 /* Pods_VPLATETests.framework */; };
+		A08E3FC771A5198E8BA7AB8A /* Pods_VPLATE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DF1D2C4A89D3F8D062ECD8 /* Pods_VPLATE.framework */; };
+		F933351DB29D962DBD1751AA /* Pods_VPLATEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0E64DB13B5436DB3972ACE /* Pods_VPLATEUITests.framework */; };
+		FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD671FFCCEC000A34961 /* HomeViewController.swift */; };
+		FC2CBD6A1FFCCF5C00A34961 /* MyVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD691FFCCF5C00A34961 /* MyVideoViewController.swift */; };
+		FC2CBD6C1FFCCF8100A34961 /* SelectedVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD6B1FFCCF8100A34961 /* SelectedVideoViewController.swift */; };
+		FC2CBD6E1FFCCF8B00A34961 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD6D1FFCCF8B00A34961 /* CommunityViewController.swift */; };
+		FC2CBD701FFCCF9200A34961 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD6F1FFCCF9200A34961 /* SettingViewController.swift */; };
+		FC2CBD731FFCE14C00A34961 /* AllVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD711FFCE14C00A34961 /* AllVideoViewController.swift */; };
+		FC2CBD741FFCE14C00A34961 /* AllVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2CBD721FFCE14C00A34961 /* AllVideoViewController.xib */; };
+		FC2CBD781FFCE18A00A34961 /* InProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD761FFCE18A00A34961 /* InProgressViewController.swift */; };
+		FC2CBD791FFCE18A00A34961 /* InProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2CBD771FFCE18A00A34961 /* InProgressViewController.xib */; };
+		FC2CBD7C1FFCE1A800A34961 /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD7A1FFCE1A800A34961 /* CompletionViewController.swift */; };
+		FC2CBD7D1FFCE1A800A34961 /* CompletionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2CBD7B1FFCE1A800A34961 /* CompletionViewController.xib */; };
+		FC2CBD801FFCE1C000A34961 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD7F1FFCE1C000A34961 /* Reusable.swift */; };
+		FC2CBD821FFCE91F00A34961 /* TitleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD811FFCE91F00A34961 /* TitleEnum.swift */; };
+		FC2CBD841FFCEC7700A34961 /* UIColorToUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD831FFCEC7700A34961 /* UIColorToUIImage.swift */; };
+		FC2CBD881FFCF12700A34961 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD871FFCF12700A34961 /* ViewController.swift */; };
+		FC2CBD8D1FFCF33C00A34961 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD8B1FFCF33C00A34961 /* VideoTableViewCell.swift */; };
+		FC2CBD8E1FFCF33C00A34961 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */; };
+		FC2CBD901FFCFCE000A34961 /* TableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD8F1FFCFCE000A34961 /* TableExtension.swift */; };
+		FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
-		FC946DFF1FF8F66F00D6616B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFE1FF8F66F00D6616B /* ViewController.swift */; };
 		FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E001FF8F66F00D6616B /* Main.storyboard */; };
 		FC946E041FF8F66F00D6616B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC946E031FF8F66F00D6616B /* Assets.xcassets */; };
 		FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E051FF8F66F00D6616B /* LaunchScreen.storyboard */; };
 		FC946E121FF8F66F00D6616B /* VPLATETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946E111FF8F66F00D6616B /* VPLATETests.swift */; };
 		FC946E1D1FF8F66F00D6616B /* VPLATEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946E1C1FF8F66F00D6616B /* VPLATEUITests.swift */; };
+		FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8071FFD402500493A51 /* PlayerView.swift */; };
+		FCFAC80B1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8091FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift */; };
+		FCFAC80C1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFAC80A1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib */; };
+		FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC80D1FFE1E0200493A51 /* TabbarViewController.swift */; };
+		FCFAC8101FFE258700493A51 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC80F1FFE258700493A51 /* TabBarController.swift */; };
+		FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8171FFF6F6600493A51 /* VideoData.swift */; };
+		FCFAC81B1FFF756E00493A51 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8191FFF756E00493A51 /* CoverA.swift */; };
+		FCFAC81C1FFF756E00493A51 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFAC81A1FFF756E00493A51 /* CoverA.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +63,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00DF1D2C4A89D3F8D062ECD8 /* Pods_VPLATE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPLATE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F6D1D72F8F277036921009 /* Pods-VPLATETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATETests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATETests/Pods-VPLATETests.release.xcconfig"; sourceTree = "<group>"; };
+		16BD03B8B875CDD77F565B0E /* Pods-VPLATEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATEUITests/Pods-VPLATEUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		18CD626F4906404F254DBD11 /* Pods-VPLATETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATETests/Pods-VPLATETests.debug.xcconfig"; sourceTree = "<group>"; };
+		1DD2E69C1F4E042F5840D459 /* Pods-VPLATE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE.debug.xcconfig"; sourceTree = "<group>"; };
+		69A98C0383687A868387DEB6 /* Pods-VPLATEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATEUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATEUITests/Pods-VPLATEUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A95FAABCC066D397DCE4CCE7 /* Pods_VPLATETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPLATETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB52C3AF31E1BE06524B36D9 /* Pods-VPLATE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATE.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE.release.xcconfig"; sourceTree = "<group>"; };
+		FC2CBD671FFCCEC000A34961 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FC2CBD691FFCCF5C00A34961 /* MyVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVideoViewController.swift; sourceTree = "<group>"; };
+		FC2CBD6B1FFCCF8100A34961 /* SelectedVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedVideoViewController.swift; sourceTree = "<group>"; };
+		FC2CBD6D1FFCCF8B00A34961 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		FC2CBD6F1FFCCF9200A34961 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		FC2CBD711FFCE14C00A34961 /* AllVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVideoViewController.swift; sourceTree = "<group>"; };
+		FC2CBD721FFCE14C00A34961 /* AllVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllVideoViewController.xib; sourceTree = "<group>"; };
+		FC2CBD761FFCE18A00A34961 /* InProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressViewController.swift; sourceTree = "<group>"; };
+		FC2CBD771FFCE18A00A34961 /* InProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InProgressViewController.xib; sourceTree = "<group>"; };
+		FC2CBD7A1FFCE1A800A34961 /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
+		FC2CBD7B1FFCE1A800A34961 /* CompletionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompletionViewController.xib; sourceTree = "<group>"; };
+		FC2CBD7F1FFCE1C000A34961 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		FC2CBD811FFCE91F00A34961 /* TitleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleEnum.swift; sourceTree = "<group>"; };
+		FC2CBD831FFCEC7700A34961 /* UIColorToUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorToUIImage.swift; sourceTree = "<group>"; };
+		FC2CBD871FFCF12700A34961 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC2CBD8B1FFCF33C00A34961 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
+		FC2CBD8F1FFCFCE000A34961 /* TableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExtension.swift; sourceTree = "<group>"; };
+		FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC946DFE1FF8F66F00D6616B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC946E011FF8F66F00D6616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC946E031FF8F66F00D6616B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC946E061FF8F66F00D6616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +102,15 @@
 		FC946E181FF8F66F00D6616B /* VPLATEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPLATEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946E1C1FF8F66F00D6616B /* VPLATEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPLATEUITests.swift; sourceTree = "<group>"; };
 		FC946E1E1FF8F66F00D6616B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCFAC8071FFD402500493A51 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		FCFAC8091FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FCFAC80A1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityVideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		FCFAC80D1FFE1E0200493A51 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		FCFAC80F1FFE258700493A51 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FCFAC8171FFF6F6600493A51 /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
+		FCFAC8191FFF756E00493A51 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
+		FCFAC81A1FFF756E00493A51 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
+		FF0E64DB13B5436DB3972ACE /* Pods_VPLATEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPLATEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08E3FC771A5198E8BA7AB8A /* Pods_VPLATE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0184BEC1E911CC89722962D /* Pods_VPLATETests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +134,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F933351DB29D962DBD1751AA /* Pods_VPLATEUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4F95A1935A61F2117A1CFD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DD2E69C1F4E042F5840D459 /* Pods-VPLATE.debug.xcconfig */,
+				EB52C3AF31E1BE06524B36D9 /* Pods-VPLATE.release.xcconfig */,
+				18CD626F4906404F254DBD11 /* Pods-VPLATETests.debug.xcconfig */,
+				07F6D1D72F8F277036921009 /* Pods-VPLATETests.release.xcconfig */,
+				16BD03B8B875CDD77F565B0E /* Pods-VPLATEUITests.debug.xcconfig */,
+				69A98C0383687A868387DEB6 /* Pods-VPLATEUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F3E3F498DD8C36FDEBC7A75F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00DF1D2C4A89D3F8D062ECD8 /* Pods_VPLATE.framework */,
+				A95FAABCC066D397DCE4CCE7 /* Pods_VPLATETests.framework */,
+				FF0E64DB13B5436DB3972ACE /* Pods_VPLATEUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC2CBD751FFCE14F00A34961 /* MyVideo */ = {
+			isa = PBXGroup;
+			children = (
+				FC2CBD711FFCE14C00A34961 /* AllVideoViewController.swift */,
+				FC2CBD721FFCE14C00A34961 /* AllVideoViewController.xib */,
+				FC2CBD761FFCE18A00A34961 /* InProgressViewController.swift */,
+				FC2CBD771FFCE18A00A34961 /* InProgressViewController.xib */,
+				FC2CBD7A1FFCE1A800A34961 /* CompletionViewController.swift */,
+				FC2CBD7B1FFCE1A800A34961 /* CompletionViewController.xib */,
+			);
+			path = MyVideo;
+			sourceTree = "<group>";
+		};
+		FC2CBD851FFCF0F600A34961 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FC2CBD8A1FFCF31A00A34961 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FCFAC8191FFF756E00493A51 /* CoverA.swift */,
+				FCFAC81A1FFF756E00493A51 /* CoverA.xib */,
+				FC2CBD8B1FFCF33C00A34961 /* VideoTableViewCell.swift */,
+				FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */,
+				FCFAC8091FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift */,
+				FCFAC80A1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FC946DF01FF8F66F00D6616B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +205,8 @@
 				FC946E101FF8F66F00D6616B /* VPLATETests */,
 				FC946E1B1FF8F66F00D6616B /* VPLATEUITests */,
 				FC946DFA1FF8F66F00D6616B /* Products */,
+				D4F95A1935A61F2117A1CFD6 /* Pods */,
+				F3E3F498DD8C36FDEBC7A75F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +223,15 @@
 		FC946DFB1FF8F66F00D6616B /* VPLATE */ = {
 			isa = PBXGroup;
 			children = (
+				FCFAC8151FFF6F4900493A51 /* Data */,
+				FCFAC8061FFD401400493A51 /* Style */,
+				FC2CBD8A1FFCF31A00A34961 /* Cell */,
+				FC2CBD851FFCF0F600A34961 /* Protocol */,
+				FCD9B2761FFCB8FD00A1651F /* Extension */,
+				FCD9B2751FFCB8ED00A1651F /* Storyboard */,
+				FCD9B2741FFCB8E700A1651F /* ViewController */,
 				FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */,
-				FC946DFE1FF8F66F00D6616B /* ViewController.swift */,
-				FC946E001FF8F66F00D6616B /* Main.storyboard */,
 				FC946E031FF8F66F00D6616B /* Assets.xcassets */,
-				FC946E051FF8F66F00D6616B /* LaunchScreen.storyboard */,
 				FC946E081FF8F66F00D6616B /* Info.plist */,
 			);
 			path = VPLATE;
@@ -125,6 +255,58 @@
 			path = VPLATEUITests;
 			sourceTree = "<group>";
 		};
+		FCD9B2741FFCB8E700A1651F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC2CBD751FFCE14F00A34961 /* MyVideo */,
+				FC2CBD671FFCCEC000A34961 /* HomeViewController.swift */,
+				FC2CBD691FFCCF5C00A34961 /* MyVideoViewController.swift */,
+				FC2CBD6B1FFCCF8100A34961 /* SelectedVideoViewController.swift */,
+				FC2CBD6D1FFCCF8B00A34961 /* CommunityViewController.swift */,
+				FC2CBD6F1FFCCF9200A34961 /* SettingViewController.swift */,
+				FC2CBD871FFCF12700A34961 /* ViewController.swift */,
+				FCFAC80D1FFE1E0200493A51 /* TabbarViewController.swift */,
+				FCFAC80F1FFE258700493A51 /* TabBarController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FCD9B2751FFCB8ED00A1651F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FC946E001FF8F66F00D6616B /* Main.storyboard */,
+				FC946E051FF8F66F00D6616B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FCD9B2761FFCB8FD00A1651F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FC2CBD7F1FFCE1C000A34961 /* Reusable.swift */,
+				FC2CBD811FFCE91F00A34961 /* TitleEnum.swift */,
+				FC2CBD831FFCEC7700A34961 /* UIColorToUIImage.swift */,
+				FC2CBD8F1FFCFCE000A34961 /* TableExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FCFAC8061FFD401400493A51 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				FCFAC8071FFD402500493A51 /* PlayerView.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		FCFAC8151FFF6F4900493A51 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FCFAC8171FFF6F6600493A51 /* VideoData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC946E211FF8F66F00D6616B /* Build configuration list for PBXNativeTarget "VPLATE" */;
 			buildPhases = (
+				B7F8E5040A1160E97A8E37E5 /* [CP] Check Pods Manifest.lock */,
 				FC946DF51FF8F66F00D6616B /* Sources */,
 				FC946DF61FF8F66F00D6616B /* Frameworks */,
 				FC946DF71FF8F66F00D6616B /* Resources */,
+				A2442D612F2BDA961AD0A502 /* [CP] Embed Pods Frameworks */,
+				C3CC4FDEA1C15E3B66575293 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +334,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC946E241FF8F66F00D6616B /* Build configuration list for PBXNativeTarget "VPLATETests" */;
 			buildPhases = (
+				43951A08E86D0ADAB268DBB4 /* [CP] Check Pods Manifest.lock */,
 				FC946E091FF8F66F00D6616B /* Sources */,
 				FC946E0A1FF8F66F00D6616B /* Frameworks */,
 				FC946E0B1FF8F66F00D6616B /* Resources */,
+				E5014D5FA1EB65A9F2CE886C /* [CP] Embed Pods Frameworks */,
+				6AAC1D469935F5C36FAC24BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +355,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC946E271FF8F66F00D6616B /* Build configuration list for PBXNativeTarget "VPLATEUITests" */;
 			buildPhases = (
+				9A7845F6051195207B440D68 /* [CP] Check Pods Manifest.lock */,
 				FC946E141FF8F66F00D6616B /* Sources */,
 				FC946E151FF8F66F00D6616B /* Frameworks */,
 				FC946E161FF8F66F00D6616B /* Resources */,
+				EBCF765BC5B9F9237332D286 /* [CP] Embed Pods Frameworks */,
+				CE8E8106D9A01053E7FC02A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +423,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFAC80C1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib in Resources */,
+				FC2CBD8E1FFCF33C00A34961 /* VideoTableViewCell.xib in Resources */,
 				FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */,
 				FC946E041FF8F66F00D6616B /* Assets.xcassets in Resources */,
+				FC2CBD7D1FFCE1A800A34961 /* CompletionViewController.xib in Resources */,
+				FC2CBD741FFCE14C00A34961 /* AllVideoViewController.xib in Resources */,
 				FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */,
+				FC2CBD791FFCE18A00A34961 /* InProgressViewController.xib in Resources */,
+				FCFAC81C1FFF756E00493A51 /* CoverA.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +451,191 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43951A08E86D0ADAB268DBB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VPLATETests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AAC1D469935F5C36FAC24BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPLATETests/Pods-VPLATETests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A7845F6051195207B440D68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VPLATEUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2442D612F2BDA961AD0A502 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MMPlayerView/MMPlayerView.framework",
+				"${BUILT_PRODUCTS_DIR}/PagingMenuController/PagingMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMPlayerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagingMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7F8E5040A1160E97A8E37E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VPLATE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3CC4FDEA1C15E3B66575293 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE8E8106D9A01053E7FC02A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPLATEUITests/Pods-VPLATEUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5014D5FA1EB65A9F2CE886C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPLATETests/Pods-VPLATETests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBCF765BC5B9F9237332D286 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPLATEUITests/Pods-VPLATEUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC946DF51FF8F66F00D6616B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC946DFF1FF8F66F00D6616B /* ViewController.swift in Sources */,
 				FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */,
+				FC2CBD6C1FFCCF8100A34961 /* SelectedVideoViewController.swift in Sources */,
+				FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */,
+				FC2CBD841FFCEC7700A34961 /* UIColorToUIImage.swift in Sources */,
+				FC2CBD6E1FFCCF8B00A34961 /* CommunityViewController.swift in Sources */,
+				FC2CBD6A1FFCCF5C00A34961 /* MyVideoViewController.swift in Sources */,
+				FCFAC80B1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift in Sources */,
+				FCFAC81B1FFF756E00493A51 /* CoverA.swift in Sources */,
+				FC2CBD801FFCE1C000A34961 /* Reusable.swift in Sources */,
+				FC2CBD781FFCE18A00A34961 /* InProgressViewController.swift in Sources */,
+				FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */,
+				FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */,
+				FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */,
+				FC2CBD7C1FFCE1A800A34961 /* CompletionViewController.swift in Sources */,
+				FC2CBD881FFCF12700A34961 /* ViewController.swift in Sources */,
+				FCFAC8101FFE258700493A51 /* TabBarController.swift in Sources */,
+				FC2CBD8D1FFCF33C00A34961 /* VideoTableViewCell.swift in Sources */,
+				FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */,
+				FC2CBD731FFCE14C00A34961 /* AllVideoViewController.swift in Sources */,
+				FC2CBD701FFCCF9200A34961 /* SettingViewController.swift in Sources */,
+				FC2CBD901FFCFCE000A34961 /* TableExtension.swift in Sources */,
+				FC2CBD821FFCE91F00A34961 /* TitleEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +799,7 @@
 		};
 		FC946E221FF8F66F00D6616B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DD2E69C1F4E042F5840D459 /* Pods-VPLATE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +815,7 @@
 		};
 		FC946E231FF8F66F00D6616B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB52C3AF31E1BE06524B36D9 /* Pods-VPLATE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +831,7 @@
 		};
 		FC946E251FF8F66F00D6616B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18CD626F4906404F254DBD11 /* Pods-VPLATETests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +849,7 @@
 		};
 		FC946E261FF8F66F00D6616B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F6D1D72F8F277036921009 /* Pods-VPLATETests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +867,7 @@
 		};
 		FC946E281FF8F66F00D6616B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16BD03B8B875CDD77F565B0E /* Pods-VPLATEUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +884,7 @@
 		};
 		FC946E291FF8F66F00D6616B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69A98C0383687A868387DEB6 /* Pods-VPLATEUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
