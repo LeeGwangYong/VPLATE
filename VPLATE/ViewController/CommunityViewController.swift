@@ -9,59 +9,6 @@
 import UIKit
 import AVKit
 
-class PagedCollectionLayout : UICollectionViewFlowLayout {
-    
-    var mostRecentOffset : CGPoint = CGPoint()
-    
-    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        
-        if velocity.y == 0 {
-            return mostRecentOffset
-        }
-        
-        if let cv = self.collectionView {
-            
-            let cvBounds = cv.bounds
-            let halfHeight = cvBounds.size.height * 0.5;
-            
-            
-            if let attributesForVisibleCells = self.layoutAttributesForElements(in: cvBounds) {
-                
-                var candidateAttributes : UICollectionViewLayoutAttributes?
-                for attributes in attributesForVisibleCells {
-                    
-                    // == Skip comparison with non-cell items (headers and footers) == //
-                    if attributes.representedElementCategory != UICollectionElementCategory.cell {
-                        continue
-                    }
-                    
-                    if (attributes.center.y == 0) || (attributes.center.y > (cv.contentOffset.y + halfHeight) && velocity.y < 0) {
-                        continue
-                    }
-                    candidateAttributes = attributes
-                }
-                
-                // Beautification step , I don't know why it works!
-                if(proposedContentOffset.y == -(cv.contentInset.top)) {
-                    return proposedContentOffset
-                }
-                
-                guard let _ = candidateAttributes else {
-                    return mostRecentOffset
-                }
-                mostRecentOffset = CGPoint(x: proposedContentOffset.x, y:
-                candidateAttributes!.center.y - halfHeight)
-                return mostRecentOffset
-                
-            }
-        }
-        
-        // fallback
-        mostRecentOffset = super.targetContentOffset(forProposedContentOffset: proposedContentOffset)
-        return mostRecentOffset
-    }
-}
-
 class CommunityViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var videoCollectionView: UICollectionView!
     var tableViewIndex: Int?
@@ -71,19 +18,6 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         videoCollectionView.isPagingEnabled = false
         videoCollectionView.showsVerticalScrollIndicator = false
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        var insets = self.videoCollectionView.contentInset
-//        let value = (self.view.frame.size.height - (self.videoCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height) * CGFloat(0.5)
-//
-//        insets.top = value
-//        insets.right = value
-//
-//        self.videoCollectionView.contentInset = insets
-//        self.videoCollectionView.decelerationRate = UIScrollViewDecelerationRateFast;
-//
-//    }
     
     @IBAction func navigateAction(_ sender: UIButton) {
         let root = self.presentingViewController as! UITabBarController
@@ -104,13 +38,6 @@ extension CommunityViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(videoCollectionView.bounds.height * 0.15,0,videoCollectionView.bounds.height * 0.15,0); // top, left, bottom, right
     }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        for cell in videoCollectionView.visibleCells as! [CommunityVideoCollectionViewCell] {
-            let indexPath = videoCollectionView.indexPath(for: cell as CommunityVideoCollectionViewCell)
-            print(indexPath)
-        }
-    }
 }
 
 
@@ -124,23 +51,32 @@ extension CommunityViewController: UICollectionViewDataSource {
         
         cell.setUpPlayer(url: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         cell.playerView.backgroundColor = UIColor(displayP3Red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1)
-        
         return cell
     }
     
-}
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        var visibleRect = CGRect()
+        visibleRect.origin = videoCollectionView.contentOffset
+        visibleRect.size = videoCollectionView.bounds.size
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndexPath: IndexPath = videoCollectionView.indexPathForItem(at: visiblePoint)!
+        
+        print("Will Begin : \(visibleIndexPath)")
+        
+        (videoCollectionView.cellForItem(at: visibleIndexPath) as! CommunityVideoCollectionViewCell).player?.pause()
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var visibleRect = CGRect()
+        visibleRect.origin = videoCollectionView.contentOffset
+        visibleRect.size = videoCollectionView.bounds.size
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndexPath: IndexPath = videoCollectionView.indexPathForItem(at: visiblePoint)!
+        
+        print("Did End : \(visibleIndexPath)")
 
-extension CommunityViewController: UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        let videoCell = cell as! CommunityVideoCollectionViewCell
-//        videoCell.player?.play()
-//        
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        let videoCell = cell as! CommunityVideoCollectionViewCell
-//        videoCell.player?.pause()
-//    }
-
+        (videoCollectionView.cellForItem(at: visibleIndexPath) as! CommunityVideoCollectionViewCell).player?.play()
+        
+    }
+    
 }
 

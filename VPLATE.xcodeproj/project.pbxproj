@@ -43,6 +43,7 @@
 		FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8171FFF6F6600493A51 /* VideoData.swift */; };
 		FCFAC81B1FFF756E00493A51 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8191FFF756E00493A51 /* CoverA.swift */; };
 		FCFAC81C1FFF756E00493A51 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFAC81A1FFF756E00493A51 /* CoverA.xib */; };
+		FCFAC81E1FFF9DE000493A51 /* PagedCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC81D1FFF9DE000493A51 /* PagedCollectionLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		FCFAC8171FFF6F6600493A51 /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
 		FCFAC8191FFF756E00493A51 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
 		FCFAC81A1FFF756E00493A51 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
+		FCFAC81D1FFF9DE000493A51 /* PagedCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedCollectionLayout.swift; sourceTree = "<group>"; };
 		FF0E64DB13B5436DB3972ACE /* Pods_VPLATEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPLATEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -295,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				FCFAC8071FFD402500493A51 /* PlayerView.swift */,
+				FCFAC81D1FFF9DE000493A51 /* PagedCollectionLayout.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */,
 				FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */,
 				FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */,
+				FCFAC81E1FFF9DE000493A51 /* PagedCollectionLayout.swift in Sources */,
 				FC2CBD7C1FFCE1A800A34961 /* CompletionViewController.swift in Sources */,
 				FC2CBD881FFCF12700A34961 /* ViewController.swift in Sources */,
 				FCFAC8101FFE258700493A51 /* TabBarController.swift in Sources */,
