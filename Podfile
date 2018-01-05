@@ -10,7 +10,7 @@ target 'VPLATE' do
 pod "PryntTrimmerView"
 pod "Alamofire"
 pod "Kingfisher"
-pod "PagingMenuController"
+pod "PageMenu"
 pod "MMPlayerView", "~> 3.0.2"
 
   target 'VPLATETests' do
