@@ -19,20 +19,6 @@ class MyVideoViewController: ViewController {
         // Do any additional setup after loading the view.
     }
     
-    func setupPageVC(vcArray: [UIViewController]) -> [UIViewController] {
-        for item in vcArray {
-            switch item{
-            case is AllVideoViewController : break
-            case is InProgressViewController: break
-            case is CompletionViewController: break
-            default: break
-                
-            }
-            
-        }
-        
-        return vcArray
-    }
     
     func setUpScrollMenu(){
         // Initialize view controllers to display and place in array

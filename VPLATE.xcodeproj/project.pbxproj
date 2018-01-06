@@ -31,10 +31,10 @@
 		FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */; };
 		FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */; };
 		FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */; };
-		FC34A20C2000553D00F3C567 /* CreatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A20A2000553D00F3C567 /* CreatorCollectionViewCell.swift */; };
-		FC34A20D2000553D00F3C567 /* CreatorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A20B2000553D00F3C567 /* CreatorCollectionViewCell.xib */; };
 		FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A20E200056DD00F3C567 /* CreatorViewController.swift */; };
 		FC34A211200065DB00F3C567 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A210200065DB00F3C567 /* PageViewController.swift */; };
+		FC34A2142000CD7E00F3C567 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2122000CD7E00F3C567 /* SceneViewController.swift */; };
+		FC34A2152000CD7E00F3C567 /* SceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A2132000CD7E00F3C567 /* SceneViewController.xib */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
 		FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E001FF8F66F00D6616B /* Main.storyboard */; };
 		FC946E041FF8F66F00D6616B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC946E031FF8F66F00D6616B /* Assets.xcassets */; };
@@ -100,10 +100,10 @@
 		FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
 		FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneCollectionViewCell.xib; sourceTree = "<group>"; };
-		FC34A20A2000553D00F3C567 /* CreatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorCollectionViewCell.swift; sourceTree = "<group>"; };
-		FC34A20B2000553D00F3C567 /* CreatorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatorCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC34A20E200056DD00F3C567 /* CreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorViewController.swift; sourceTree = "<group>"; };
 		FC34A210200065DB00F3C567 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		FC34A2122000CD7E00F3C567 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
+		FC34A2132000CD7E00F3C567 /* SceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneViewController.xib; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC946E011FF8F66F00D6616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -229,8 +229,6 @@
 				FCFAC8201FFFCFB900493A51 /* CategoryCollectionViewCell.xib */,
 				FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */,
 				FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */,
-				FC34A20A2000553D00F3C567 /* CreatorCollectionViewCell.swift */,
-				FC34A20B2000553D00F3C567 /* CreatorCollectionViewCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -305,6 +303,8 @@
 				FCFAC80D1FFE1E0200493A51 /* TabbarViewController.swift */,
 				FCFAC80F1FFE258700493A51 /* TabBarController.swift */,
 				FC34A20E200056DD00F3C567 /* CreatorViewController.swift */,
+				FC34A2122000CD7E00F3C567 /* SceneViewController.swift */,
+				FC34A2132000CD7E00F3C567 /* SceneViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -463,7 +463,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC34A20D2000553D00F3C567 /* CreatorCollectionViewCell.xib in Resources */,
 				FCFAC80C1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib in Resources */,
 				FC2CBD8E1FFCF33C00A34961 /* VideoTableViewCell.xib in Resources */,
 				FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */,
@@ -471,6 +470,7 @@
 				FC2CBD7D1FFCE1A800A34961 /* CompletionViewController.xib in Resources */,
 				FC2CBD741FFCE14C00A34961 /* AllVideoViewController.xib in Resources */,
 				FCFAC8221FFFCFB900493A51 /* CategoryCollectionViewCell.xib in Resources */,
+				FC34A2152000CD7E00F3C567 /* SceneViewController.xib in Resources */,
 				FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */,
 				FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */,
 				FC2CBD791FFCE18A00A34961 /* InProgressViewController.xib in Resources */,
@@ -663,13 +663,13 @@
 				FCFAC8241FFFD4D300493A51 /* RandomColor.swift in Sources */,
 				FC2CBD6E1FFCCF8B00A34961 /* CommunityViewController.swift in Sources */,
 				FC2CBD6A1FFCCF5C00A34961 /* MyVideoViewController.swift in Sources */,
-				FC34A20C2000553D00F3C567 /* CreatorCollectionViewCell.swift in Sources */,
 				FCFAC80B1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift in Sources */,
 				FC2CBD801FFCE1C000A34961 /* Reusable.swift in Sources */,
 				FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */,
 				FC2CBD781FFCE18A00A34961 /* InProgressViewController.swift in Sources */,
 				FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */,
 				FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */,
+				FC34A2142000CD7E00F3C567 /* SceneViewController.swift in Sources */,
 				FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */,
 				FC34A211200065DB00F3C567 /* PageViewController.swift in Sources */,
 				FCFAC81E1FFF9DE000493A51 /* PagedCollectionLayout.swift in Sources */,

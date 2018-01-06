@@ -7,48 +7,55 @@
 //
 
 import UIKit
+import PageMenu
 
-class CreatorViewController: UIViewController, ViewControllerProtocol {
-
-    @IBOutlet weak var sceneNameCollectionView: UICollectionView!
-    @IBOutlet weak var sceneCollectionView: UICollectionView!
+class CreatorViewController: UIViewController {
+    
+    var pageMenu: CAPSPageMenu?
+    var currentCellIndexPath: IndexPath!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUpCollectionView(collectionView: sceneCollectionView, cell: CreatorCollectionViewCell.self)
-        self.sceneCollectionView.isPagingEnabled = true
+        setUpScrollMenu()
     }
+    
+    func setUpScrollMenu(){
+        // Initialize view controllers to display and place in array
+        var controllerArray : [PageViewController] = []
+        
+        
+        for item in 1...5 {
+            let controller:SceneViewController = SceneViewController(nibName: SceneViewController.reuseIdentifier, bundle: nil)
+            controller.title = "SCENE \(item)"
+            controller.parentNavigationController = self.navigationController
+            controller.info = "SCENE \(item)"
+            controllerArray.append(controller)
+        }
+        
+        // Customize menu (Optional)
+        let menuHeight:CGFloat = 50.0
+        
+        let parameters: [CAPSPageMenuOption] = [
+            .scrollMenuBackgroundColor(UIColor.clear),
+            .viewBackgroundColor(UIColor.clear),
+            .selectionIndicatorColor(UIColor.red),
+            .unselectedMenuItemLabelColor(UIColor.lightGray.withAlphaComponent(0.5)),
+            .menuItemFont(UIFont(name: "HelveticaNeue", size: 15.0)!),
+            .menuHeight(menuHeight),
+            .menuItemWidth(self.view.frame.width/3),
+            .menuMargin(0),
+            .selectionIndicatorHeight(5.0),
+            .bottomMenuHairlineColor(UIColor.orange),
+            .menuItemWidthBasedOnTitleTextWidth(false),
+            .selectedMenuItemLabelColor(UIColor.black)
+        ]
+        
+        // Initialize scroll menu
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
+        self.view.addSubview(pageMenu!.view)
+    }
+    
+    
+
 }
 
-extension CreatorViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.frame.size
-    }
-    
-    
-}
-
-extension CreatorViewController: UICollectionViewDelegate {
-    
-}
-
-extension CreatorViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CreatorCollectionViewCell.reuseIdentifier, for: indexPath)
-        return cell
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        <#code#>
-    }
-    
-    
-    
-}

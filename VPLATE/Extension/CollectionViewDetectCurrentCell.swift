@@ -11,14 +11,20 @@ import UIKit
 
 
 extension UICollectionView {
-    func detectCurrentCell() -> IndexPath {
+    func detectCurrentCellIndexPath() -> IndexPath {
         var visibleRect = CGRect()
         visibleRect.origin = self.contentOffset
         visibleRect.size = self.bounds.size
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         let visibleIndexPath: IndexPath = self.indexPathForItem(at: visiblePoint)!
+        
         return visibleIndexPath
     }
+    
+    func currentCell() -> UICollectionViewCell {
+        guard let cell = self.cellForItem(at: self.detectCurrentCellIndexPath())
+            else {return UICollectionViewCell()}
+        return cell
+    }
 }
-
 

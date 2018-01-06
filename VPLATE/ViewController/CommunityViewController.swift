@@ -56,14 +56,14 @@ extension CommunityViewController: UICollectionViewDataSource {
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        print("Will Begin : \(self.videoCollectionView.detectCurrentCell())")
+        print("Will Begin : \(self.videoCollectionView.detectCurrentCellIndexPath())")
         
-        (videoCollectionView.cellForItem(at: self.videoCollectionView.detectCurrentCell()) as! CommunityVideoCollectionViewCell).player?.pause()
+        (videoCollectionView.currentCell() as! CommunityVideoCollectionViewCell).player?.pause()
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("Did End : \(self.videoCollectionView.detectCurrentCell())")
+        print("Did End : \(self.videoCollectionView.detectCurrentCellIndexPath())")
 
-        (videoCollectionView.cellForItem(at: self.videoCollectionView.detectCurrentCell()) as!
+        (videoCollectionView.currentCell() as!
             CommunityVideoCollectionViewCell).player?.play()
     }
 }
