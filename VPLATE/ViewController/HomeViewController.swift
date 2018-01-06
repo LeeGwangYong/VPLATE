@@ -19,6 +19,7 @@ class HomeViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var mainViewTopConstraint: NSLayoutConstraint!
     var categoryConstraints: [NSLayoutConstraint]!
     
+    @IBOutlet weak var categoryCollectionView: UICollectionView!
     var openCategory: Bool = false
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         self.title = TitleEnum.home.rawValue
         categoryConstraints = [categoryViewHeightConstraint, mainViewTopConstraint]
         self.setUpTableView(tableView: homeVideoTableView, tableViewCell: VideoTableViewCell.self)
+        self.setUpCollectionView(collectionView: categoryCollectionView, cell: CategoryCollectionViewCell.self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +71,40 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return getReusableCell(tableView: tableView, cell: VideoTableViewCell.self, indexPath: indexPath) as! VideoTableViewCell
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: categoryView.bounds.size.height, height: categoryView.bounds.size.height)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Category Selected Index : \(indexPath)")
+        for cell in collectionView.visibleCells as! [CategoryCollectionViewCell]{
+            cell.reload()            
+        }
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print("Category DeSelected Index : \(indexPath)")
+    }
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
+        cell.backgroundImageView.backgroundColor = UIColor().random()
+        cell.reload()
+        return cell
     }
     
     

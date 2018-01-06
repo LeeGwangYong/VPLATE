@@ -19,17 +19,33 @@ class MyVideoViewController: ViewController {
         // Do any additional setup after loading the view.
     }
     
+    func setupPageVC(vcArray: [UIViewController]) -> [UIViewController] {
+        for item in vcArray {
+            switch item{
+            case is AllVideoViewController : break
+            case is InProgressViewController: break
+            case is CompletionViewController: break
+            default: break
+                
+            }
+            
+        }
+        
+        return vcArray
+    }
+    
     func setUpScrollMenu(){
         // Initialize view controllers to display and place in array
-        var controllerArray : [UIViewController] = []
+        var controllerArray : [PageViewController] = []
         
-        var controller:UIViewController = AllVideoViewController(nibName: AllVideoViewController.reuseIdentifier, bundle: nil)
+        var controller:PageViewController = AllVideoViewController(nibName: AllVideoViewController.reuseIdentifier, bundle: nil)
         controller.title = "모든 영상"
+        controller.parentNavigationController = self.navigationController
         controllerArray.append(controller)
         controller = InProgressViewController(nibName: InProgressViewController.reuseIdentifier, bundle: nil)
         controller.title = "제작중인 영상"
         controllerArray.append(controller)
-        controller = CompletionViewController(nibName: CompletionViewController.reuseIdentifier, bundle: nil)
+        controller = CompletionViewController(nibName: CompletionViewController.reuseIdentifier, bundle: nil) 
         controller.title = "완성된 영상"
         controllerArray.append(controller)
         

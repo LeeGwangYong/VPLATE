@@ -50,7 +50,7 @@ extension CommunityViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CommunityVideoCollectionViewCell.reuseIdentifier, for: indexPath) as! CommunityVideoCollectionViewCell
         
         cell.setUpPlayer(url: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        cell.playerView.backgroundColor = UIColor(displayP3Red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1)
+        cell.playerView.backgroundColor = UIColor().random()
         return cell
     }
     
@@ -75,8 +75,17 @@ extension CommunityViewController: UICollectionViewDataSource {
         print("Did End : \(visibleIndexPath)")
 
         (videoCollectionView.cellForItem(at: visibleIndexPath) as! CommunityVideoCollectionViewCell).player?.play()
-        
     }
-    
+}
+
+extension UICollectionView {
+    func detectCurrentCell() -> IndexPath {
+        var visibleRect = CGRect()
+        visibleRect.origin = self.contentOffset
+        visibleRect.size = self.bounds.size
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndexPath: IndexPath = self.indexPathForItem(at: visiblePoint)!
+        return visibleIndexPath
+    }
 }
 

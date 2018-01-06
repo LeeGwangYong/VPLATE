@@ -29,6 +29,12 @@
 		FC2CBD8E1FFCF33C00A34961 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */; };
 		FC2CBD901FFCFCE000A34961 /* TableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD8F1FFCFCE000A34961 /* TableExtension.swift */; };
 		FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */; };
+		FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */; };
+		FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */; };
+		FC34A20C2000553D00F3C567 /* CreatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A20A2000553D00F3C567 /* CreatorCollectionViewCell.swift */; };
+		FC34A20D2000553D00F3C567 /* CreatorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A20B2000553D00F3C567 /* CreatorCollectionViewCell.xib */; };
+		FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A20E200056DD00F3C567 /* CreatorViewController.swift */; };
+		FC34A211200065DB00F3C567 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A210200065DB00F3C567 /* PageViewController.swift */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
 		FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E001FF8F66F00D6616B /* Main.storyboard */; };
 		FC946E041FF8F66F00D6616B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC946E031FF8F66F00D6616B /* Assets.xcassets */; };
@@ -41,9 +47,10 @@
 		FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC80D1FFE1E0200493A51 /* TabbarViewController.swift */; };
 		FCFAC8101FFE258700493A51 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC80F1FFE258700493A51 /* TabBarController.swift */; };
 		FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8171FFF6F6600493A51 /* VideoData.swift */; };
-		FCFAC81B1FFF756E00493A51 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8191FFF756E00493A51 /* CoverA.swift */; };
-		FCFAC81C1FFF756E00493A51 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFAC81A1FFF756E00493A51 /* CoverA.xib */; };
 		FCFAC81E1FFF9DE000493A51 /* PagedCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC81D1FFF9DE000493A51 /* PagedCollectionLayout.swift */; };
+		FCFAC8211FFFCFB900493A51 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC81F1FFFCFB900493A51 /* CategoryCollectionViewCell.swift */; };
+		FCFAC8221FFFCFB900493A51 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFAC8201FFFCFB900493A51 /* CategoryCollectionViewCell.xib */; };
+		FCFAC8241FFFD4D300493A51 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8231FFFD4D300493A51 /* RandomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +98,12 @@
 		FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		FC2CBD8F1FFCFCE000A34961 /* TableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExtension.swift; sourceTree = "<group>"; };
 		FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
+		FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneCollectionViewCell.xib; sourceTree = "<group>"; };
+		FC34A20A2000553D00F3C567 /* CreatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC34A20B2000553D00F3C567 /* CreatorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatorCollectionViewCell.xib; sourceTree = "<group>"; };
+		FC34A20E200056DD00F3C567 /* CreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorViewController.swift; sourceTree = "<group>"; };
+		FC34A210200065DB00F3C567 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC946E011FF8F66F00D6616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,9 +122,10 @@
 		FCFAC80D1FFE1E0200493A51 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		FCFAC80F1FFE258700493A51 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FCFAC8171FFF6F6600493A51 /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
-		FCFAC8191FFF756E00493A51 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
-		FCFAC81A1FFF756E00493A51 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
 		FCFAC81D1FFF9DE000493A51 /* PagedCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedCollectionLayout.swift; sourceTree = "<group>"; };
+		FCFAC81F1FFFCFB900493A51 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		FCFAC8201FFFCFB900493A51 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		FCFAC8231FFFD4D300493A51 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		FF0E64DB13B5436DB3972ACE /* Pods_VPLATEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPLATEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,6 +189,7 @@
 				FC2CBD771FFCE18A00A34961 /* InProgressViewController.xib */,
 				FC2CBD7A1FFCE1A800A34961 /* CompletionViewController.swift */,
 				FC2CBD7B1FFCE1A800A34961 /* CompletionViewController.xib */,
+				FC34A210200065DB00F3C567 /* PageViewController.swift */,
 			);
 			path = MyVideo;
 			sourceTree = "<group>";
@@ -190,14 +205,34 @@
 		FC2CBD8A1FFCF31A00A34961 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				FCFAC8191FFF756E00493A51 /* CoverA.swift */,
-				FCFAC81A1FFF756E00493A51 /* CoverA.xib */,
-				FC2CBD8B1FFCF33C00A34961 /* VideoTableViewCell.swift */,
-				FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */,
-				FCFAC8091FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift */,
-				FCFAC80A1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib */,
+				FC34A2051FFFE08900F3C567 /* CollectionView */,
+				FC34A2041FFFE07900F3C567 /* TableView */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FC34A2041FFFE07900F3C567 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FC2CBD8B1FFCF33C00A34961 /* VideoTableViewCell.swift */,
+				FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		FC34A2051FFFE08900F3C567 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FCFAC8091FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift */,
+				FCFAC80A1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib */,
+				FCFAC81F1FFFCFB900493A51 /* CategoryCollectionViewCell.swift */,
+				FCFAC8201FFFCFB900493A51 /* CategoryCollectionViewCell.xib */,
+				FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */,
+				FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */,
+				FC34A20A2000553D00F3C567 /* CreatorCollectionViewCell.swift */,
+				FC34A20B2000553D00F3C567 /* CreatorCollectionViewCell.xib */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		FC946DF01FF8F66F00D6616B = {
@@ -269,6 +304,7 @@
 				FC2CBD871FFCF12700A34961 /* ViewController.swift */,
 				FCFAC80D1FFE1E0200493A51 /* TabbarViewController.swift */,
 				FCFAC80F1FFE258700493A51 /* TabBarController.swift */,
+				FC34A20E200056DD00F3C567 /* CreatorViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -289,6 +325,7 @@
 				FC2CBD811FFCE91F00A34961 /* TitleEnum.swift */,
 				FC2CBD831FFCEC7700A34961 /* UIColorToUIImage.swift */,
 				FC2CBD8F1FFCFCE000A34961 /* TableExtension.swift */,
+				FCFAC8231FFFD4D300493A51 /* RandomColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -426,15 +463,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC34A20D2000553D00F3C567 /* CreatorCollectionViewCell.xib in Resources */,
 				FCFAC80C1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib in Resources */,
 				FC2CBD8E1FFCF33C00A34961 /* VideoTableViewCell.xib in Resources */,
 				FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */,
 				FC946E041FF8F66F00D6616B /* Assets.xcassets in Resources */,
 				FC2CBD7D1FFCE1A800A34961 /* CompletionViewController.xib in Resources */,
 				FC2CBD741FFCE14C00A34961 /* AllVideoViewController.xib in Resources */,
+				FCFAC8221FFFCFB900493A51 /* CategoryCollectionViewCell.xib in Resources */,
+				FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */,
 				FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */,
 				FC2CBD791FFCE18A00A34961 /* InProgressViewController.xib in Resources */,
-				FCFAC81C1FFF756E00493A51 /* CoverA.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,19 +660,24 @@
 				FC2CBD6C1FFCCF8100A34961 /* SelectedVideoViewController.swift in Sources */,
 				FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */,
 				FC2CBD841FFCEC7700A34961 /* UIColorToUIImage.swift in Sources */,
+				FCFAC8241FFFD4D300493A51 /* RandomColor.swift in Sources */,
 				FC2CBD6E1FFCCF8B00A34961 /* CommunityViewController.swift in Sources */,
 				FC2CBD6A1FFCCF5C00A34961 /* MyVideoViewController.swift in Sources */,
+				FC34A20C2000553D00F3C567 /* CreatorCollectionViewCell.swift in Sources */,
 				FCFAC80B1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift in Sources */,
-				FCFAC81B1FFF756E00493A51 /* CoverA.swift in Sources */,
 				FC2CBD801FFCE1C000A34961 /* Reusable.swift in Sources */,
+				FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */,
 				FC2CBD781FFCE18A00A34961 /* InProgressViewController.swift in Sources */,
 				FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */,
 				FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */,
 				FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */,
+				FC34A211200065DB00F3C567 /* PageViewController.swift in Sources */,
 				FCFAC81E1FFF9DE000493A51 /* PagedCollectionLayout.swift in Sources */,
 				FC2CBD7C1FFCE1A800A34961 /* CompletionViewController.swift in Sources */,
 				FC2CBD881FFCF12700A34961 /* ViewController.swift in Sources */,
 				FCFAC8101FFE258700493A51 /* TabBarController.swift in Sources */,
+				FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */,
+				FCFAC8211FFFCFB900493A51 /* CategoryCollectionViewCell.swift in Sources */,
 				FC2CBD8D1FFCF33C00A34961 /* VideoTableViewCell.swift in Sources */,
 				FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */,
 				FC2CBD731FFCE14C00A34961 /* AllVideoViewController.swift in Sources */,

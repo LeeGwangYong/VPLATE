@@ -8,18 +8,25 @@
 
 import UIKit
 
-class AllVideoViewController: UIViewController, ViewControllerProtocol  {
+class AllVideoViewController: PageViewController, ViewControllerProtocol  {
     @IBOutlet weak var videoTableView: UITableView!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpTableView(tableView: videoTableView, tableViewCell: VideoTableViewCell.self)
     }
 }
 
+
 extension AllVideoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: CreatorViewController.reuseIdentifier)
+        self.parentNavigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
@@ -31,6 +38,4 @@ extension AllVideoViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return self.getReusableCell(tableView: tableView, cell: VideoTableViewCell.self, indexPath: indexPath)
     }
-    
-    
 }
