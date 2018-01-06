@@ -12,6 +12,7 @@ import AVKit
 class CommunityViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var videoCollectionView: UICollectionView!
     var tableViewIndex: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView(collectionView: videoCollectionView, cell: CommunityVideoCollectionViewCell.self)
@@ -55,37 +56,16 @@ extension CommunityViewController: UICollectionViewDataSource {
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        var visibleRect = CGRect()
-        visibleRect.origin = videoCollectionView.contentOffset
-        visibleRect.size = videoCollectionView.bounds.size
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        let visibleIndexPath: IndexPath = videoCollectionView.indexPathForItem(at: visiblePoint)!
+        print("Will Begin : \(self.videoCollectionView.detectCurrentCell())")
         
-        print("Will Begin : \(visibleIndexPath)")
-        
-        (videoCollectionView.cellForItem(at: visibleIndexPath) as! CommunityVideoCollectionViewCell).player?.pause()
+        (videoCollectionView.cellForItem(at: self.videoCollectionView.detectCurrentCell()) as! CommunityVideoCollectionViewCell).player?.pause()
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        var visibleRect = CGRect()
-        visibleRect.origin = videoCollectionView.contentOffset
-        visibleRect.size = videoCollectionView.bounds.size
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        let visibleIndexPath: IndexPath = videoCollectionView.indexPathForItem(at: visiblePoint)!
-        
-        print("Did End : \(visibleIndexPath)")
+        print("Did End : \(self.videoCollectionView.detectCurrentCell())")
 
-        (videoCollectionView.cellForItem(at: visibleIndexPath) as! CommunityVideoCollectionViewCell).player?.play()
+        (videoCollectionView.cellForItem(at: self.videoCollectionView.detectCurrentCell()) as!
+            CommunityVideoCollectionViewCell).player?.play()
     }
 }
 
-extension UICollectionView {
-    func detectCurrentCell() -> IndexPath {
-        var visibleRect = CGRect()
-        visibleRect.origin = self.contentOffset
-        visibleRect.size = self.bounds.size
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        let visibleIndexPath: IndexPath = self.indexPathForItem(at: visiblePoint)!
-        return visibleIndexPath
-    }
-}
 

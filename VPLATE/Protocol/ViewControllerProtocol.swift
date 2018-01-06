@@ -31,5 +31,5 @@ extension ViewControllerProtocol where Self: UICollectionViewDataSource & UIColl
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: cell.reuseIdentifier, bundle: nil) , forCellWithReuseIdentifier: cell.reuseIdentifier)
     }
-
 }
+

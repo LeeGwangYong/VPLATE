@@ -27,7 +27,7 @@
 		FC2CBD881FFCF12700A34961 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD871FFCF12700A34961 /* ViewController.swift */; };
 		FC2CBD8D1FFCF33C00A34961 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD8B1FFCF33C00A34961 /* VideoTableViewCell.swift */; };
 		FC2CBD8E1FFCF33C00A34961 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */; };
-		FC2CBD901FFCFCE000A34961 /* TableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD8F1FFCFCE000A34961 /* TableExtension.swift */; };
+		FC2CBD901FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD8F1FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift */; };
 		FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */; };
 		FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */; };
 		FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */; };
@@ -96,7 +96,7 @@
 		FC2CBD871FFCF12700A34961 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC2CBD8B1FFCF33C00A34961 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
-		FC2CBD8F1FFCFCE000A34961 /* TableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExtension.swift; sourceTree = "<group>"; };
+		FC2CBD8F1FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDetectCurrentCell.swift; sourceTree = "<group>"; };
 		FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
 		FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -324,7 +324,7 @@
 				FC2CBD7F1FFCE1C000A34961 /* Reusable.swift */,
 				FC2CBD811FFCE91F00A34961 /* TitleEnum.swift */,
 				FC2CBD831FFCEC7700A34961 /* UIColorToUIImage.swift */,
-				FC2CBD8F1FFCFCE000A34961 /* TableExtension.swift */,
+				FC2CBD8F1FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift */,
 				FCFAC8231FFFD4D300493A51 /* RandomColor.swift */,
 			);
 			path = Extension;
@@ -682,7 +682,7 @@
 				FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */,
 				FC2CBD731FFCE14C00A34961 /* AllVideoViewController.swift in Sources */,
 				FC2CBD701FFCCF9200A34961 /* SettingViewController.swift in Sources */,
-				FC2CBD901FFCFCE000A34961 /* TableExtension.swift in Sources */,
+				FC2CBD901FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift in Sources */,
 				FC2CBD821FFCE91F00A34961 /* TitleEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
