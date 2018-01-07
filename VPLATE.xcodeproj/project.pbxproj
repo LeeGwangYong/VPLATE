@@ -33,6 +33,9 @@
 		FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */; };
 		FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A20E200056DD00F3C567 /* CreatorViewController.swift */; };
 		FC34A211200065DB00F3C567 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A210200065DB00F3C567 /* PageViewController.swift */; };
+		FC34A21D2001C1A000F3C567 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A21B2001C1A000F3C567 /* CoverA.xib */; };
+		FC34A21E2001C1A000F3C567 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A21C2001C1A000F3C567 /* CoverA.swift */; };
+		FC34A2212001C87200F3C567 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2202001C87200F3C567 /* DummyData.swift */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
 		FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E001FF8F66F00D6616B /* Main.storyboard */; };
 		FC946E041FF8F66F00D6616B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC946E031FF8F66F00D6616B /* Assets.xcassets */; };
@@ -100,6 +103,9 @@
 		FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC34A20E200056DD00F3C567 /* CreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorViewController.swift; sourceTree = "<group>"; };
 		FC34A210200065DB00F3C567 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		FC34A21B2001C1A000F3C567 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
+		FC34A21C2001C1A000F3C567 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
+		FC34A2202001C87200F3C567 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC946E011FF8F66F00D6616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		FC2CBD8A1FFCF31A00A34961 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FC34A21F2001C1A500F3C567 /* CoverA */,
 				FC34A2051FFFE08900F3C567 /* CollectionView */,
 				FC34A2041FFFE07900F3C567 /* TableView */,
 			);
@@ -227,6 +234,16 @@
 				FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		FC34A21F2001C1A500F3C567 /* CoverA */ = {
+			isa = PBXGroup;
+			children = (
+				FC34A21B2001C1A000F3C567 /* CoverA.xib */,
+				FC34A21C2001C1A000F3C567 /* CoverA.swift */,
+			);
+			name = CoverA;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		FC946DF01FF8F66F00D6616B = {
@@ -337,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				FCFAC8171FFF6F6600493A51 /* VideoData.swift */,
+				FC34A2202001C87200F3C567 /* DummyData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -462,6 +480,7 @@
 				FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */,
 				FC946E041FF8F66F00D6616B /* Assets.xcassets in Resources */,
 				FC2CBD7D1FFCE1A800A34961 /* CompletionViewController.xib in Resources */,
+				FC34A21D2001C1A000F3C567 /* CoverA.xib in Resources */,
 				FC2CBD741FFCE14C00A34961 /* AllVideoViewController.xib in Resources */,
 				FCFAC8221FFFCFB900493A51 /* CategoryCollectionViewCell.xib in Resources */,
 				FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */,
@@ -547,15 +566,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MMPlayerView/MMPlayerView.framework",
 				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMPlayerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -662,6 +685,7 @@
 				FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */,
 				FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */,
 				FC34A211200065DB00F3C567 /* PageViewController.swift in Sources */,
+				FC34A21E2001C1A000F3C567 /* CoverA.swift in Sources */,
 				FCFAC81E1FFF9DE000493A51 /* PagedCollectionLayout.swift in Sources */,
 				FC2CBD7C1FFCE1A800A34961 /* CompletionViewController.swift in Sources */,
 				FC2CBD881FFCF12700A34961 /* ViewController.swift in Sources */,
@@ -674,6 +698,7 @@
 				FC2CBD701FFCCF9200A34961 /* SettingViewController.swift in Sources */,
 				FC2CBD901FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift in Sources */,
 				FC2CBD821FFCE91F00A34961 /* TitleEnum.swift in Sources */,
+				FC34A2212001C87200F3C567 /* DummyData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

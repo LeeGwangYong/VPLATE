@@ -9,9 +9,10 @@ target 'VPLATE' do
   # Pods for VPLATE
 pod "PryntTrimmerView"
 pod "Alamofire"
+pod "SwiftyJSON"
 pod "Kingfisher"
 pod "PageMenu"
-#pod "MMPlayerView", "~> 3.0.2"
+pod "MMPlayerView"
 #pod 'Segmentio', '~> 2.1'
 
   target 'VPLATETests' do

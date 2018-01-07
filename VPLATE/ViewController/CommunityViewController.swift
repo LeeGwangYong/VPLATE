@@ -8,9 +8,19 @@
 
 import UIKit
 import AVKit
+import MMPlayerView
 
 class CommunityViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var videoCollectionView: UICollectionView!
+    lazy var mmPlayerLayer: MMPlayerLayer = {
+        let layer = MMPlayerLayer()
+        layer.cacheType = .memory(count: 5)
+        layer.coverFitType = .fitToPlayerView
+        layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        layer.replace(cover: CoverA.instantiateFromNib())
+        return layer
+    }()
+    
     var tableViewIndex: Int?
     
     override func viewDidLoad() {
@@ -18,6 +28,11 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         setUpCollectionView(collectionView: videoCollectionView, cell: CommunityVideoCollectionViewCell.self)
         videoCollectionView.isPagingEnabled = false
         videoCollectionView.showsVerticalScrollIndicator = false
+        videoCollectionView.addObserver(self, forKeyPath: "contentOffset", options: [.new], context: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            self.updateByContentOffset()
+        }
     }
     
     @IBAction func navigateAction(_ sender: UIButton) {
@@ -25,7 +40,55 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         root.selectedIndex = self.tableViewIndex!
         self.dismiss(animated: true, completion: nil)
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "contentOffset" {
+            self.updateByContentOffset()
+            NSObject.cancelPreviousPerformRequests(withTarget: self)
+            self.perform(#selector(startLoading), with: nil, afterDelay: 0.3)
+        } else {
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+        }
+    }
+    
+    
+    func updateByContentOffset() {
+        self.updateCell(at: self.videoCollectionView.detectCurrentCellIndexPath())
+    }
+    @objc func startLoading() {
+        mmPlayerLayer.startLoading()
+    }
+    
+    func updateCell(at indexPath: IndexPath){
+        guard let cell = videoCollectionView.currentCell() as? CommunityVideoCollectionViewCell else {return}
+        mmPlayerLayer.thumbImageView.image = cell.imgView.image
+        if !MMLandscapeWindow.shared.isKeyWindow {
+            mmPlayerLayer.playView = cell.imgView
+        }
+        
+        mmPlayerLayer.set(url: cell.data?.play_Url, state: { (status) in
+            switch status {
+            case .failed(let err):
+                let alert = UIAlertController(title: "err", message: err.description, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            case .ready:
+                print("Ready to Play")
+            case .playing:
+                print("Playing")
+            case .pause:
+                print("Pause")
+            case .end:
+                print("End")
+            default: break
+            }
+        })
+        
+    }
+    
 }
+
+
 
 extension CommunityViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -44,27 +107,15 @@ extension CommunityViewController: UICollectionViewDelegateFlowLayout {
 
 extension CommunityViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return DemoSource.shared.demoData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CommunityVideoCollectionViewCell.reuseIdentifier, for: indexPath) as! CommunityVideoCollectionViewCell
         
-        cell.setUpPlayer(url: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        cell.playerView.backgroundColor = UIColor().random()
+        cell.data = DemoSource.shared.demoData[indexPath.row]
+        cell.imgView.backgroundColor = UIColor().random()
         return cell
-    }
-    
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        print("Will Begin : \(self.videoCollectionView.detectCurrentCellIndexPath())")
-        
-        (videoCollectionView.currentCell() as! CommunityVideoCollectionViewCell).player?.pause()
-    }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("Did End : \(self.videoCollectionView.detectCurrentCellIndexPath())")
-
-        (videoCollectionView.currentCell() as!
-            CommunityVideoCollectionViewCell).player?.play()
     }
 }
 

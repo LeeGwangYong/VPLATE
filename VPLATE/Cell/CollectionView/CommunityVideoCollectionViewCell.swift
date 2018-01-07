@@ -10,8 +10,12 @@ import UIKit
 import AVKit
 
 class CommunityVideoCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var playerView: UIView!
-    
+    @IBOutlet weak var imgView: UIImageView!
+    var data: DataObj?{
+        didSet{
+            self.imgView.image = data?.image
+        }
+    }
     var player: AVPlayer?
     
     func setUpPlayer(url: String) {
@@ -19,7 +23,7 @@ class CommunityVideoCollectionViewCell: UICollectionViewCell {
         self.player = AVPlayer(url: videoURL)
         let playerLayer = AVPlayerLayer(player: self.player)
         playerLayer.frame = (self.bounds)
-        self.playerView.layer.addSublayer(playerLayer)
+        self.imgView.layer.addSublayer(playerLayer)
         
     }
     

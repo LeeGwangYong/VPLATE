@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,35 +20,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="182" height="254"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTz-b7-nvD">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBm-Mn-asw">
                         <rect key="frame" x="0.0" y="0.0" width="182" height="254"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목 제목 제목 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx6-Kp-eev">
-                                <rect key="frame" x="20" y="213" width="142" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTz-b7-nvD" customClass="UIImageView">
+                                <rect key="frame" x="0.0" y="76" width="182" height="102"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MTz-b7-nvD" secondAttribute="height" multiplier="16:9" id="09l-TD-AvK"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="lx6-Kp-eev" secondAttribute="trailing" constant="20" id="9aO-eG-KIy"/>
-                            <constraint firstItem="lx6-Kp-eev" firstAttribute="leading" secondItem="MTz-b7-nvD" secondAttribute="leading" constant="20" id="Wv4-x8-p2r"/>
-                            <constraint firstAttribute="bottom" secondItem="lx6-Kp-eev" secondAttribute="bottom" constant="20" id="oLZ-nK-uEf"/>
+                            <constraint firstItem="MTz-b7-nvD" firstAttribute="centerY" secondItem="QBm-Mn-asw" secondAttribute="centerY" id="olY-FR-nPq"/>
+                            <constraint firstItem="MTz-b7-nvD" firstAttribute="leading" secondItem="QBm-Mn-asw" secondAttribute="leading" id="qU0-lf-ab8"/>
+                            <constraint firstAttribute="trailing" secondItem="MTz-b7-nvD" secondAttribute="trailing" id="yFe-Ah-NdG"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="MTz-b7-nvD" secondAttribute="bottom" id="25Y-CR-EOe"/>
-                <constraint firstItem="MTz-b7-nvD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="G65-cC-wdF"/>
-                <constraint firstItem="MTz-b7-nvD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eBb-Rl-wBU"/>
-                <constraint firstAttribute="trailing" secondItem="MTz-b7-nvD" secondAttribute="trailing" id="zzF-ij-8cx"/>
+                <constraint firstItem="QBm-Mn-asw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2fV-e8-FFs"/>
+                <constraint firstItem="QBm-Mn-asw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AaV-lu-K8a"/>
+                <constraint firstAttribute="bottom" secondItem="QBm-Mn-asw" secondAttribute="bottom" id="GKh-jz-0Av"/>
+                <constraint firstAttribute="trailing" secondItem="QBm-Mn-asw" secondAttribute="trailing" id="WhK-Nt-4sR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="182" height="254"/>
             <connections>
-                <outlet property="playerView" destination="MTz-b7-nvD" id="WM7-EN-AOU"/>
+                <outlet property="imgView" destination="MTz-b7-nvD" id="yhX-ZU-fq4"/>
             </connections>
             <point key="canvasLocation" x="100" y="156"/>
         </collectionViewCell>
