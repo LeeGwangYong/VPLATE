@@ -7,55 +7,43 @@
 //
 
 import UIKit
-import PageMenu
+class CreatorViewController: ViewController, ViewControllerProtocol {
+    let arr = [true, false, false, true, false]
+    @IBOutlet weak var sceneCollectionView: UICollectionView!
+    
 
-class CreatorViewController: UIViewController {
-    
-    var pageMenu: CAPSPageMenu?
-    var currentCellIndexPath: IndexPath!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpScrollMenu()
+        setUpCollectionView(collectionView: sceneCollectionView, cell: SceneCollectionViewCell.self)
     }
-    
-    func setUpScrollMenu(){
-        // Initialize view controllers to display and place in array
-        var controllerArray : [PageViewController] = []
-        
-        
-        for item in 1...5 {
-            let controller:SceneViewController = SceneViewController(nibName: SceneViewController.reuseIdentifier, bundle: nil)
-            controller.title = "SCENE \(item)"
-            controller.parentNavigationController = self.navigationController
-            controller.info = "SCENE \(item)"
-            controllerArray.append(controller)
-        }
-        
-        // Customize menu (Optional)
-        let menuHeight:CGFloat = 50.0
-        
-        let parameters: [CAPSPageMenuOption] = [
-            .scrollMenuBackgroundColor(UIColor.clear),
-            .viewBackgroundColor(UIColor.clear),
-            .selectionIndicatorColor(UIColor.red),
-            .unselectedMenuItemLabelColor(UIColor.lightGray.withAlphaComponent(0.5)),
-            .menuItemFont(UIFont(name: "HelveticaNeue", size: 15.0)!),
-            .menuHeight(menuHeight),
-            .menuItemWidth(self.view.frame.width/3),
-            .menuMargin(0),
-            .selectionIndicatorHeight(5.0),
-            .bottomMenuHairlineColor(UIColor.orange),
-            .menuItemWidthBasedOnTitleTextWidth(false),
-            .selectedMenuItemLabelColor(UIColor.black)
-        ]
-        
-        // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
-        self.view.addSubview(pageMenu!.view)
-    }
-    
-    
 
 }
+extension CreatorViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! SceneCollectionViewCell
+        print(cell.data)
+    }
+}
 
+extension CreatorViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SceneCollectionViewCell.reuseIdentifier, for: indexPath) as! SceneCollectionViewCell
+        cell.data = String(arr[indexPath.row])
+        cell.isUserInteractionEnabled = arr[indexPath.row]
+        return cell
+    }
+}
+
+extension CreatorViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.height * 16/9, height: collectionView.bounds.height)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+}

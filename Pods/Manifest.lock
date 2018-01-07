@@ -1,24 +1,21 @@
 PODS:
   - Alamofire (4.5.1)
   - Kingfisher (4.2.0)
-  - MMPlayerView (3.0.8)
   - PageMenu (2.0.0)
   - PryntTrimmerView (2.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
-  - MMPlayerView (~> 3.0.2)
   - PageMenu
   - PryntTrimmerView
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
-  MMPlayerView: 4d5f970ad4baedaf35e3719ac2fc94d161565a04
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   PryntTrimmerView: 3af9f84875d347b9a131501b3695abf94b02a7bb
 
-PODFILE CHECKSUM: 59d2e97c1fe0c60fd97716369350edc3ca9954e2
+PODFILE CHECKSUM: 9fa9371a355c8abb5a1fcc58d6430147786d1a6a
 
 COCOAPODS: 1.3.1

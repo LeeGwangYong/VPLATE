@@ -9,6 +9,7 @@
 import UIKit
 
 class SceneCollectionViewCell: UICollectionViewCell {
+    var data: String?
 
     override func awakeFromNib() {
         super.awakeFromNib()

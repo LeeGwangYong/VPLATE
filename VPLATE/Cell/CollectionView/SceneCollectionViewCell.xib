@@ -12,14 +12,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SceneCollectionViewCell" customModule="VPLATE" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SceneCollectionViewCell" id="gTV-IL-0wX" customClass="SceneCollectionViewCell" customModule="VPLATE" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="186" height="106"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="186" height="106"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pAL-ie-q0m">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="16-9-dummy-image6" translatesAutoresizingMaskIntoConstraints="NO" id="pAL-ie-q0m">
                         <rect key="frame" x="0.0" y="0.0" width="186" height="106"/>
                     </imageView>
                 </subviews>
@@ -35,4 +35,7 @@
             <point key="canvasLocation" x="7" y="82"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="16-9-dummy-image6" width="1600" height="900"/>
+    </resources>
 </document>

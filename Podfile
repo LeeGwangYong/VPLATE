@@ -11,7 +11,8 @@ pod "PryntTrimmerView"
 pod "Alamofire"
 pod "Kingfisher"
 pod "PageMenu"
-pod "MMPlayerView", "~> 3.0.2"
+#pod "MMPlayerView", "~> 3.0.2"
+#pod 'Segmentio', '~> 2.1'
 
   target 'VPLATETests' do
     inherit! :search_paths
