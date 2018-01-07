@@ -36,9 +36,9 @@
 		FC34A21D2001C1A000F3C567 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A21B2001C1A000F3C567 /* CoverA.xib */; };
 		FC34A21E2001C1A000F3C567 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A21C2001C1A000F3C567 /* CoverA.swift */; };
 		FC34A2212001C87200F3C567 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2202001C87200F3C567 /* DummyData.swift */; };
+		FC5A55742002057F00FFB5A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5A55732002057E00FFB5A3 /* Assets.xcassets */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
 		FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E001FF8F66F00D6616B /* Main.storyboard */; };
-		FC946E041FF8F66F00D6616B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC946E031FF8F66F00D6616B /* Assets.xcassets */; };
 		FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E051FF8F66F00D6616B /* LaunchScreen.storyboard */; };
 		FC946E121FF8F66F00D6616B /* VPLATETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946E111FF8F66F00D6616B /* VPLATETests.swift */; };
 		FC946E1D1FF8F66F00D6616B /* VPLATEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946E1C1FF8F66F00D6616B /* VPLATEUITests.swift */; };
@@ -106,10 +106,10 @@
 		FC34A21B2001C1A000F3C567 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
 		FC34A21C2001C1A000F3C567 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
 		FC34A2202001C87200F3C567 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		FC5A55732002057E00FFB5A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC946E011FF8F66F00D6616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FC946E031FF8F66F00D6616B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC946E061FF8F66F00D6616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC946E081FF8F66F00D6616B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC946E0D1FF8F66F00D6616B /* VPLATETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPLATETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +271,7 @@
 		FC946DFB1FF8F66F00D6616B /* VPLATE */ = {
 			isa = PBXGroup;
 			children = (
+				FC5A55732002057E00FFB5A3 /* Assets.xcassets */,
 				FCFAC8151FFF6F4900493A51 /* Data */,
 				FCFAC8061FFD401400493A51 /* Style */,
 				FC2CBD8A1FFCF31A00A34961 /* Cell */,
@@ -279,7 +280,6 @@
 				FCD9B2751FFCB8ED00A1651F /* Storyboard */,
 				FCD9B2741FFCB8E700A1651F /* ViewController */,
 				FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */,
-				FC946E031FF8F66F00D6616B /* Assets.xcassets */,
 				FC946E081FF8F66F00D6616B /* Info.plist */,
 			);
 			path = VPLATE;
@@ -477,8 +477,8 @@
 			files = (
 				FCFAC80C1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib in Resources */,
 				FC2CBD8E1FFCF33C00A34961 /* VideoTableViewCell.xib in Resources */,
+				FC5A55742002057F00FFB5A3 /* Assets.xcassets in Resources */,
 				FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */,
-				FC946E041FF8F66F00D6616B /* Assets.xcassets in Resources */,
 				FC2CBD7D1FFCE1A800A34961 /* CompletionViewController.xib in Resources */,
 				FC34A21D2001C1A000F3C567 /* CoverA.xib in Resources */,
 				FC2CBD741FFCE14C00A34961 /* AllVideoViewController.xib in Resources */,

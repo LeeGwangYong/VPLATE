@@ -14,13 +14,13 @@ class HomeViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var homeVideoTableView: UITableView!
-    
     @IBOutlet weak var categoryViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var mainViewTopConstraint: NSLayoutConstraint!
     var categoryConstraints: [NSLayoutConstraint]!
-    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     var openCategory: Bool = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

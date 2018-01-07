@@ -195,9 +195,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CKg-42-bA8">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CKg-42-bA8">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HoI-Bn-wN3" customClass="PagedCollectionLayout" customModule="VPLATE" customModuleProvider="target">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -215,34 +215,60 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msf-Bi-WRu">
-                                <rect key="frame" x="20" y="40" width="35" height="30"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msf-Bi-WRu">
+                                <rect key="frame" x="12" y="40" width="12" height="19.5"/>
+                                <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="navigateAction:" destination="KNf-Q3-XyP" eventType="touchUpInside" id="Yvd-vx-p15"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZg-7b-lV9">
+                                <rect key="frame" x="307" y="160" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZZg-7b-lV9" secondAttribute="height" multiplier="1:1" id="8pJ-qp-h15"/>
+                                </constraints>
+                                <state key="normal" image="my upload button"/>
+                                <connections>
+                                    <action selector="myVideoAction:" destination="KNf-Q3-XyP" eventType="touchUpInside" id="dLh-Bf-Fia"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8c-rw-i4n">
+                                <rect key="frame" x="307" y="95" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d8c-rw-i4n" secondAttribute="height" multiplier="1:1" id="ZRc-ab-6Z5"/>
+                                </constraints>
+                                <state key="normal" image="trophy"/>
+                                <connections>
+                                    <action selector="rankingAction:" destination="KNf-Q3-XyP" eventType="touchUpInside" id="vqo-fn-k8f"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ruv-He-Af7" firstAttribute="trailing" secondItem="CKg-42-bA8" secondAttribute="trailing" id="1fw-To-UnI"/>
+                            <constraint firstItem="ZZg-7b-lV9" firstAttribute="top" secondItem="d8c-rw-i4n" secondAttribute="bottom" constant="15" id="74Z-Z0-OgY"/>
+                            <constraint firstItem="Ruv-He-Af7" firstAttribute="trailing" secondItem="d8c-rw-i4n" secondAttribute="trailing" constant="18" id="KCJ-xJ-iTM"/>
                             <constraint firstItem="CKg-42-bA8" firstAttribute="top" secondItem="Ruv-He-Af7" secondAttribute="top" id="W7D-vs-9T9"/>
-                            <constraint firstItem="msf-Bi-WRu" firstAttribute="leading" secondItem="Ruv-He-Af7" secondAttribute="leading" constant="20" id="Wzs-de-ZXN"/>
+                            <constraint firstItem="msf-Bi-WRu" firstAttribute="leading" secondItem="Ruv-He-Af7" secondAttribute="leading" constant="12" id="Wzs-de-ZXN"/>
                             <constraint firstItem="CKg-42-bA8" firstAttribute="leading" secondItem="Ruv-He-Af7" secondAttribute="leading" id="doc-N3-Hsh"/>
-                            <constraint firstItem="Ruv-He-Af7" firstAttribute="trailing" secondItem="msf-Bi-WRu" secondAttribute="trailing" constant="320" id="ibf-gG-20v"/>
+                            <constraint firstItem="msf-Bi-WRu" firstAttribute="height" secondItem="CKg-42-bA8" secondAttribute="height" multiplier="0.03" id="gho-4N-fma"/>
+                            <constraint firstItem="d8c-rw-i4n" firstAttribute="top" secondItem="Ruv-He-Af7" secondAttribute="top" constant="75" id="pW1-i5-BSE"/>
                             <constraint firstItem="Ruv-He-Af7" firstAttribute="bottom" secondItem="CKg-42-bA8" secondAttribute="bottom" id="sC2-dF-pqy"/>
+                            <constraint firstItem="ZZg-7b-lV9" firstAttribute="trailing" secondItem="d8c-rw-i4n" secondAttribute="trailing" id="vUm-E0-iG9"/>
                             <constraint firstItem="msf-Bi-WRu" firstAttribute="top" secondItem="Ruv-He-Af7" secondAttribute="top" constant="20" id="yEx-fc-3jA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ruv-He-Af7"/>
                     </view>
                     <navigationItem key="navigationItem" id="UIs-DK-KnF"/>
                     <connections>
+                        <outlet property="myVideoBtn" destination="ZZg-7b-lV9" id="qe7-lR-2mD"/>
+                        <outlet property="rankingBtn" destination="d8c-rw-i4n" id="00A-zy-cwv"/>
                         <outlet property="videoCollectionView" destination="CKg-42-bA8" id="m3n-Uh-Zsi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NiN-75-EdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2862" y="1002"/>
+            <point key="canvasLocation" x="2861.5999999999999" y="1001.649175412294"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="PUi-aq-68B">
@@ -376,4 +402,9 @@
             <point key="canvasLocation" x="2132" y="1684"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="12" height="21"/>
+        <image name="my upload button" width="50" height="50"/>
+        <image name="trophy" width="50" height="50"/>
+    </resources>
 </document>
