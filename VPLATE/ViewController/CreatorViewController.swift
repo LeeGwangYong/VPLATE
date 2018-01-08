@@ -7,14 +7,26 @@
 //
 
 import UIKit
+
 class CreatorViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var sceneCollectionView: UICollectionView!
-
+    @IBOutlet weak var sceneImageView: UIImageView!
+    
+    let picker = UIImagePickerController()
+    let cropper = UIImageCropper(cropRatio: 16/9)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView(collectionView: sceneCollectionView, cell: SceneCollectionViewCell.self)
+        cropper.picker = picker
+        cropper.delegate = self
+        cropper.cropRatio = 16/9
     }
 
+    @IBAction func takePicture(_ sender: UIButton) {
+        self.picker.sourceType = .photoLibrary
+        self.present(self.picker, animated: true, completion: nil)
+    }
 }
 extension CreatorViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -42,5 +54,13 @@ extension CreatorViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
+}
+
+extension CreatorViewController: UIImageCropperProtocol{
+    func didCropImage(originalImage: UIImage?, croppedImage: UIImage?) {
+        sceneImageView.image = croppedImage
+    }
+    func didCancel() {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }

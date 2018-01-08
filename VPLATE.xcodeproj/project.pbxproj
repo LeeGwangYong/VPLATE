@@ -42,6 +42,9 @@
 		FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E051FF8F66F00D6616B /* LaunchScreen.storyboard */; };
 		FC946E121FF8F66F00D6616B /* VPLATETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946E111FF8F66F00D6616B /* VPLATETests.swift */; };
 		FC946E1D1FF8F66F00D6616B /* VPLATEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946E1C1FF8F66F00D6616B /* VPLATEUITests.swift */; };
+		FCC2278F20037D900050804D /* UIImage+FixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2278D20037D900050804D /* UIImage+FixOrientation.swift */; };
+		FCC2279020037D900050804D /* UIImageCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2278E20037D900050804D /* UIImageCropper.swift */; };
+		FCC227922003884C0050804D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC227912003884C0050804D /* LogInViewController.swift */; };
 		FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8071FFD402500493A51 /* PlayerView.swift */; };
 		FCFAC80B1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8091FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift */; };
 		FCFAC80C1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFAC80A1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib */; };
@@ -119,6 +122,9 @@
 		FC946E181FF8F66F00D6616B /* VPLATEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPLATEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946E1C1FF8F66F00D6616B /* VPLATEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPLATEUITests.swift; sourceTree = "<group>"; };
 		FC946E1E1FF8F66F00D6616B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC2278D20037D900050804D /* UIImage+FixOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+FixOrientation.swift"; sourceTree = "<group>"; };
+		FCC2278E20037D900050804D /* UIImageCropper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCropper.swift; sourceTree = "<group>"; };
+		FCC227912003884C0050804D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		FCFAC8071FFD402500493A51 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		FCFAC8091FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCFAC80A1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityVideoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -303,9 +309,19 @@
 			path = VPLATEUITests;
 			sourceTree = "<group>";
 		};
+		FCC2278C20037D770050804D /* ImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				FCC2278D20037D900050804D /* UIImage+FixOrientation.swift */,
+				FCC2278E20037D900050804D /* UIImageCropper.swift */,
+			);
+			path = ImageCropper;
+			sourceTree = "<group>";
+		};
 		FCD9B2741FFCB8E700A1651F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FCC2278C20037D770050804D /* ImageCropper */,
 				FC2CBD751FFCE14F00A34961 /* MyVideo */,
 				FC2CBD671FFCCEC000A34961 /* HomeViewController.swift */,
 				FC2CBD691FFCCF5C00A34961 /* MyVideoViewController.swift */,
@@ -316,6 +332,7 @@
 				FCFAC80D1FFE1E0200493A51 /* TabbarViewController.swift */,
 				FCFAC80F1FFE258700493A51 /* TabBarController.swift */,
 				FC34A20E200056DD00F3C567 /* CreatorViewController.swift */,
+				FCC227912003884C0050804D /* LogInViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -684,12 +701,15 @@
 				FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */,
 				FC2CBD781FFCE18A00A34961 /* InProgressViewController.swift in Sources */,
 				FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */,
+				FCC227922003884C0050804D /* LogInViewController.swift in Sources */,
+				FCC2279020037D900050804D /* UIImageCropper.swift in Sources */,
 				FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */,
 				FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */,
 				FC34A21E2001C1A000F3C567 /* CoverA.swift in Sources */,
 				FCFAC81E1FFF9DE000493A51 /* PagedCollectionLayout.swift in Sources */,
 				FC2CBD7C1FFCE1A800A34961 /* CompletionViewController.swift in Sources */,
 				FC2CBD881FFCF12700A34961 /* ViewController.swift in Sources */,
+				FCC2278F20037D900050804D /* UIImage+FixOrientation.swift in Sources */,
 				FCFAC8101FFE258700493A51 /* TabBarController.swift in Sources */,
 				FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */,
 				FCFAC8211FFFCFB900493A51 /* CategoryCollectionViewCell.swift in Sources */,

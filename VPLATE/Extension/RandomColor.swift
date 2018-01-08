@@ -10,6 +10,6 @@ import Foundation
 import UIKit
 extension UIColor {
     func random() -> UIColor {
-        return UIColor(displayP3Red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1)
+        return UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1)
     }
 }

@@ -18,9 +18,9 @@ target 'VPLATE' do
   
   pod 'MMPlayerView'
   
-  #pod 'UIImageCropper'
+  pod 'UIImageCropper'
 
-  pod 'CropViewController'
+#pod 'CropViewController'
 
   target 'VPLATETests' do
     inherit! :search_paths
