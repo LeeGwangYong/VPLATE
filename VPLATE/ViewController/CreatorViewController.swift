@@ -8,7 +8,6 @@
 
 import UIKit
 class CreatorViewController: ViewController, ViewControllerProtocol {
-    let arr = [true, false, false, true, false]
     @IBOutlet weak var sceneCollectionView: UICollectionView!
 
     override func viewDidLoad() {
@@ -26,13 +25,12 @@ extension CreatorViewController: UICollectionViewDelegate {
 
 extension CreatorViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arr.count
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SceneCollectionViewCell.reuseIdentifier, for: indexPath) as! SceneCollectionViewCell
-        cell.data = String(arr[indexPath.row])
-        cell.isUserInteractionEnabled = arr[indexPath.row]
+
         return cell
     }
 }

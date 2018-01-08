@@ -54,11 +54,11 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zaQ-Zy-D7y">
-                                <rect key="frame" x="0.0" y="196.5" width="375" height="421.5"/>
+                                <rect key="frame" x="0.0" y="176.5" width="375" height="441.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvG-cG-fJG">
-                                <rect key="frame" x="0.0" y="130" width="375" height="66.5"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="46.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -66,7 +66,7 @@
                         <constraints>
                             <constraint firstItem="ZIp-1S-w2I" firstAttribute="leading" secondItem="6sf-6c-iOY" secondAttribute="leading" id="5iz-NJ-cmg"/>
                             <constraint firstItem="6sf-6c-iOY" firstAttribute="trailing" secondItem="zaQ-Zy-D7y" secondAttribute="trailing" id="6vI-Xw-kKO"/>
-                            <constraint firstItem="jvG-cG-fJG" firstAttribute="height" secondItem="hVa-dP-H4C" secondAttribute="height" multiplier="0.1" id="7wD-f4-gw2"/>
+                            <constraint firstItem="jvG-cG-fJG" firstAttribute="height" secondItem="hVa-dP-H4C" secondAttribute="height" multiplier="0.07" id="7wD-f4-gw2"/>
                             <constraint firstItem="6sf-6c-iOY" firstAttribute="bottom" secondItem="zaQ-Zy-D7y" secondAttribute="bottom" id="Bgd-nv-aXX"/>
                             <constraint firstItem="zaQ-Zy-D7y" firstAttribute="top" secondItem="jvG-cG-fJG" secondAttribute="bottom" id="N7T-gc-CnB"/>
                             <constraint firstAttribute="trailing" secondItem="jvG-cG-fJG" secondAttribute="trailing" id="S6I-6R-jkC"/>
@@ -87,11 +87,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryCollectionView" destination="2dm-Eh-Fnk" id="QUA-Rj-RLi"/>
-                        <outlet property="categoryView" destination="jvG-cG-fJG" id="SxW-IP-ULA"/>
                         <outlet property="categoryViewHeightConstraint" destination="mYa-Cs-cZl" id="0Xp-Rh-61t"/>
                         <outlet property="homeVideoTableView" destination="zaQ-Zy-D7y" id="xYq-2s-dr7"/>
                         <outlet property="mainViewTopConstraint" destination="e2A-vS-3ao" id="aje-cV-7DT"/>
-                        <outlet property="menuView" destination="ZIp-1S-w2I" id="CiW-81-h5I"/>
+                        <outlet property="menuView" destination="jvG-cG-fJG" id="wdf-r1-hCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1s-Rb-uIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,7 +129,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wHh-da-fVu">
-                                <rect key="frame" x="0.0" y="231" width="375" height="84.5"/>
+                                <rect key="frame" x="0.0" y="231" width="375" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3fX-fe-h2J">
                                     <size key="itemSize" width="50" height="50"/>
@@ -140,7 +139,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DKR-CZ-XTl">
-                                        <rect key="frame" x="0.0" y="17.5" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="-4" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -149,6 +148,16 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVQ-96-z23">
+                                <rect key="frame" x="81" y="305" width="213" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Crop Image"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyQ-c2-O8E">
+                                <rect key="frame" x="111" y="382" width="152" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Trimming Video"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -156,7 +165,7 @@
                             <constraint firstItem="wHh-da-fVu" firstAttribute="leading" secondItem="jUM-gI-4EB" secondAttribute="leading" id="Lu0-c4-xmb"/>
                             <constraint firstItem="jUM-gI-4EB" firstAttribute="trailing" secondItem="rEd-bm-3rD" secondAttribute="trailing" id="OPi-1C-Afz"/>
                             <constraint firstItem="wHh-da-fVu" firstAttribute="top" secondItem="rEd-bm-3rD" secondAttribute="bottom" id="TLd-cY-IGz"/>
-                            <constraint firstItem="wHh-da-fVu" firstAttribute="height" secondItem="rEd-bm-3rD" secondAttribute="height" multiplier="0.4" id="UM9-ft-Ckz"/>
+                            <constraint firstItem="wHh-da-fVu" firstAttribute="height" secondItem="rEd-bm-3rD" secondAttribute="height" multiplier="0.2" id="UM9-ft-Ckz"/>
                             <constraint firstItem="rEd-bm-3rD" firstAttribute="leading" secondItem="jUM-gI-4EB" secondAttribute="leading" id="Xok-tT-vVe"/>
                             <constraint firstItem="rEd-bm-3rD" firstAttribute="top" secondItem="jUM-gI-4EB" secondAttribute="top" id="sET-Kr-Oze"/>
                         </constraints>

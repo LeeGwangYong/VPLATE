@@ -158,7 +158,6 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         videoCollectionView.addObserver(self, forKeyPath: "contentOffset", options: [.new], context: nil)
         self.setButtonAlpah(buttons: [self.rankingBtn, self.myVideoBtn], value: alphaValue)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            print(self.videoCollectionView.contentOffset)
             self.updateByContentOffset()
             self.startLoading()
         }

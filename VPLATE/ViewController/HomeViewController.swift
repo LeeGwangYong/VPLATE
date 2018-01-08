@@ -12,12 +12,12 @@ import UIKit
 class HomeViewController: ViewController, ViewControllerProtocol {
 
     @IBOutlet weak var menuView: UIView!
-    @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var homeVideoTableView: UITableView!
     @IBOutlet weak var categoryViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var mainViewTopConstraint: NSLayoutConstraint!
     var categoryConstraints: [NSLayoutConstraint]!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    var categoryHeight: CGFloat!
     var openCategory: Bool = false
     
     
@@ -28,6 +28,7 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         categoryConstraints = [categoryViewHeightConstraint, mainViewTopConstraint]
         self.setUpTableView(tableView: homeVideoTableView, tableViewCell: VideoTableViewCell.self)
         self.setUpCollectionView(collectionView: categoryCollectionView, cell: CategoryCollectionViewCell.self)
+        categoryHeight = super.view.frame.height * 0.09
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,7 +48,7 @@ class HomeViewController: ViewController, ViewControllerProtocol {
     @IBAction func openCategoryAction(_ sender: UIBarButtonItem) {
         openCategory = openCategory ? false:true
         if openCategory {
-            self.categoryVisible(target: self.categoryConstraints, value: 60)
+            self.categoryVisible(target: self.categoryConstraints, value: categoryHeight)
         }
         else {
             self.categoryVisible(target: self.categoryConstraints, value: 0)
@@ -76,7 +77,7 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: categoryView.bounds.size.height, height: categoryView.bounds.size.height)
+        return CGSize(width: categoryHeight, height: categoryHeight)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
