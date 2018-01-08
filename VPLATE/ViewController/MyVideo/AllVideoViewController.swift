@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AllVideoViewController: PageViewController, ViewControllerProtocol  {
+class AllVideoViewController: UIViewController, ViewControllerProtocol  {
     @IBOutlet weak var videoTableView: UITableView!
-    
+    var parentNavigationController : UINavigationController?
 
     override func viewDidLoad() {
         super.viewDidLoad()

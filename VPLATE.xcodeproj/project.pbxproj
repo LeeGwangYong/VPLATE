@@ -32,11 +32,11 @@
 		FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */; };
 		FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */; };
 		FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A20E200056DD00F3C567 /* CreatorViewController.swift */; };
-		FC34A211200065DB00F3C567 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A210200065DB00F3C567 /* PageViewController.swift */; };
 		FC34A21D2001C1A000F3C567 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A21B2001C1A000F3C567 /* CoverA.xib */; };
 		FC34A21E2001C1A000F3C567 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A21C2001C1A000F3C567 /* CoverA.swift */; };
 		FC34A2212001C87200F3C567 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2202001C87200F3C567 /* DummyData.swift */; };
 		FC5A55742002057F00FFB5A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5A55732002057E00FFB5A3 /* Assets.xcassets */; };
+		FC84A2B52002D97D002CB10E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84A2B42002D97D002CB10E /* PageViewController.swift */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
 		FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E001FF8F66F00D6616B /* Main.storyboard */; };
 		FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E051FF8F66F00D6616B /* LaunchScreen.storyboard */; };
@@ -102,11 +102,11 @@
 		FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC34A20E200056DD00F3C567 /* CreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorViewController.swift; sourceTree = "<group>"; };
-		FC34A210200065DB00F3C567 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		FC34A21B2001C1A000F3C567 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
 		FC34A21C2001C1A000F3C567 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
 		FC34A2202001C87200F3C567 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		FC5A55732002057E00FFB5A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC84A2B42002D97D002CB10E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC946E011FF8F66F00D6616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				FC2CBD771FFCE18A00A34961 /* InProgressViewController.xib */,
 				FC2CBD7A1FFCE1A800A34961 /* CompletionViewController.swift */,
 				FC2CBD7B1FFCE1A800A34961 /* CompletionViewController.xib */,
-				FC34A210200065DB00F3C567 /* PageViewController.swift */,
+				FC84A2B42002D97D002CB10E /* PageViewController.swift */,
 			);
 			path = MyVideo;
 			sourceTree = "<group>";
@@ -684,7 +684,6 @@
 				FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */,
 				FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */,
 				FCFAC8181FFF6F6600493A51 /* VideoData.swift in Sources */,
-				FC34A211200065DB00F3C567 /* PageViewController.swift in Sources */,
 				FC34A21E2001C1A000F3C567 /* CoverA.swift in Sources */,
 				FCFAC81E1FFF9DE000493A51 /* PagedCollectionLayout.swift in Sources */,
 				FC2CBD7C1FFCE1A800A34961 /* CompletionViewController.swift in Sources */,
@@ -693,6 +692,7 @@
 				FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */,
 				FCFAC8211FFFCFB900493A51 /* CategoryCollectionViewCell.swift in Sources */,
 				FC2CBD8D1FFCF33C00A34961 /* VideoTableViewCell.swift in Sources */,
+				FC84A2B52002D97D002CB10E /* PageViewController.swift in Sources */,
 				FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */,
 				FC2CBD731FFCE14C00A34961 /* AllVideoViewController.swift in Sources */,
 				FC2CBD701FFCCF9200A34961 /* SettingViewController.swift in Sources */,

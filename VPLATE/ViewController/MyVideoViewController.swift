@@ -15,25 +15,28 @@ class MyVideoViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = TitleEnum.myVideo.rawValue
+        //
         setUpScrollMenu()
         // Do any additional setup after loading the view.
     }
     
-    
     func setUpScrollMenu(){
         // Initialize view controllers to display and place in array
-        var controllerArray : [PageViewController] = []
+        var controllerArray : [UIViewController] = []
         
-        var controller:PageViewController = AllVideoViewController(nibName: AllVideoViewController.reuseIdentifier, bundle: nil)
-        controller.title = "모든 영상"
-        controller.parentNavigationController = self.navigationController
-        controllerArray.append(controller)
-        controller = InProgressViewController(nibName: InProgressViewController.reuseIdentifier, bundle: nil)
-        controller.title = "제작중인 영상"
-        controllerArray.append(controller)
-        controller = CompletionViewController(nibName: CompletionViewController.reuseIdentifier, bundle: nil) 
-        controller.title = "완성된 영상"
-        controllerArray.append(controller)
+        let controller1:AllVideoViewController = AllVideoViewController(nibName: AllVideoViewController.reuseIdentifier, bundle: nil)
+        controller1.title = "모든 영상"
+        controller1.parentNavigationController = self.navigationController
+        controllerArray.append(controller1)
+        
+        let controller2: InProgressViewController = InProgressViewController(nibName: InProgressViewController.reuseIdentifier, bundle: nil)
+        controller2.title = "제작중인 영상"
+        controllerArray.append(controller2)
+        
+        
+        let controller3: CompletionViewController = CompletionViewController(nibName: CompletionViewController.reuseIdentifier, bundle: nil)
+        controller3.title = "완성된 영상"
+        controllerArray.append(controller3)
         
         // Customize menu (Optional)
         let menuHeight:CGFloat = 50.0

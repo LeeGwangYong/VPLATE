@@ -8,9 +8,10 @@
 
 import UIKit
 
-class CompletionViewController: PageViewController, ViewControllerProtocol {
+class CompletionViewController: UIViewController, ViewControllerProtocol {
     @IBOutlet weak var videoTableView: UITableView!
-
+    var parentNavigationController : UINavigationController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpTableView(tableView: videoTableView, tableViewCell: VideoTableViewCell.self)

@@ -10,7 +10,6 @@ import UIKit
 class CreatorViewController: ViewController, ViewControllerProtocol {
     let arr = [true, false, false, true, false]
     @IBOutlet weak var sceneCollectionView: UICollectionView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

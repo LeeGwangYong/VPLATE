@@ -8,10 +8,11 @@
 
 import UIKit
 
-class InProgressViewController: PageViewController, ViewControllerProtocol {
+class InProgressViewController: UIViewController, ViewControllerProtocol {
 
     @IBOutlet weak var videoTableView: UITableView!
-
+    var parentNavigationController : UINavigationController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpTableView(tableView: videoTableView, tableViewCell: VideoTableViewCell.self)
