@@ -1,6 +1,30 @@
 PODS:
   - Alamofire (4.5.1)
-  - CropViewController (2.3.6)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FacebookCore (0.3.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.27)
+  - FacebookLogin (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKLoginKit (~> 4.27)
+  - FacebookShare (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKShareKit (~> 4.27)
+  - FBSDKCoreKit (4.29.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.29.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.29.0):
+    - FBSDKCoreKit
   - Kingfisher (4.2.0)
   - MMPlayerView (3.0.8)
   - PageMenu (2.0.0)
@@ -9,7 +33,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - CropViewController
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - Kingfisher
   - MMPlayerView
   - PageMenu
@@ -18,13 +44,19 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  CropViewController: e6d4bd512d15a1709e9ddf71fe7d98ffd05dda0f
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
+  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
+  FacebookShare: 0469964297ebd75f052be2c5083389a4208e82b7
+  FBSDKCoreKit: 6f139173dc63a1deaff4430a55f2fe5bb222d2af
+  FBSDKLoginKit: 56a057ca6822535ea0faa25f57a7c41edb697fd4
+  FBSDKShareKit: 18a2cd118aef11dd657fe7e8b64bae5c719088b2
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
   MMPlayerView: 4d5f970ad4baedaf35e3719ac2fc94d161565a04
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   PryntTrimmerView: 3af9f84875d347b9a131501b3695abf94b02a7bb
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 2f64d7331b9ec6ddea2e984e41e66365a5086786
+PODFILE CHECKSUM: e14bfdd2dbc664c9e9b71463371da20999e5c2ea
 
 COCOAPODS: 1.3.1

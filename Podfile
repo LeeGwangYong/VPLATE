@@ -7,20 +7,14 @@ target 'VPLATE' do
 
   # Pods for VPLATE
   pod 'PryntTrimmerView'
-  
   pod 'Alamofire'
-  
   pod 'SwiftyJSON'
-  
   pod 'Kingfisher'
-  
   pod 'PageMenu'
-  
   pod 'MMPlayerView'
-  
-  pod 'UIImageCropper'
-
-#pod 'CropViewController'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
 
   target 'VPLATETests' do
     inherit! :search_paths

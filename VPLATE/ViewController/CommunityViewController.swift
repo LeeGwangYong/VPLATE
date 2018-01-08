@@ -18,8 +18,6 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
     let alphaValue: CGFloat = 0.9
     
     let data = ["https://hyunho9304.s3.ap-northeast-2.amazonaws.com/1515402618128.mp4"]
-
-    
     
     lazy var mmPlayerLayer: MMPlayerLayer = {
         let layer = MMPlayerLayer()
@@ -32,8 +30,26 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
     
     var tableViewIndex: Int?
     //var queue: DispatchQueue?
+
+    func setStatusBarDark(dark: Bool){
+        let color: UIColor = dark ? UIColor.black : UIColor.clear
+        let status: UIStatusBarStyle = dark ? UIStatusBarStyle.lightContent : UIStatusBarStyle.default
+        
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = color
+        }
+        UIApplication.shared.statusBarStyle = status
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setStatusBarDark(dark: true)
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpCollectionView(collectionView: videoCollectionView, cell: CommunityVideoCollectionViewCell.self)
         videoCollectionView.addObserver(self, forKeyPath: "contentOffset", options: [.new], context: nil)
         self.setButtonAlpah(buttons: [self.rankingBtn, self.myVideoBtn], value: alphaValue)
@@ -45,6 +61,7 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        setStatusBarDark(dark: false)
         super.viewWillDisappear(animated)
         self.mmPlayerLayer.player?.pause()
         NotificationCenter.default.removeObserver(self)
