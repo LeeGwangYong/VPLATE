@@ -7,13 +7,29 @@
 //
 
 import UIKit
-
+import Kingfisher
 class VideoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    
+    var info: Template? {
+        didSet{
+            categoryLabel.text = info?.template_type
+            dateLabel.text = info?.template_uploadtime.convertStringDate()
+            titleLabel.text = info?.template_title
+            contentLabel.text = info?.template_hashtag
+            timeLabel.text = info?.template_length.IntToMMSS()
+            
+            if let url = info?.template_thumbnail {
+                self.thumbnail.kf.setImage(with: URL(string: url))
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

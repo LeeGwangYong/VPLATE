@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.shadowImage = UIColor.black.as1ptImage()
+        //self.navigationController?.navigationBar.shadowImage = UIColor.black.as1ptImage()
         // Do any additional setup after loading the view.
     }
 }

@@ -13,14 +13,18 @@ enum Result<T> {
     case Success(T)
     case Failure(Int)
 }
-
+struct Token {
+    static func getToken() -> [String:String]{
+        return ["tt" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjowLCJlbWFpbCI6ImFkbWluQHZwbGF0ZS5jb20iLCJuYW1lIjoiYWRtaW4iLCJuaWNrbmFtZSI6ImFkbWluIiwiaWF0IjoxNTE1NDg1MzQxLCJleHAiOjE1MTgwNzczNDF9.RA4-krO8EiLuBWt6kTagqBrRC2_h5_4O54pnU9xBXgo"]
+    }
+}
 protocol APIService {
     
 }
 
 extension APIService  {
     static func getURL(path: String) -> String {
-        return "13.124.195.255:3003/" + path
+        return "http://13.124.195.255:3003/" + path
     }
     static func getResult_StatusCode(response: DataResponse<Data>) -> Result<Any>? {
         switch response.result {

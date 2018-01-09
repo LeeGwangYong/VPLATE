@@ -10,7 +10,6 @@ import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var selectedImageView: UIImageView!
     
     override func layoutSubviews() {
@@ -19,9 +18,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     }
     func reload() {
         if isSelected {
-            backgroundImageView.backgroundColor = UIColor.black
+            selectedImageView.alpha = 1
         } else {
-            backgroundImageView.backgroundColor = UIColor().random()
+            selectedImageView.alpha = 0
         }
     }
     

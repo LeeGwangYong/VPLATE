@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,36 +25,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="134" height="144"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전체" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIy-Y5-37b">
-                        <rect key="frame" x="46" y="62" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-cm-4eY">
-                        <rect key="frame" x="0.0" y="0.0" width="134" height="144"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-cm-4eY">
+                        <rect key="frame" x="53.5" y="119.5" width="27" height="24.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="lf5-cm-4eY" secondAttribute="height" multiplier="2:1.8" id="6hj-Pq-WYs"/>
+                        </constraints>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="lf5-cm-4eY" firstAttribute="width" secondItem="t33-0Q-GeJ" secondAttribute="width" multiplier="0.2" id="2j2-gD-fbd"/>
                 <constraint firstItem="t33-0Q-GeJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Gnj-4Q-Kgy"/>
                 <constraint firstAttribute="bottom" secondItem="t33-0Q-GeJ" secondAttribute="bottom" id="HPg-MZ-vKw"/>
                 <constraint firstAttribute="trailing" secondItem="t33-0Q-GeJ" secondAttribute="trailing" id="N3g-xp-yY3"/>
-                <constraint firstItem="lf5-cm-4eY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PII-Gr-sUz"/>
                 <constraint firstItem="t33-0Q-GeJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QDN-CC-2VS"/>
-                <constraint firstItem="lf5-cm-4eY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="p5b-ue-VMc"/>
-                <constraint firstAttribute="bottom" secondItem="lf5-cm-4eY" secondAttribute="bottom" id="u7J-wi-PCc"/>
-                <constraint firstAttribute="trailing" secondItem="lf5-cm-4eY" secondAttribute="trailing" id="yWd-Xg-x8k"/>
+                <constraint firstItem="lf5-cm-4eY" firstAttribute="centerX" secondItem="t33-0Q-GeJ" secondAttribute="centerX" id="cmu-wU-Ohx"/>
+                <constraint firstAttribute="bottom" secondItem="lf5-cm-4eY" secondAttribute="bottom" id="mWG-fZ-0Rv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="134" height="144"/>
             <connections>
                 <outlet property="backgroundImageView" destination="t33-0Q-GeJ" id="2Mq-CL-i6l"/>
                 <outlet property="selectedImageView" destination="lf5-cm-4eY" id="KFI-Jd-D7U"/>
-                <outlet property="titleLabel" destination="tIy-Y5-37b" id="P8D-ND-fP0"/>
             </connections>
             <point key="canvasLocation" x="76" y="101"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="triangle" width="10" height="9"/>
+    </resources>
 </document>
