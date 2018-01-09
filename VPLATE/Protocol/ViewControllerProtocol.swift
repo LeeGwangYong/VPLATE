@@ -12,6 +12,12 @@ import UIKit
 protocol ViewControllerProtocol {
 }
 
+extension ViewControllerProtocol {
+    func getNextViewController(viewController: UIViewController.Type) -> UIViewController{
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        return storyBoard.instantiateViewController(withIdentifier: viewController.reuseIdentifier)
+    }
+}
 extension ViewControllerProtocol where Self: UITableViewDataSource & UITableViewDelegate {
     func setUpTableView(tableView: UITableView, tableViewCell: UITableViewCell.Type){
         tableView.delegate = self

@@ -325,19 +325,20 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACw-46-FBy">
                                 <rect key="frame" x="75" y="598" width="225" height="29"/>
-                                <string key="text">계속 진행하면 VPLATE의 서비스 약관,개인정보 보호정책에 동의한 것으로 간주됩니다.</string>
+                                <string key="text">계속 진행하면 VPLATE의 서비스 약관,
+개인정보 보호정책에 동의한 것으로 간주됩니다.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vplate" translatesAutoresizingMaskIntoConstraints="NO" id="Rr5-ZF-ehv">
-                                <rect key="frame" x="104.5" y="65" width="166" height="166"/>
+                                <rect key="frame" x="112.5" y="100" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Rr5-ZF-ehv" secondAttribute="height" multiplier="1:1" id="lol-oG-aFL"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6pm-rD-36X">
-                                <rect key="frame" x="38.5" y="296" width="298" height="164"/>
+                                <rect key="frame" x="38.5" y="330" width="298" height="164"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4f-0b-rZd">
                                         <rect key="frame" x="0.0" y="0.0" width="298" height="48"/>
@@ -364,23 +365,20 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aU7-Ug-174">
-                                <rect key="frame" x="124.5" y="478" width="126" height="18"/>
+                                <rect key="frame" x="124.5" y="512" width="126" height="18"/>
                                 <color key="tintColor" red="0.0073564403550000004" green="0.0073564403550000004" blue="0.0073564403550000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="doyouhaveaccount"/>
-                                <connections>
-                                    <action selector="signUpAction:" destination="40l-nY-aYI" eventType="touchUpInside" id="pAR-v7-xTP"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Rr5-ZF-ehv" firstAttribute="centerX" secondItem="gq2-nl-6HB" secondAttribute="centerX" id="23z-1p-unl"/>
-                            <constraint firstItem="Rr5-ZF-ehv" firstAttribute="top" secondItem="gq2-nl-6HB" secondAttribute="top" constant="45" id="9FH-sC-n7F"/>
-                            <constraint firstItem="6pm-rD-36X" firstAttribute="centerY" secondItem="gq2-nl-6HB" secondAttribute="centerY" multiplier="1.1" id="F2I-fT-czb"/>
+                            <constraint firstItem="Rr5-ZF-ehv" firstAttribute="top" secondItem="gq2-nl-6HB" secondAttribute="top" constant="80" id="Bse-4C-VGv"/>
+                            <constraint firstItem="6pm-rD-36X" firstAttribute="centerY" secondItem="gq2-nl-6HB" secondAttribute="centerY" multiplier="1.2" id="F2I-fT-czb"/>
                             <constraint firstItem="gq2-nl-6HB" firstAttribute="bottom" secondItem="ACw-46-FBy" secondAttribute="bottom" constant="40" id="M03-c4-aCu"/>
                             <constraint firstItem="6pm-rD-36X" firstAttribute="centerX" secondItem="gq2-nl-6HB" secondAttribute="centerX" id="YDm-0I-4xS"/>
                             <constraint firstItem="aU7-Ug-174" firstAttribute="top" secondItem="6pm-rD-36X" secondAttribute="bottom" constant="18" id="g7Z-hi-FyU"/>
-                            <constraint firstItem="6pm-rD-36X" firstAttribute="top" secondItem="Rr5-ZF-ehv" secondAttribute="bottom" constant="65" id="l8V-vY-3zb"/>
+                            <constraint firstItem="6pm-rD-36X" firstAttribute="top" secondItem="Rr5-ZF-ehv" secondAttribute="bottom" constant="80" id="l8V-vY-3zb"/>
                             <constraint firstItem="ACw-46-FBy" firstAttribute="centerX" secondItem="gq2-nl-6HB" secondAttribute="centerX" id="mT3-zu-Kwc"/>
                             <constraint firstItem="aU7-Ug-174" firstAttribute="centerX" secondItem="gq2-nl-6HB" secondAttribute="centerX" id="uiA-K5-9n3"/>
                         </constraints>

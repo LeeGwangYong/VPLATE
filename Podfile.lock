@@ -25,8 +25,28 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.29.0):
     - FBSDKCoreKit
+  - Firebase/Core (4.8.0):
+    - FirebaseAnalytics (= 4.0.5)
+    - FirebaseCore (= 4.0.13)
+  - FirebaseAnalytics (4.0.5):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseCore (4.0.13):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (2.0.8):
+    - FirebaseCore (~> 4.0)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
   - Kingfisher (4.2.0)
   - MMPlayerView (3.0.8)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
   - PageMenu (2.0.0)
   - PryntTrimmerView (2.0.0)
   - SwiftyJSON (4.0.0)
@@ -36,6 +56,7 @@ DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FacebookShare
+  - Firebase/Core
   - Kingfisher
   - MMPlayerView
   - PageMenu
@@ -51,12 +72,18 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 6f139173dc63a1deaff4430a55f2fe5bb222d2af
   FBSDKLoginKit: 56a057ca6822535ea0faa25f57a7c41edb697fd4
   FBSDKShareKit: 18a2cd118aef11dd657fe7e8b64bae5c719088b2
+  Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
+  FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
+  FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
+  FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
   MMPlayerView: 4d5f970ad4baedaf35e3719ac2fc94d161565a04
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   PryntTrimmerView: 3af9f84875d347b9a131501b3695abf94b02a7bb
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: e14bfdd2dbc664c9e9b71463371da20999e5c2ea
+PODFILE CHECKSUM: 7f7b8457b50f35ef56e3da8d45c96f1e782947ef
 
 COCOAPODS: 1.3.1

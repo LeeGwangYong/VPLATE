@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import FBSDKCoreKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,9 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Thread.sleep(forTimeInterval: 3.0)
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().backgroundColor = UIColor.white
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        return true
+        FirebaseApp.configure()
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

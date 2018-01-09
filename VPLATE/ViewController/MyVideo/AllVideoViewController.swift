@@ -24,9 +24,7 @@ extension AllVideoViewController: UITableViewDelegate {
         cell.backgroundColor = UIColor.clear
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = storyBoard.instantiateViewController(withIdentifier: CreatorViewController.reuseIdentifier)
-        self.parentNavigationController?.pushViewController(nextVC, animated: true)
+        self.parentNavigationController?.pushViewController(getNextViewController(viewController: CreatorViewController.self), animated: true)
     }
 }
 
