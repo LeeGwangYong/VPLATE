@@ -15,8 +15,7 @@ target 'VPLATE' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
-  pod 'Firebase/Core'
-  pod 'SwiftGifOrigin', '~> 1.6.1'
+  
   target 'VPLATETests' do
     inherit! :search_paths
     # Pods for testing

@@ -10,28 +10,41 @@ import UIKit
 import FacebookCore
 import FacebookLogin
 import FBSDKCoreKit
-import Alamofire
+import SwiftyJSON
 import SwiftGifOrigin
 
-struct UserDataRequest: GraphRequestProtocol{
-    let fbLoginManager = LoginManager()
-    public let graphPath: String = "me"
-    public let parameters: [String : Any]? = ["fields" : "id, email, name, picture[url]"]
+struct UserDataRequest: GraphRequestProtocol
+{
+    public let graphPath = "me"
+    public let parameters: [String:Any]? = ["fields" : "id, email, name, picture{url}"]
     public let accessToken: AccessToken? = AccessToken.current
     public let httpMethod: GraphRequestHTTPMethod = .GET
     public let apiVersion: GraphAPIVersion = GraphAPIVersion.defaultVersion
     
-    struct Response: GraphResponseProtocol {
+    struct Response: GraphResponseProtocol{
         var id = ""
         var email = ""
         var name = ""
         var profileURL = ""
-        init(rawResponse: Any?) {
-            guard let data = rawResponse as? [String:Any] else {return}
-            if let id = data["id"] { self.id = id as! String}
-            if let email = data["email"] { self.email = email as! String}
-            if let name = data["name"] { self.name = name as! String}
-            if let profileURL = (data["pictures"] as? [String: [String: String]])?["data"]?["url"] { self.profileURL = profileURL}
+        init(rawResponse: Any?){
+            if let data = rawResponse as? [String:Any]
+            {
+                if let id = data["id"]{
+                    self.id = id as! String
+                }
+                if let email = data["email"]{
+                    self.id = email as! String
+                }
+                
+                if let name = data["name"]{
+                    self.name = name as! String
+                }
+                
+                if let profileURL = (data["picture"] as? [String: [String:String]])?["data"]?["url"]{
+                    self.profileURL = profileURL
+                }
+                
+            }
         }
     }
 }
@@ -46,7 +59,6 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
         //backImageView.loadGif(name: <#T##String#>)
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.present(self.getNextViewController(viewController: TabBarController.self), animated: true, completion: nil)
         navigateAccesToken()
     }
     
@@ -55,8 +67,6 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
             switch result {
             case .success(grantedPermissions: _, declinedPermissions: _, token: _) :
                 self.getFaceBookUserData()
-                //delete token : fbLoginManager.logOut()
-                break
             case .failed(let err) :
                 print(err.localizedDescription)
             case .cancelled :
@@ -70,7 +80,8 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
     func getFaceBookUserData() {
         guard let fbToken = FBSDKAccessToken.current() else {
             print("Facebook Token Error")
-            return }
+            return
+        }
         
         let connection = GraphRequestConnection()
         connection.add(UserDataRequest()) {
@@ -79,15 +90,13 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
             case .success(let graphResponse) :
                 self.userData = graphResponse
                 print("Facebook User Data : \(self.userData)")
-                // 수정
-                //self.present(self.getNextViewController(viewController: TabBarController.self), animated: true, completion: nil)
-                //self.signIn(id: "id", pw: "pw", fcmKey: "fcm")
-            
-                break
+                guard let email = self.userData?.id else {return}
+                self.signIn(email: email, pw: fbToken.userID, fcmKey: nil)
             case .failed :
                 break
             }
         }
+        connection.start()
     }
     
     func navigateAccesToken(){
@@ -96,48 +105,53 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
         }
     }
     
-    func signIn(id: String, pw: String, fcmKey: String){
-        let parameter = ["email" : id,
-                         "pwd" : pw,
+    //로그아웃
+    //UserDefaults.standard.removeObject(forKey: "id")
+    //delete token : fbLoginManager.logOut()
+    
+    func signIn(email: String, pw: String, fcmKey: String?){
+        let parameter = ["email" : email,
+                         "outside_key" : pw,
                          "fcm_key" : fcmKey]
         SignService.getSignData(url: "account/signin", parameter: parameter) { (result) in
             switch result {
             case .Success(let response):
-                print(response)
+                guard let data = response as? Data else {return}
+                let dataJSON = JSON(data)
+                print(dataJSON)
+                let token = dataJSON["token"].string
+                UserDefaults.standard.set(email, forKey: "email")
+                UserDefaults.standard.set(pw, forKey: "pw")
+                UserDefaults.standard.set(token, forKey: "token")
                 
-                //                자동로그인
-                //                UserDefaults.standard.set(id, forKey: "id")
-                //                UserDefaults.standard.set(pw, forKey: "pw")
-                //                UserDefaults.standard.set(token, forKey: "token")
-                //                if let userId = UserDefaults.standard.string(forKey: "id"){
-                //
-                //                }
-                //                로그아웃
-                //                UserDefaults.standard.removeObject(forKey: "id")
                 self.navigateAccesToken()
-                break
             case .Failure(let failureCode):
-                self.signUp(data: self.userData)
                 print("Sign In Failure : \(failureCode)")
+                if failureCode == 500 { print("Disconnect Network")}
+                else {
+                    self.signUp()
+                }
             }
         }
     }
     
-    func signUp(data: UserDataRequest.Response?) {
-        guard let data = data else {return}
-        let parameter = ["email" : "",
-                         "name" : data.name,
-                         "nickname" : data.name,
-                         "profile" : data.profileURL,
-                         "outside_key" : data.id]
+    func signUp() {
+        guard let userData = userData else {return}
+        let parameter: [String : Any] = ["type" : 2,
+                                            "email" : userData.id,
+                                            "name" : userData.name,
+                                            "nickname" : userData.name,
+                                            "profile" : userData.profileURL,
+                                            "outside_key" : FBSDKAccessToken.current().userID]
         SignService.getSignData(url: "account/signup", parameter: parameter) { (result) in
             switch result {
             case .Success(let response):
-                print(response)
-                
-                self.signIn(id: "id", pw: "pw", fcmKey: "fcm")
+                //print(response)
+                self.signIn(email: "Email", pw: FBSDKAccessToken.current().userID, fcmKey: nil)
             case .Failure(let failureCode):
                 print("Sing Up Failure : \(failureCode)")
+                if failureCode >= 500 { print("Disconnect Network")}
+                
             }
         }
     }

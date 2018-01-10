@@ -8,6 +8,9 @@
 
 import UIKit
 import Kingfisher
+enum CellType {
+    case template, myVideo
+}
 class VideoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var thumbnail: UIImageView!
@@ -16,7 +19,22 @@ class VideoTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
+    @IBOutlet weak var percentLabel: UILabel!
+    @IBOutlet weak var renderingImageView: UIImageView!
+    var cellType: CellType? {
+        didSet{
+            switch self.cellType {
+            case .template?:
+                percentLabel.isHidden = true
+                renderingImageView.isHidden = true
+            case .myVideo?:
+                percentLabel.isHidden = false
+                renderingImageView.isHidden = false
+            case .none:
+                break
+            }
+        }
+    }
     var info: Template? {
         didSet{
             categoryLabel.text = info?.template_type
@@ -26,7 +44,9 @@ class VideoTableViewCell: UITableViewCell {
             timeLabel.text = info?.template_length.IntToMMSS()
             
             if let url = info?.template_thumbnail {
+                self.thumbnail.kf.indicatorType = .activity
                 self.thumbnail.kf.setImage(with: URL(string: url))
+                
             }
         }
     }

@@ -16,9 +16,13 @@ extension UICollectionView {
         visibleRect.origin = self.contentOffset
         visibleRect.size = self.bounds.size
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        let visibleIndexPath: IndexPath = self.indexPathForItem(at: visiblePoint)!
         
-        return visibleIndexPath
+        if let visibleIndexPath: IndexPath = self.indexPathForItem(at: visiblePoint) {
+                return visibleIndexPath
+        }
+
+        return IndexPath(row: 0, section: 0)
+        
     }
     
     func currentCell() -> UICollectionViewCell {

@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //self.navigationController?.navigationBar.shadowImage = UIColor.black.as1ptImage()
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
 

@@ -10,26 +10,25 @@ import UIKit
 import AVKit
 import AVFoundation
 import MMPlayerView
+import SwiftyJSON
 
 class CommunityViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var videoCollectionView: UICollectionView!
     @IBOutlet weak var rankingBtn: UIButton!
     @IBOutlet weak var myVideoBtn: UIButton!
+    @IBOutlet weak var nonImageView: UIImageView!
     let alphaValue: CGFloat = 0.9
-    
-    let data = ["https://hyunho9304.s3.ap-northeast-2.amazonaws.com/1515402618128.mp4"]
     
     lazy var mmPlayerLayer: MMPlayerLayer = {
         let layer = MMPlayerLayer()
-        layer.cacheType = .memory(count: 5)
+        layer.cacheType = .memory(count: 30)
         layer.coverFitType = .fitToPlayerView
         layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         layer.replace(cover: CoverA.instantiateFromNib())
         return layer
     }()
-    
-    var tableViewIndex: Int?
-    //var queue: DispatchQueue?
+    var communityVideoList: [CommunityVideo] = []
+    var tableViewIndex: Int!
 
     func setStatusBarDark(dark: Bool){
         let color: UIColor = dark ? UIColor.black : UIColor.clear
@@ -53,24 +52,49 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         setUpCollectionView(collectionView: videoCollectionView, cell: CommunityVideoCollectionViewCell.self)
         videoCollectionView.addObserver(self, forKeyPath: "contentOffset", options: [.new], context: nil)
         self.setButtonAlpah(buttons: [self.rankingBtn, self.myVideoBtn], value: alphaValue)
+        
+        self.fetchCommunityVideo()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.updateByContentOffset()
             self.startLoading()
         }
 
     }
+    
+    func fetchCommunityVideo(){
+        CommunityListServiece.getList(url: "community/list/latest", parameter: nil, header: Token.getToken()) { (response) in
+            switch response {
+            case .Success(let data):
+                guard let data = data as? Data else {return}
+                let dataJSON = JSON(data)
+                let community = dataJSON["data"]["community"].map({$0.1})
+                let decoder = JSONDecoder()
+                do {
+                    self.communityVideoList = try community.map({ (jsonData) -> CommunityVideo in
+                        let value = try decoder.decode(CommunityVideo.self, from: jsonData.rawData())
+                        return value
+                    })
+                    self.videoCollectionView.reloadData()
+                }
+                catch (let err) {
+                    print(err.localizedDescription)
+                }
+            case .Failure( _):
+                break
+            }
+        }
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
-        setStatusBarDark(dark: false)
         super.viewWillDisappear(animated)
+        videoCollectionView.removeObserver(self, forKeyPath: "contentOffset")
         self.mmPlayerLayer.player?.pause()
-        NotificationCenter.default.removeObserver(self)
     }
     
     @IBAction func navigateAction(_ sender: UIButton) {
-        let root = self.presentingViewController as! UITabBarController
-        root.selectedIndex = self.tableViewIndex!
-        //{self.mmPlayerLayer.currentPlayStatus = .unknown}
+        guard let root = self.presentingViewController as? TabBarController else { return }
+        root.selectedIndex = self.tableViewIndex
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -93,10 +117,10 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
     
     func updateByContentOffset() {
         let index = self.videoCollectionView.detectCurrentCellIndexPath()
-        print("Current : \(videoCollectionView.contentOffset)")
+        //print("Current : \(videoCollectionView.contentOffset)")
         if let prevCell = self.videoCollectionView.cellForItem(at: IndexPath(row: index.row - 1, section: 0) ) {
             
-            UIView.animate(withDuration: 2, animations: {
+            UIView.animate(withDuration: 1, animations: {
                 prevCell.contentView.alpha = 0.3
             })
         }
@@ -116,29 +140,31 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
             if !MMLandscapeWindow.shared.isKeyWindow {
                 mmPlayerLayer.playView = currentCell.imgView
             }
-            
-            mmPlayerLayer.set(url: currentCell.data?.play_Url, state: { (status) in
-                switch status {
-                case .failed(let err):
-                    let alert = UIAlertController(title: "err", message: err.description, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                case .ready:
-                    print("Ready to Play")
-                case .playing:
-                    print("Playing")
-                case .pause:
-                    print("Pause")
-                case .end:
-                    print("End")
-                default: break
-                }
-            })
+            if let url = URL(string: communityVideoList[index.row].uploadvideo) {
+                mmPlayerLayer.set(url: url, state: { (status) in
+                    switch status {
+                    case .failed(let err):
+                        let alert = UIAlertController(title: "err", message: err.description, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    case .ready:
+                        print("Ready to Play")
+                    case .playing:
+                        print("Playing")
+                    case .pause:
+                        print("Pause")
+                    case .end:
+                        print("End")
+                    default: break
+                    }
+                })
+            }
         }
     }
     @objc func startLoading() {
-        mmPlayerLayer.startLoading()
-        
+        if communityVideoList.count > 0 {
+            mmPlayerLayer.startLoading()
+        }
     }
 }
 
@@ -178,29 +204,21 @@ extension CommunityViewController: UICollectionViewDelegateFlowLayout {
 
 extension CommunityViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        UIView.animate(withDuration: 1) {
+            if self.communityVideoList.count == 0 {
+                self.nonImageView.alpha = 1
+            }
+            else { self.nonImageView.alpha = 0}
+        }
+        return communityVideoList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CommunityVideoCollectionViewCell.reuseIdentifier, for: indexPath) as! CommunityVideoCollectionViewCell
-        let url = URL(string: data[indexPath.row])
-        cell.data = DataObj(image: getThumbnailImage(forUrl: url!), play_Url: url, title: "title", content: "content")
-        cell.imgView.backgroundColor = UIColor().random()
+        cell.info = communityVideoList[indexPath.row]
         return cell
     }
-    func getThumbnailImage(forUrl url: URL) -> UIImage? {
-        let asset: AVAsset = AVAsset(url: url)
-        let imageGenerator = AVAssetImageGenerator(asset: asset)
-        
-        do {
-            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(1, 60) , actualTime: nil)
-            return UIImage(cgImage: thumbnailImage)
-        } catch let error {
-            print(error)
-        }
-        
-        return nil
-    }
+    
 }
 
 

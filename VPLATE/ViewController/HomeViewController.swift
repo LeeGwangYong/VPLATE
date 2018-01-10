@@ -63,7 +63,6 @@ class HomeViewController: ViewController, ViewControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homeVideoTableView.separatorStyle = .none
-        
         self.navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "vplate.png"))
         
         categoryConstraints = [categoryViewHeightConstraint, mainViewTopConstraint]
@@ -71,16 +70,8 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         self.setUpCollectionView(collectionView: categoryCollectionView, cell: CategoryCollectionViewCell.self)
         
         categoryHeight = super.view.frame.height * 0.1
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        for button in sortButton {
-            if button == latestButton{
-                templateListSortAction(button)
-            }
-        }
         
-        categoryCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: UICollectionViewScrollPosition.left)
+       self.navigationItem.title = ""
     }
     
     
@@ -88,6 +79,11 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         super.viewWillAppear(true)
         categoryVisible(target: categoryConstraints, value: 0)
         openCategory = false
+        for button in sortButton {
+            if button == latestButton{
+                templateListSortAction(button)
+            }
+        }
     }
 
     
@@ -108,6 +104,11 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         }
         UIView.animate(withDuration: 0.6) {
             self.view.layoutIfNeeded()
+            for button in self.sortButton {
+                if button == self.latestButton{
+                    self.templateListSortAction(button)
+                }
+            }
         }
     }
     
@@ -127,6 +128,8 @@ class HomeViewController: ViewController, ViewControllerProtocol {
             self.sort = .popularity
         }
         requestTemplateList(position: .top)
+        
+        //self.view.layoutIfNeeded()
     }
     
     func requestTemplateList(position: UITableViewScrollPosition) {
@@ -134,7 +137,7 @@ class HomeViewController: ViewController, ViewControllerProtocol {
                                        "cursor" : self.cursor]
         let sortValue = self.sort.rawValue
         
-        TemplateListServiece.getTemplateList(url: "account/template/list/"+sortValue, parameter: parameter, header: Token.getToken()) { (response) in
+        TemplateListServiece.getTemplateList(url: "account/template/list/"+sortValue, method: .get, parameter: parameter, header: Token.getToken()) { (response) in
             switch response {
             case .Success(let data):
                 guard let data = data as? Data else {return}
@@ -191,6 +194,12 @@ extension HomeViewController: UITableViewDelegate {
 //            }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = getNextViewController(viewController: DetailViewController.self) as! DetailViewController
+        vc.info = templateList[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -203,6 +212,7 @@ extension HomeViewController: UITableViewDataSource {
         
         cell.layoutMargins = UIEdgeInsets.zero
         cell.info = templateList[indexPath.row]
+        cell.cellType = CellType.template
         return cell
     }
 }

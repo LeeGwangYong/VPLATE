@@ -19,3 +19,11 @@ struct SignService: APIService {
         }
     }
 }
+//"http://13.124.195.255:3003/account/signin"
+//- key : "email"
+//- some : "rhkddydkrfl2@naver.com"
+//- key : "pwd"
+//- some : "1517875735000727"
+//- key : "fcm_key"
+//- value : nil
+

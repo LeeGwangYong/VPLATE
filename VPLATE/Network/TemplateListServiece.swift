@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 struct TemplateListServiece: APIService {
-    static func getTemplateList(url: String, parameter: [String : Any]?, header: HTTPHeaders,completion: @escaping (Result<Any>)->()) {
+    static func getTemplateList(url: String, method: HTTPMethod,parameter: [String : Any]?, header: HTTPHeaders,completion: @escaping (Result<Any>)->()) {
         let url = self.getURL(path: url)
-        Alamofire.request(url, method: .get, parameters: parameter, encoding: 
+        Alamofire.request(url, method: method, parameters: parameter, encoding: 
             URLEncoding.queryString, headers: header).responseData { (response) in
             print(response.request?.url)
             guard let resultData = getResult_StatusCode(response: response) else {
@@ -22,4 +22,5 @@ struct TemplateListServiece: APIService {
             completion(resultData)
         }
     }
+    
 }

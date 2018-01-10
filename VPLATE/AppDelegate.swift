@@ -9,18 +9,18 @@
 import UIKit
 import CoreData
 import FBSDKCoreKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    static let token = ["tt" : ""]
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //Thread.sleep(forTimeInterval: 3.0)
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().backgroundColor = UIColor.white
-        FirebaseApp.configure()
+        UIBarButtonItem.appearance().tintColor = UIColor.black
+    //UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.clear], for: .normal)
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     

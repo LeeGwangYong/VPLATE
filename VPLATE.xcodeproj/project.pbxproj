@@ -15,8 +15,6 @@
 		FC2CBD6C1FFCCF8100A34961 /* SelectedVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD6B1FFCCF8100A34961 /* SelectedVideoViewController.swift */; };
 		FC2CBD6E1FFCCF8B00A34961 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD6D1FFCCF8B00A34961 /* CommunityViewController.swift */; };
 		FC2CBD701FFCCF9200A34961 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD6F1FFCCF9200A34961 /* SettingViewController.swift */; };
-		FC2CBD731FFCE14C00A34961 /* AllVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD711FFCE14C00A34961 /* AllVideoViewController.swift */; };
-		FC2CBD741FFCE14C00A34961 /* AllVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2CBD721FFCE14C00A34961 /* AllVideoViewController.xib */; };
 		FC2CBD781FFCE18A00A34961 /* InProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD761FFCE18A00A34961 /* InProgressViewController.swift */; };
 		FC2CBD791FFCE18A00A34961 /* InProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2CBD771FFCE18A00A34961 /* InProgressViewController.xib */; };
 		FC2CBD7C1FFCE1A800A34961 /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD7A1FFCE1A800A34961 /* CompletionViewController.swift */; };
@@ -34,7 +32,6 @@
 		FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A20E200056DD00F3C567 /* CreatorViewController.swift */; };
 		FC34A21D2001C1A000F3C567 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A21B2001C1A000F3C567 /* CoverA.xib */; };
 		FC34A21E2001C1A000F3C567 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A21C2001C1A000F3C567 /* CoverA.swift */; };
-		FC34A2212001C87200F3C567 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2202001C87200F3C567 /* DummyData.swift */; };
 		FC5A55742002057F00FFB5A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5A55732002057E00FFB5A3 /* Assets.xcassets */; };
 		FC84A2B52002D97D002CB10E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84A2B42002D97D002CB10E /* PageViewController.swift */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
@@ -45,12 +42,16 @@
 		FCC2278F20037D900050804D /* UIImage+FixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2278D20037D900050804D /* UIImage+FixOrientation.swift */; };
 		FCC2279020037D900050804D /* UIImageCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2278E20037D900050804D /* UIImageCropper.swift */; };
 		FCC227922003884C0050804D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC227912003884C0050804D /* LogInViewController.swift */; };
-		FCC2279A200464770050804D /* APIServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC22799200464770050804D /* APIServiece.swift */; };
+		FCC2279A200464770050804D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC22799200464770050804D /* APIService.swift */; };
 		FCC2279C20046B420050804D /* SignServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2279B20046B420050804D /* SignServiece.swift */; };
-		FCC2279E20047E2F0050804D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC2279D20047E2F0050804D /* GoogleService-Info.plist */; };
 		FCC227A0200492600050804D /* TemplateListServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2279F200492600050804D /* TemplateListServiece.swift */; };
 		FCC227A22005079D0050804D /* ConvertUTCtoLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC227A12005079D0050804D /* ConvertUTCtoLocal.swift */; };
 		FCC227A42005100A0050804D /* IntToMMSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC227A32005100A0050804D /* IntToMMSS.swift */; };
+		FCC227A82005ADB80050804D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC227A72005ADB80050804D /* DummyData.swift */; };
+		FCC528DA2005C5F4006DEF40 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC528D92005C5F4006DEF40 /* DetailViewController.swift */; };
+		FCC528DC20062AF7006DEF40 /* CommunityVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC528DB20062AF7006DEF40 /* CommunityVideo.swift */; };
+		FCC528DE20062B8C006DEF40 /* CommunityListServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC528DD20062B8C006DEF40 /* CommunityListServiece.swift */; };
+		FCC528E020063ECD006DEF40 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC528DF20063ECD006DEF40 /* RoundedImageView.swift */; };
 		FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8071FFD402500493A51 /* PlayerView.swift */; };
 		FCFAC80B1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAC8091FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift */; };
 		FCFAC80C1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFAC80A1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib */; };
@@ -95,8 +96,6 @@
 		FC2CBD6B1FFCCF8100A34961 /* SelectedVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedVideoViewController.swift; sourceTree = "<group>"; };
 		FC2CBD6D1FFCCF8B00A34961 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		FC2CBD6F1FFCCF9200A34961 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		FC2CBD711FFCE14C00A34961 /* AllVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVideoViewController.swift; sourceTree = "<group>"; };
-		FC2CBD721FFCE14C00A34961 /* AllVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllVideoViewController.xib; sourceTree = "<group>"; };
 		FC2CBD761FFCE18A00A34961 /* InProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProgressViewController.swift; sourceTree = "<group>"; };
 		FC2CBD771FFCE18A00A34961 /* InProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InProgressViewController.xib; sourceTree = "<group>"; };
 		FC2CBD7A1FFCE1A800A34961 /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +113,6 @@
 		FC34A20E200056DD00F3C567 /* CreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorViewController.swift; sourceTree = "<group>"; };
 		FC34A21B2001C1A000F3C567 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
 		FC34A21C2001C1A000F3C567 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
-		FC34A2202001C87200F3C567 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		FC5A55732002057E00FFB5A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC84A2B42002D97D002CB10E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,12 +129,16 @@
 		FCC2278D20037D900050804D /* UIImage+FixOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+FixOrientation.swift"; sourceTree = "<group>"; };
 		FCC2278E20037D900050804D /* UIImageCropper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCropper.swift; sourceTree = "<group>"; };
 		FCC227912003884C0050804D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		FCC22799200464770050804D /* APIServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiece.swift; sourceTree = "<group>"; };
+		FCC22799200464770050804D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FCC2279B20046B420050804D /* SignServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignServiece.swift; sourceTree = "<group>"; };
-		FCC2279D20047E2F0050804D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCC2279F200492600050804D /* TemplateListServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateListServiece.swift; sourceTree = "<group>"; };
 		FCC227A12005079D0050804D /* ConvertUTCtoLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertUTCtoLocal.swift; sourceTree = "<group>"; };
 		FCC227A32005100A0050804D /* IntToMMSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntToMMSS.swift; sourceTree = "<group>"; };
+		FCC227A72005ADB80050804D /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		FCC528D92005C5F4006DEF40 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FCC528DB20062AF7006DEF40 /* CommunityVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVideo.swift; sourceTree = "<group>"; };
+		FCC528DD20062B8C006DEF40 /* CommunityListServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityListServiece.swift; sourceTree = "<group>"; };
+		FCC528DF20063ECD006DEF40 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		FCFAC8071FFD402500493A51 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		FCFAC8091FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCFAC80A1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityVideoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -203,8 +205,6 @@
 		FC2CBD751FFCE14F00A34961 /* MyVideo */ = {
 			isa = PBXGroup;
 			children = (
-				FC2CBD711FFCE14C00A34961 /* AllVideoViewController.swift */,
-				FC2CBD721FFCE14C00A34961 /* AllVideoViewController.xib */,
 				FC2CBD761FFCE18A00A34961 /* InProgressViewController.swift */,
 				FC2CBD771FFCE18A00A34961 /* InProgressViewController.xib */,
 				FC2CBD7A1FFCE1A800A34961 /* CompletionViewController.swift */,
@@ -300,7 +300,6 @@
 				FCD9B2741FFCB8E700A1651F /* ViewController */,
 				FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */,
 				FC946E081FF8F66F00D6616B /* Info.plist */,
-				FCC2279D20047E2F0050804D /* GoogleService-Info.plist */,
 			);
 			path = VPLATE;
 			sourceTree = "<group>";
@@ -335,9 +334,10 @@
 		FCC227932003FB910050804D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FCC22799200464770050804D /* APIServiece.swift */,
+				FCC22799200464770050804D /* APIService.swift */,
 				FCC2279B20046B420050804D /* SignServiece.swift */,
 				FCC2279F200492600050804D /* TemplateListServiece.swift */,
+				FCC528DD20062B8C006DEF40 /* CommunityListServiece.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -357,6 +357,7 @@
 				FCFAC80F1FFE258700493A51 /* TabBarController.swift */,
 				FC34A20E200056DD00F3C567 /* CreatorViewController.swift */,
 				FCC227912003884C0050804D /* LogInViewController.swift */,
+				FCC528D92005C5F4006DEF40 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -374,7 +375,6 @@
 			isa = PBXGroup;
 			children = (
 				FC2CBD7F1FFCE1C000A34961 /* Reusable.swift */,
-				FC2CBD811FFCE91F00A34961 /* TitleEnum.swift */,
 				FC2CBD831FFCEC7700A34961 /* UIColorToUIImage.swift */,
 				FC2CBD8F1FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift */,
 				FCFAC8231FFFD4D300493A51 /* RandomColor.swift */,
@@ -387,6 +387,7 @@
 		FCFAC8061FFD401400493A51 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				FCC528DF20063ECD006DEF40 /* RoundedImageView.swift */,
 				FCFAC8071FFD402500493A51 /* PlayerView.swift */,
 				FCFAC81D1FFF9DE000493A51 /* PagedCollectionLayout.swift */,
 			);
@@ -396,8 +397,10 @@
 		FCFAC8151FFF6F4900493A51 /* Data Object */ = {
 			isa = PBXGroup;
 			children = (
+				FC2CBD811FFCE91F00A34961 /* TitleEnum.swift */,
+				FCC227A72005ADB80050804D /* DummyData.swift */,
 				FCFAC8171FFF6F6600493A51 /* Template.swift */,
-				FC34A2202001C87200F3C567 /* DummyData.swift */,
+				FCC528DB20062AF7006DEF40 /* CommunityVideo.swift */,
 			);
 			path = "Data Object";
 			sourceTree = "<group>";
@@ -523,9 +526,7 @@
 				FC5A55742002057F00FFB5A3 /* Assets.xcassets in Resources */,
 				FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */,
 				FC2CBD7D1FFCE1A800A34961 /* CompletionViewController.xib in Resources */,
-				FCC2279E20047E2F0050804D /* GoogleService-Info.plist in Resources */,
 				FC34A21D2001C1A000F3C567 /* CoverA.xib in Resources */,
-				FC2CBD741FFCE14C00A34961 /* AllVideoViewController.xib in Resources */,
 				FCFAC8221FFFCFB900493A51 /* CategoryCollectionViewCell.xib in Resources */,
 				FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */,
 				FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */,
@@ -739,6 +740,7 @@
 				FC2CBD6C1FFCCF8100A34961 /* SelectedVideoViewController.swift in Sources */,
 				FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */,
 				FC2CBD841FFCEC7700A34961 /* UIColorToUIImage.swift in Sources */,
+				FCC528DE20062B8C006DEF40 /* CommunityListServiece.swift in Sources */,
 				FCFAC8241FFFD4D300493A51 /* RandomColor.swift in Sources */,
 				FC2CBD6E1FFCCF8B00A34961 /* CommunityViewController.swift in Sources */,
 				FC2CBD6A1FFCCF5C00A34961 /* MyVideoViewController.swift in Sources */,
@@ -752,7 +754,8 @@
 				FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */,
 				FCFAC8181FFF6F6600493A51 /* Template.swift in Sources */,
 				FCC2279C20046B420050804D /* SignServiece.swift in Sources */,
-				FCC2279A200464770050804D /* APIServiece.swift in Sources */,
+				FCC2279A200464770050804D /* APIService.swift in Sources */,
+				FCC528DC20062AF7006DEF40 /* CommunityVideo.swift in Sources */,
 				FC34A21E2001C1A000F3C567 /* CoverA.swift in Sources */,
 				FCC227A42005100A0050804D /* IntToMMSS.swift in Sources */,
 				FCFAC81E1FFF9DE000493A51 /* PagedCollectionLayout.swift in Sources */,
@@ -762,15 +765,16 @@
 				FCC2278F20037D900050804D /* UIImage+FixOrientation.swift in Sources */,
 				FCFAC8101FFE258700493A51 /* TabBarController.swift in Sources */,
 				FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */,
+				FCC227A82005ADB80050804D /* DummyData.swift in Sources */,
+				FCC528DA2005C5F4006DEF40 /* DetailViewController.swift in Sources */,
 				FCFAC8211FFFCFB900493A51 /* CategoryCollectionViewCell.swift in Sources */,
 				FC2CBD8D1FFCF33C00A34961 /* VideoTableViewCell.swift in Sources */,
 				FC84A2B52002D97D002CB10E /* PageViewController.swift in Sources */,
+				FCC528E020063ECD006DEF40 /* RoundedImageView.swift in Sources */,
 				FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */,
-				FC2CBD731FFCE14C00A34961 /* AllVideoViewController.swift in Sources */,
 				FC2CBD701FFCCF9200A34961 /* SettingViewController.swift in Sources */,
 				FC2CBD901FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift in Sources */,
 				FC2CBD821FFCE91F00A34961 /* TitleEnum.swift in Sources */,
-				FC34A2212001C87200F3C567 /* DummyData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

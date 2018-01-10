@@ -11,9 +11,25 @@ import AVKit
 
 class CommunityVideoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgView: UIImageView!
-    var data: DataObj?{
+    @IBOutlet weak var profileImage: RoundedImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    
+    var info: CommunityVideo?{
         didSet{
-            self.imgView.image = data?.image
+            //self.imgView.image = data?.image
+            if let profileString = info?.profile, let url = URL(string: profileString){
+                self.profileImage.kf.setImage(with: url)
+            }
+            self.dateLabel.text = info?.uploadtime.convertStringDate()
+            self.nameLabel.text = info?.nickname
+            self.likeLabel.text = String(describing: (info?.hits)!)
+            self.contentLabel.text = info?.content
+            if let videoString = info?.uploadvideo, let url = URL(string: videoString) {
+                self.imgView.image = getThumbnailImage(forUrl: url)
+            }
         }
     }
     var player: AVPlayer?
@@ -30,6 +46,20 @@ class CommunityVideoCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func getThumbnailImage(forUrl url: URL) -> UIImage? {
+        let asset: AVAsset = AVAsset(url: url)
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+        
+        do {
+            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(1, 60) , actualTime: nil)
+            return UIImage(cgImage: thumbnailImage)
+        } catch let error {
+            print(error)
+        }
+        
+        return nil
     }
 
 }

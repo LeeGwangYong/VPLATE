@@ -24,13 +24,8 @@ class MyVideoViewController: ViewController {
         // Initialize view controllers to display and place in array
         var controllerArray : [UIViewController] = []
         
-        let controller1:AllVideoViewController = AllVideoViewController(nibName: AllVideoViewController.reuseIdentifier, bundle: nil)
-        controller1.title = "모든 영상"
-        controller1.parentNavigationController = self.navigationController
-        controllerArray.append(controller1)
-        
         let controller2: InProgressViewController = InProgressViewController(nibName: InProgressViewController.reuseIdentifier, bundle: nil)
-        controller2.title = "제작중인 영상"
+        controller2.title = "미완성 영상"
         controllerArray.append(controller2)
         
         
@@ -44,14 +39,14 @@ class MyVideoViewController: ViewController {
         let parameters: [CAPSPageMenuOption] = [
             .scrollMenuBackgroundColor(UIColor.clear),
             .viewBackgroundColor(UIColor.clear),
-            .selectionIndicatorColor(UIColor.red),
-            .unselectedMenuItemLabelColor(UIColor.lightGray.withAlphaComponent(0.5)),
-            .menuItemFont(UIFont(name: "HelveticaNeue", size: 15.0)!),
+            .selectionIndicatorColor(UIColor.black),
+            .unselectedMenuItemLabelColor(UIColor(red: 104/255, green: 104/255, blue: 104/255, alpha: 1)  ),
+            .menuItemFont(UIFont(name: "HelveticaNeue", size: 12.0)!),
             .menuHeight(menuHeight),
-            .menuItemWidth(self.view.frame.width/3),
+            .menuItemWidth(100),
             .menuMargin(0),
-            .selectionIndicatorHeight(5.0),
-            .bottomMenuHairlineColor(UIColor.orange),
+            .selectionIndicatorHeight(3.0),
+            .bottomMenuHairlineColor(UIColor.black),
             .menuItemWidthBasedOnTitleTextWidth(false),
             .selectedMenuItemLabelColor(UIColor.black)
         ]

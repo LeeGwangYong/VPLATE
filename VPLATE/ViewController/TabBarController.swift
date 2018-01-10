@@ -20,9 +20,10 @@ class TabBarController: UITabBarController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print(selectedIndex)
-    }
+//
+//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        super.tabBar(tabBar, didSelect: item)
+//        print(selectedIndex)
+//    }
 
 }
