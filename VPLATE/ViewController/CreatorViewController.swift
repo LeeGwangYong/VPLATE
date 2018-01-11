@@ -16,6 +16,9 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var sceneImageView: UIImageView!
     @IBOutlet weak var pageMenuView: UIView!
     
+    var editData: EditorDetailData?
+    
+    
     var thumbnailImage: UIImage!
     var templateID: Int!
     var sceneURL: [String] = []
@@ -27,9 +30,11 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
         super.viewDidLoad()
         self.navigationItem.title = TitleEnum.creator.rawValue
         setUpCollectionView(collectionView: sceneCollectionView, cell: SceneCollectionViewCell.self)
+        
         cropper.picker = picker
         cropper.delegate = self
         cropper.cropRatio = 16/9
+        
         sceneImageView.image = thumbnailImage
         fetchTemplateInform()
         if #available(iOS 10.0, *) {
@@ -37,6 +42,10 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
         } else {
             // Fallback on earlier versions
         }
+        
+        self.editData = EditorDetailData(type: .picture,
+                                                          indexRatio: [1 : CGFloat(16.0/9.0),
+                                                                       2 : CGFloat(9.0/16.0)])
         setUpPageMenu()
     }
     
@@ -53,11 +62,17 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
         let controller1: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
         controller1.title = "VIDEO"
         controller1.parentNavigation = self.navigationController
+        if self.editData?.type == EditorType.video {
+            controller1.editData = self.editData
+        }
         controllerArray.append(controller1)
         
         let controller2: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
         controller2.title = "PICTURE"
         controller2.parentNavigation = self.navigationController
+        if self.editData?.type == EditorType.picture {
+            controller2.editData = self.editData
+        }
         controllerArray.append(controller2)
         
         

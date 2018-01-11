@@ -20,33 +20,43 @@
                 <rect key="frame" x="0.0" y="0.0" width="161" height="134"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_movie_creation_white_48px" translatesAutoresizingMaskIntoConstraints="NO" id="MwE-4m-9rG">
-                        <rect key="frame" x="37" y="10" width="114" height="114"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="MwE-4m-9rG" secondAttribute="height" multiplier="1:1" id="Ufa-yR-mq5"/>
-                        </constraints>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="three" translatesAutoresizingMaskIntoConstraints="NO" id="g03-bP-3BL">
-                        <rect key="frame" x="10" y="10" width="20" height="20"/>
+                        <rect key="frame" x="10" y="15" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="0qa-DQ-UN2"/>
                             <constraint firstAttribute="width" secondItem="g03-bP-3BL" secondAttribute="height" multiplier="1:1" id="VbI-en-aj5"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kM7-FI-Y0r">
+                        <rect key="frame" x="40" y="15" width="106" height="104"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_movie_creation_white_48px" translatesAutoresizingMaskIntoConstraints="NO" id="aFF-p1-bjl">
+                                <rect key="frame" x="0.0" y="0.0" width="106" height="104"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38426861166954041" green="0.38433963060379028" blue="0.38426411151885986" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="kM7-FI-Y0r" secondAttribute="height" multiplier="53:52" id="DWk-4s-480"/>
+                            <constraint firstItem="aFF-p1-bjl" firstAttribute="leading" secondItem="kM7-FI-Y0r" secondAttribute="leading" id="aFo-nK-vb2"/>
+                            <constraint firstAttribute="bottom" secondItem="aFF-p1-bjl" secondAttribute="bottom" id="g1h-5e-5Jq"/>
+                            <constraint firstAttribute="trailing" secondItem="aFF-p1-bjl" secondAttribute="trailing" id="ig3-13-xm6"/>
+                            <constraint firstItem="aFF-p1-bjl" firstAttribute="top" secondItem="kM7-FI-Y0r" secondAttribute="top" id="nJb-FP-Hf4"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="MwE-4m-9rG" secondAttribute="trailing" constant="10" id="8xD-QT-KJ9"/>
-                <constraint firstItem="g03-bP-3BL" firstAttribute="top" secondItem="MwE-4m-9rG" secondAttribute="top" id="9H5-Pe-Hy1"/>
-                <constraint firstAttribute="bottom" secondItem="MwE-4m-9rG" secondAttribute="bottom" constant="10" id="ItW-ak-x27"/>
-                <constraint firstItem="MwE-4m-9rG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="NBk-E9-PyE"/>
-                <constraint firstItem="MwE-4m-9rG" firstAttribute="leading" secondItem="g03-bP-3BL" secondAttribute="trailing" constant="7" id="Oud-TV-dFz"/>
+                <constraint firstItem="kM7-FI-Y0r" firstAttribute="leading" secondItem="g03-bP-3BL" secondAttribute="trailing" constant="10" id="8a4-ff-Id7"/>
+                <constraint firstItem="kM7-FI-Y0r" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="K8A-zj-uFk"/>
+                <constraint firstItem="kM7-FI-Y0r" firstAttribute="top" secondItem="g03-bP-3BL" secondAttribute="top" id="UzJ-pT-X0A"/>
+                <constraint firstAttribute="bottom" secondItem="kM7-FI-Y0r" secondAttribute="bottom" constant="15" id="Xaa-oF-HGn"/>
                 <constraint firstItem="g03-bP-3BL" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="uEQ-7P-8TX"/>
+                <constraint firstAttribute="trailing" secondItem="kM7-FI-Y0r" secondAttribute="trailing" constant="15" id="xBs-VG-E0d"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="167" height="134"/>
             <connections>
-                <outlet property="imageView" destination="MwE-4m-9rG" id="Mu6-5b-pM4"/>
+                <outlet property="imageView" destination="aFF-p1-bjl" id="8lE-sq-npa"/>
                 <outlet property="numberView" destination="g03-bP-3BL" id="Evw-or-WDA"/>
             </connections>
             <point key="canvasLocation" x="157.5" y="128"/>

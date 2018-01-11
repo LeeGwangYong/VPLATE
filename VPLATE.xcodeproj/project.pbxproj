@@ -43,6 +43,7 @@
 		FC61995E2007C36F00041477 /* EditorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC61995C2007C36F00041477 /* EditorCollectionViewCell.xib */; };
 		FC6199622007E12000041477 /* InsertImageToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6199612007E12000041477 /* InsertImageToString.swift */; };
 		FC6199642007EE4700041477 /* EditorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6199632007EE4700041477 /* EditorData.swift */; };
+		FC619966200811F700041477 /* AssetSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC619965200811F700041477 /* AssetSelectorViewController.swift */; };
 		FC84A2B52002D97D002CB10E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84A2B42002D97D002CB10E /* PageViewController.swift */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
 		FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E001FF8F66F00D6616B /* Main.storyboard */; };
@@ -134,6 +135,7 @@
 		FC61995C2007C36F00041477 /* EditorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditorCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC6199612007E12000041477 /* InsertImageToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertImageToString.swift; sourceTree = "<group>"; };
 		FC6199632007EE4700041477 /* EditorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorData.swift; sourceTree = "<group>"; };
+		FC619965200811F700041477 /* AssetSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSelectorViewController.swift; sourceTree = "<group>"; };
 		FC84A2B42002D97D002CB10E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				FC318388200720E8005CEE57 /* HomePageViewController.xib */,
 				FC6199572007C25B00041477 /* EditorViewController.swift */,
 				FC6199582007C25B00041477 /* EditorViewController.xib */,
+				FC619965200811F700041477 /* AssetSelectorViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -786,6 +789,7 @@
 				FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */,
 				FCC227922003884C0050804D /* LogInViewController.swift in Sources */,
 				FCC2279020037D900050804D /* UIImageCropper.swift in Sources */,
+				FC619966200811F700041477 /* AssetSelectorViewController.swift in Sources */,
 				FCFAC8081FFD402500493A51 /* PlayerView.swift in Sources */,
 				FCFAC8181FFF6F6600493A51 /* Template.swift in Sources */,
 				FCC2279C20046B420050804D /* SignServiece.swift in Sources */,
