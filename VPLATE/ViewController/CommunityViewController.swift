@@ -45,6 +45,11 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         setStatusBarDark(dark: true)
         super.viewWillAppear(animated)
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        videoCollectionView.removeObserver(self, forKeyPath: "contentOffset")   
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,16 +91,13 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         }
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        videoCollectionView.removeObserver(self, forKeyPath: "contentOffset")
-        self.mmPlayerLayer.player?.pause()
-    }
+    
     
     @IBAction func navigateAction(_ sender: UIButton) {
         guard let root = self.presentingViewController as? TabBarController else { return }
         root.selectedIndex = self.tableViewIndex
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {
+            self.mmPlayerLayer.player = nil})
     }
     
     @IBAction func rankingAction(_ sender: UIButton) {
@@ -162,9 +164,7 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         }
     }
     @objc func startLoading() {
-        if communityVideoList.count > 0 {
-            mmPlayerLayer.startLoading()
-        }
+        mmPlayerLayer.startLoading()
     }
 }
 

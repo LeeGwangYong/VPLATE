@@ -197,6 +197,13 @@ extension CAPSPageMenu {
                     if self.menuItems[self.lastPageIndex].titleLabel != nil && self.menuItems[self.currentPageIndex].titleLabel != nil {
                         self.menuItems[self.lastPageIndex].titleLabel!.textColor = self.configuration.unselectedMenuItemLabelColor
                         self.menuItems[self.currentPageIndex].titleLabel!.textColor = self.configuration.selectedMenuItemLabelColor
+//                        let attributedString = NSAttributedString(string: (self.menuItems[self.currentPageIndex].titleLabel?.text)!)
+//                        let textRange = NSMakeRange(0, attributedString.length)
+//                        let underlinedMessage = NSMutableAttributedString(attributedString: attributedString)
+//                        underlinedMessage.addAttribute(NSAttributedStringKey.underlineStyle,
+//                                                       value:NSUnderlineStyle.styleSingle.rawValue,
+//                                                       range: textRange)
+//                        self.menuItems[self.currentPageIndex].titleLabel?.attributedText = underlinedMessage
                     }
                 }
             })

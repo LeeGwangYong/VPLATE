@@ -13,7 +13,7 @@ import MMPlayerView
 import AVKit
 import Toast_Swift
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, ViewControllerProtocol {
     @IBOutlet weak var playerView: MMPlayerView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -133,6 +133,13 @@ class DetailViewController: UIViewController {
                 break
             }
         }
+    }
+    
+    @IBAction func navigateCreator(_ sender: UIButton) {
+        let vc: CreatorViewController = getNextViewController(viewController: CreatorViewController.self) as! CreatorViewController
+        vc.templateID = self.info?.template_id
+        vc.thumbnailImage = self.thumbImage
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
     

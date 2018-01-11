@@ -14,4 +14,5 @@ enum TitleEnum: String {
     case selected = "찜한 영상"
     case setting = "마이페이지"
     case detail = "상세페이지"
+    case creator = "영상 편집실"
 }

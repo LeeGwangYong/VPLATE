@@ -22,4 +22,6 @@ struct CommunityListServiece: APIService {
                 completion(resultData)
         }
     }
+    
+    //static func 
 }

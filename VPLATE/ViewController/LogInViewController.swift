@@ -58,7 +58,7 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
         super.viewDidLoad()
     }
     override func viewDidAppear(_ animated: Bool) {
-        navigateAccesToken()
+        navigateSignIn()
     }
     
     @IBAction func facebookAction(_ sender: UIButton) {
@@ -98,9 +98,10 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
         connection.start()
     }
     
-    func navigateAccesToken(){
-        if let _ = UserDefaults.standard.value(forKey: "token") {
-            self.present(self.getNextViewController(viewController: TabBarController.self), animated: true, completion: nil)
+    func navigateSignIn(){
+        if let email = UserDefaults.standard.string(forKey: "email"),
+            let pw = UserDefaults.standard.string(forKey: "pw"){
+            signIn(email: email, pw: pw, fcmKey: nil)
         }
     }
     
@@ -119,11 +120,15 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
                 let dataJSON = JSON(data)
                 print(dataJSON)
                 let token = dataJSON["token"].string
+                let nickname = dataJSON["data"]["nickname"].string
+                let name = dataJSON["data"]["name"].string
                 UserDefaults.standard.set(email, forKey: "email")
                 UserDefaults.standard.set(pw, forKey: "pw")
                 UserDefaults.standard.set(token, forKey: "token")
-                
-                self.navigateAccesToken()
+                UserDefaults.standard.set(name, forKey: "name")
+                UserDefaults.standard.set(nickname, forKey: "nickname")
+                let vc = self.getNextViewController(viewController: TabBarController.self)
+                self.present(vc, animated: true, completion: nil)
             case .Failure(let failureCode):
                 print("Sign In Failure : \(failureCode)")
                 if failureCode == 500 { print("Disconnect Network")}

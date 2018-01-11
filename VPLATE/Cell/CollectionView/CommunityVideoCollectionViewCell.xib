@@ -32,12 +32,12 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="야간열차 안에서 보는 네덜란드!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-qs-QvX">
-                                <rect key="frame" x="17.5" y="404" width="161" height="16"/>
+                                <rect key="frame" x="17.5" y="415" width="161" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="dK2-nk-3cm" customClass="RoundedImageView" customModule="VPLATE" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_person" translatesAutoresizingMaskIntoConstraints="NO" id="dK2-nk-3cm" customClass="RoundedImageView" customModule="VPLATE" customModuleProvider="target">
                                 <rect key="frame" x="18" y="60" width="43" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dK2-nk-3cm" secondAttribute="height" multiplier="1:1" id="3cf-5h-BCa"/>
@@ -62,17 +62,18 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNC-2l-BIR" userLabel="UnderBar">
-                                <rect key="frame" x="9" y="385.5" width="356" height="1"/>
+                                <rect key="frame" x="9" y="396.5" width="356" height="1"/>
                                 <color key="backgroundColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="tiG-UV-w2p"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL3-7Y-YC3">
-                                <rect key="frame" x="17.5" y="352" width="75" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="17.5" y="352" width="75" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="235" image="thumb">
+                                <state key="normal" title="0" image="thumb">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -122,7 +123,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="profile" width="43" height="43"/>
+        <image name="icon_person" width="97" height="97"/>
         <image name="thumb" width="18" height="16"/>
     </resources>
 </document>

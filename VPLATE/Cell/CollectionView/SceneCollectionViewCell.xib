@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,29 +15,62 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SceneCollectionViewCell" id="gTV-IL-0wX" customClass="SceneCollectionViewCell" customModule="VPLATE" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="186" height="106"/>
+            <rect key="frame" x="0.0" y="0.0" width="165" height="92"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="186" height="106"/>
+                <rect key="frame" x="0.0" y="0.0" width="165" height="92"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="16-9-dummy-image6" translatesAutoresizingMaskIntoConstraints="NO" id="pAL-ie-q0m">
-                        <rect key="frame" x="0.0" y="0.0" width="186" height="106"/>
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="92"/>
+                    </imageView>
+                    <view alpha="0.5" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUN-es-4Ig">
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="92"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxq-Pa-JjX">
+                        <rect key="frame" x="11.5" y="11.5" width="23" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="hAj-jr-Trt">
+                        <rect key="frame" x="71" y="70" width="24.5" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="hAj-jr-Trt" secondAttribute="height" multiplier="2:1.8" id="90D-9r-3Ik"/>
+                        </constraints>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="fxq-Pa-JjX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="11.5" id="0WF-EY-n4j"/>
+                <constraint firstItem="fxq-Pa-JjX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="11.5" id="8b6-Fc-KvX"/>
+                <constraint firstAttribute="bottom" secondItem="hAj-jr-Trt" secondAttribute="bottom" id="AVd-RN-5Zf"/>
                 <constraint firstAttribute="bottom" secondItem="pAL-ie-q0m" secondAttribute="bottom" id="DjO-Tf-W8o"/>
                 <constraint firstItem="pAL-ie-q0m" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Gkj-BE-nMa"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fxq-Pa-JjX" secondAttribute="trailing" constant="15" id="Hkw-na-3Su"/>
+                <constraint firstItem="RUN-es-4Ig" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Jxh-ca-LK8"/>
+                <constraint firstItem="hAj-jr-Trt" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="WXf-Bm-E4D"/>
                 <constraint firstItem="pAL-ie-q0m" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="d3e-Rf-wXc"/>
+                <constraint firstAttribute="trailing" secondItem="RUN-es-4Ig" secondAttribute="trailing" id="iPw-6r-vD7"/>
+                <constraint firstAttribute="bottom" secondItem="RUN-es-4Ig" secondAttribute="bottom" id="n1i-kD-nQi"/>
+                <constraint firstItem="RUN-es-4Ig" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qLz-nm-8kw"/>
                 <constraint firstAttribute="trailing" secondItem="pAL-ie-q0m" secondAttribute="trailing" id="v72-1D-ngr"/>
+                <constraint firstItem="hAj-jr-Trt" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.15" id="yJa-l9-SWz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="186" height="106"/>
-            <point key="canvasLocation" x="7" y="82"/>
+            <size key="customSize" width="165" height="92"/>
+            <connections>
+                <outlet property="blackView" destination="RUN-es-4Ig" id="KKW-ae-lkX"/>
+                <outlet property="imageView" destination="pAL-ie-q0m" id="uzQ-cD-9oE"/>
+                <outlet property="numberLabel" destination="fxq-Pa-JjX" id="HvL-mE-xaM"/>
+                <outlet property="triangleImageView" destination="hAj-jr-Trt" id="3OX-em-sdB"/>
+            </connections>
+            <point key="canvasLocation" x="-3.5" y="75"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="16-9-dummy-image6" width="1600" height="900"/>
+        <image name="triangle" width="10" height="9"/>
     </resources>
 </document>

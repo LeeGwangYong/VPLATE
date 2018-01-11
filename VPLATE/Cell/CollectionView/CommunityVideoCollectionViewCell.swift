@@ -25,7 +25,9 @@ class CommunityVideoCollectionViewCell: UICollectionViewCell {
             }
             self.dateLabel.text = info?.uploadtime.convertStringDate()
             self.nameLabel.text = info?.nickname
-            self.likeButton.titleLabel?.text = String(describing: (info?.hits)!)
+            if let hits = info?.hits {
+                self.likeButton.setTitle("\(hits)", for: .normal)
+            }
             self.contentLabel.text = info?.content
             if let videoString = info?.uploadvideo, let url = URL(string: videoString) {
                 self.imgView.image = getThumbnailImage(forUrl: url)

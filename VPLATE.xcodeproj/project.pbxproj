@@ -28,6 +28,8 @@
 		FC2CBD901FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD8F1FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift */; };
 		FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */; };
 		FC318384200706B5005CEE57 /* UIApplicationExtenson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC318383200706B5005CEE57 /* UIApplicationExtenson.swift */; };
+		FC318389200720E8005CEE57 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC318387200720E8005CEE57 /* HomePageViewController.swift */; };
+		FC31838A200720E8005CEE57 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC318388200720E8005CEE57 /* HomePageViewController.xib */; };
 		FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */; };
 		FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */; };
 		FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A20E200056DD00F3C567 /* CreatorViewController.swift */; };
@@ -111,6 +113,8 @@
 		FC2CBD8F1FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDetectCurrentCell.swift; sourceTree = "<group>"; };
 		FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
 		FC318383200706B5005CEE57 /* UIApplicationExtenson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtenson.swift; sourceTree = "<group>"; };
+		FC318387200720E8005CEE57 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		FC318388200720E8005CEE57 /* HomePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
 		FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC34A20E200056DD00F3C567 /* CreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorViewController.swift; sourceTree = "<group>"; };
@@ -363,6 +367,8 @@
 				FC34A20E200056DD00F3C567 /* CreatorViewController.swift */,
 				FCC227912003884C0050804D /* LogInViewController.swift */,
 				FCC528D92005C5F4006DEF40 /* DetailViewController.swift */,
+				FC318387200720E8005CEE57 /* HomePageViewController.swift */,
+				FC318388200720E8005CEE57 /* HomePageViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 				FCFAC8221FFFCFB900493A51 /* CategoryCollectionViewCell.xib in Resources */,
 				FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */,
 				FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */,
+				FC31838A200720E8005CEE57 /* HomePageViewController.xib in Resources */,
 				FC2CBD791FFCE18A00A34961 /* InProgressViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,6 +783,7 @@
 				FC84A2B52002D97D002CB10E /* PageViewController.swift in Sources */,
 				FCC528E020063ECD006DEF40 /* RoundedImageView.swift in Sources */,
 				FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */,
+				FC318389200720E8005CEE57 /* HomePageViewController.swift in Sources */,
 				FC2CBD701FFCCF9200A34961 /* SettingViewController.swift in Sources */,
 				FC2CBD901FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift in Sources */,
 				FC2CBD821FFCE91F00A34961 /* TitleEnum.swift in Sources */,
@@ -948,7 +956,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPWV8KDDJE;
 				INFOPLIST_FILE = VPLATE/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SOPT.VPLATE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -965,7 +973,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPWV8KDDJE;
 				INFOPLIST_FILE = VPLATE/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SOPT.VPLATE;
 				PRODUCT_NAME = "$(TARGET_NAME)";

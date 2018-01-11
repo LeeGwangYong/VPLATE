@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import PageMenu
 
 enum Sort: String{
     case latest = "latest"
@@ -40,13 +41,12 @@ class HomeViewController: ViewController, ViewControllerProtocol {
                                 Category.cafe,
                                 Category.foodTruck,
                                 Category.event]
-    var selectedCategory: Category = Category.all
+    static var selectedCategory: Category = Category.all
     var sort: Sort = Sort.latest
     var cursor: Int = 0
     var templateList: [Template] = []
     
     @IBOutlet weak var menuView: UIView!
-    @IBOutlet weak var homeVideoTableView: UITableView!
     
     @IBOutlet weak var categoryViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var mainViewTopConstraint: NSLayoutConstraint!
@@ -55,25 +55,23 @@ class HomeViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     var categoryHeight: CGFloat!
     var openCategory: Bool = false
-    
-    @IBOutlet var sortButton: [UIButton]!
-    @IBOutlet weak var latestButton: UIButton!
-    
-    
+      
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.homeVideoTableView.separatorStyle = .none
         self.navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "vplate.png"))
         
         categoryConstraints = [categoryViewHeightConstraint, mainViewTopConstraint]
-        self.setUpTableView(tableView: homeVideoTableView, tableViewCell: VideoTableViewCell.self)
         self.setUpCollectionView(collectionView: categoryCollectionView, cell: CategoryCollectionViewCell.self)
-        
         categoryHeight = super.view.frame.height * 0.1
         
-       self.navigationItem.title = ""
+        self.navigationItem.title = ""
+        self.categoryCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+        if #available(iOS 10.0, *) {
+            self.categoryCollectionView.isPrefetchingEnabled = false
+        } else {
+            // Fallback on earlier versions
+        }
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -81,14 +79,12 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         openCategory = false
         
     }
-
+    
+    
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidLoad()
-        for button in sortButton {
-            if button == latestButton{
-                templateListSortAction(button)
-            }
-        }
+        super.viewDidAppear(animated)
+        setUpPageMenu()
+        self.setNeedsFocusUpdate()
     }
     
     func categoryVisible(target: [NSLayoutConstraint] ,value: CGFloat){
@@ -97,7 +93,54 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         }
     }
     
+    var pageMenu: CAPSPageMenu?
     
+    func setUpPageMenu(){
+        // Initialize view controllers to display and place in array
+        var controllerArray : [UIViewController] = []
+        
+        let controller1: HomePageViewController = HomePageViewController(nibName: HomePageViewController.reuseIdentifier, bundle: nil)
+        controller1.title = "최신순"
+        controller1.sort = .latest
+        controller1.parentNavigation = self.navigationController
+        controllerArray.append(controller1)
+        
+        let controller2: HomePageViewController = HomePageViewController(nibName: HomePageViewController.reuseIdentifier, bundle: nil)
+        controller2.title = "인기순"
+        controller2.parentNavigation = self.navigationController
+        controller2.sort = .popularity
+        controllerArray.append(controller2)
+
+        let menuHeight:CGFloat = super.view.frame.height * 0.075// 50.0
+        
+        let parameters: [CAPSPageMenuOption] = [
+            .scrollMenuBackgroundColor(UIColor.white),
+            .viewBackgroundColor(UIColor.white),
+            .selectionIndicatorColor(UIColor.black),
+            .unselectedMenuItemLabelColor(UIColor.lightGray),
+                //UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)  ),
+            .menuItemFont(UIFont(name: "HelveticaNeue", size: 12.0)!),
+            .menuHeight(menuHeight),
+            .menuItemWidth(80),
+            .menuMargin(0),
+            .selectionIndicatorHeight(0),
+            .bottomMenuHairlineColor(UIColor.black),
+            .menuItemWidthBasedOnTitleTextWidth(false),
+            .selectedMenuItemLabelColor(UIColor.black),
+            
+        ]
+        
+        // Initialize scroll menu
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray,
+                                frame: CGRect(x: 0.0, y: 0.0, width: self.menuView.frame.width, height: self.menuView.frame.height),
+                                pageMenuOptions: parameters)
+        
+        
+        self.menuView.addSubview(pageMenu!.view)
+        //self.view.setNeedsLayout()
+        
+    }
+
     @IBAction func openCategoryAction(_ sender: UIBarButtonItem) {
         openCategory = openCategory ? false:true
         if openCategory {
@@ -106,109 +149,10 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         else {
             self.categoryVisible(target: self.categoryConstraints, value: 0)
         }
-        UIView.animate(withDuration: 0.6) {
-            self.view.layoutIfNeeded()
-            for button in self.sortButton {
-                if button == self.latestButton{
-                    self.templateListSortAction(button)
-                }
-            }
-        }
     }
-    
-    @IBAction func templateListSortAction(_ sender: UIButton) {
-        for button in sortButton {
-            if (button == sender) {
-                button.titleLabel?.textColor = UIColor.black
-            }
-            else {
-                button.titleLabel?.textColor = UIColor.lightGray
-            }
-        }
-        
-        if sender == latestButton {
-            self.sort = .latest
-        } else {
-            self.sort = .popularity
-        }
-        requestTemplateList()
-        
-        //self.view.layoutIfNeeded()
-    }
-    
-    func requestTemplateList() {
-        let parameter: [String:Any] = ["type" : self.selectedCategory.rawValue,
-                                       "cursor" : self.cursor]
-        let sortValue = self.sort.rawValue
-        
-        TemplateListServiece.getTemplateList(url: "account/template/list/"+sortValue, method: .get, parameter: parameter, header: Token.getToken()) { (response) in
-            switch response {
-            case .Success(let data):
-                guard let data = data as? Data else {return}
-                let dataJSON = JSON(data)
-            let template = dataJSON["data"]["template"].map({$0.1})
-                let decoder = JSONDecoder()
-                do {
-                    self.templateList = try template.map({ (jsonData) -> Template in
-                        let value = try decoder.decode(Template.self, from: jsonData.rawData())
-                        return value
-                    })
-                    
-                    self.homeVideoTableView.reloadData()
-                }
-                catch (let err) {
-                    print(err.localizedDescription)
-                }
-            case .Failure( _):
-                break
-            }
-        }
-    }
+
 }
 
-extension HomeViewController: UITableViewDelegate {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let endScrolling: CGFloat = scrollView.contentOffset.y + scrollView.frame.size.height
-        if endScrolling >= scrollView.contentSize.height {
-            print("Scroll End")
-            
-        }
-    }
-    
-    func cursorUpdate() {
-         cursor = ((cursor % 10) + 1) * 10
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if (scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height {
-//            if !isMoreData {
-//                moreData = true
-//                // call some method that handles more rows
-//            }
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = getNextViewController(viewController: DetailViewController.self) as! DetailViewController
-        vc.info = templateList[indexPath.row]
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return templateList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = getReusableCell(tableView: tableView, cell: VideoTableViewCell.self, indexPath: indexPath) as! VideoTableViewCell
-        
-        cell.layoutMargins = UIEdgeInsets.zero
-        cell.info = templateList[indexPath.row]
-        cell.cellType = CellType.template
-        return cell
-    }
-}
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -221,16 +165,16 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout{
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Category Selected Index : \(indexPath)")
-        for cell in collectionView.visibleCells as! [CategoryCollectionViewCell]{
-            cell.reload()            
-        }
-        selectedCategory = category[indexPath.row]
-        requestTemplateList()
-        self.homeVideoTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        guard let cell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell? else {return}
+        cell.reload()
+        HomeViewController.selectedCategory = category[indexPath.row]
+        let p = pageMenu?.childViewControllers as! [HomePageViewController]
+        p[0].fetchTemplateList()
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        print("Category DeSelected Index : \(indexPath)")
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell? {
+            cell.reload()
+        }
     }
 }
 
