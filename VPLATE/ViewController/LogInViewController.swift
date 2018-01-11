@@ -11,7 +11,7 @@ import FacebookCore
 import FacebookLogin
 import FBSDKCoreKit
 import SwiftyJSON
-import SwiftGifOrigin
+import Toast_Swift
 
 struct UserDataRequest: GraphRequestProtocol
 {
@@ -56,7 +56,6 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //backImageView.loadGif(name: <#T##String#>)
     }
     override func viewDidAppear(_ animated: Bool) {
         navigateAccesToken()
@@ -156,6 +155,14 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
         }
     }
     
-    
+    @IBAction func kakaoLoginAction(_ sender: Any) {
+        self.view.makeToast( "카카오톡 로그인이 준비 중입니다.", duration: 1, position: .center, style: ToastStyle())
+    }
+    @IBAction func signUpAction(_ sender: Any) {
+        self.view.makeToast( "로그인이 준비 중입니다.", duration: 1, position: .center, style: ToastStyle())
+    }
+    @IBAction func signInAction(_ sender: Any) {
+        self.view.makeToast( "회원가입이 준비 중입니다.", duration: 1, position: .center, style: ToastStyle())
+    }
 }
 

@@ -16,7 +16,7 @@ enum Result<T> {
 struct Token {
     static func getToken() -> [String:String]{
         guard let token = UserDefaults.standard.string(forKey: "token") else {return ["tt" : "Not exist Token"]}
-        
+        print(token)
         return ["tt" : token]
     }
 }

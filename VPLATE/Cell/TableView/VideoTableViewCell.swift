@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 enum CellType {
-    case template, myVideo
+    case template, myVideo, favorite
 }
 class VideoTableViewCell: UITableViewCell {
 
@@ -21,15 +21,22 @@ class VideoTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var renderingImageView: UIImageView!
+    @IBOutlet weak var favoriteImage: UIImageView!
+    
     var cellType: CellType? {
         didSet{
             switch self.cellType {
-            case .template?:
+            case .template?, .favorite?:
                 percentLabel.isHidden = true
                 renderingImageView.isHidden = true
+                favoriteImage.isHidden = true
+                if self.cellType == .favorite{
+                    favoriteImage.isHidden = false
+                }
             case .myVideo?:
                 percentLabel.isHidden = false
                 renderingImageView.isHidden = false
+                favoriteImage.isHidden = true
             case .none:
                 break
             }
@@ -46,7 +53,6 @@ class VideoTableViewCell: UITableViewCell {
             if let url = info?.template_thumbnail {
                 self.thumbnail.kf.indicatorType = .activity
                 self.thumbnail.kf.setImage(with: URL(string: url))
-                
             }
         }
     }

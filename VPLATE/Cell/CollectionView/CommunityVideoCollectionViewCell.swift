@@ -14,8 +14,8 @@ class CommunityVideoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImage: RoundedImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
     
     var info: CommunityVideo?{
         didSet{
@@ -25,7 +25,7 @@ class CommunityVideoCollectionViewCell: UICollectionViewCell {
             }
             self.dateLabel.text = info?.uploadtime.convertStringDate()
             self.nameLabel.text = info?.nickname
-            self.likeLabel.text = String(describing: (info?.hits)!)
+            self.likeButton.titleLabel?.text = String(describing: (info?.hits)!)
             self.contentLabel.text = info?.content
             if let videoString = info?.uploadvideo, let url = URL(string: videoString) {
                 self.imgView.image = getThumbnailImage(forUrl: url)

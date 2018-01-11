@@ -33,7 +33,7 @@ class RoundedImageView: UIImageView {
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 2.0 {
+    @IBInspectable var borderWidth: CGFloat = 0 {
         didSet{
             self.layer.borderWidth = borderWidth
         }

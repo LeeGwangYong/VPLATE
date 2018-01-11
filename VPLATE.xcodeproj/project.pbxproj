@@ -27,11 +27,13 @@
 		FC2CBD8E1FFCF33C00A34961 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */; };
 		FC2CBD901FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD8F1FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift */; };
 		FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */; };
+		FC318384200706B5005CEE57 /* UIApplicationExtenson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC318383200706B5005CEE57 /* UIApplicationExtenson.swift */; };
 		FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */; };
 		FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */; };
 		FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A20E200056DD00F3C567 /* CreatorViewController.swift */; };
 		FC34A21D2001C1A000F3C567 /* CoverA.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC34A21B2001C1A000F3C567 /* CoverA.xib */; };
 		FC34A21E2001C1A000F3C567 /* CoverA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34A21C2001C1A000F3C567 /* CoverA.swift */; };
+		FC3932492006F9E900190705 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3932482006F9E900190705 /* NetworkStatus.swift */; };
 		FC5A55742002057F00FFB5A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5A55732002057E00FFB5A3 /* Assets.xcassets */; };
 		FC84A2B52002D97D002CB10E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84A2B42002D97D002CB10E /* PageViewController.swift */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
@@ -108,11 +110,13 @@
 		FC2CBD8C1FFCF33C00A34961 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		FC2CBD8F1FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDetectCurrentCell.swift; sourceTree = "<group>"; };
 		FC2CBD911FFD1EAF00A34961 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
+		FC318383200706B5005CEE57 /* UIApplicationExtenson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtenson.swift; sourceTree = "<group>"; };
 		FC34A2061FFFE18700F3C567 /* SceneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceneCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC34A20E200056DD00F3C567 /* CreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorViewController.swift; sourceTree = "<group>"; };
 		FC34A21B2001C1A000F3C567 /* CoverA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverA.xib; sourceTree = "<group>"; };
 		FC34A21C2001C1A000F3C567 /* CoverA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverA.swift; sourceTree = "<group>"; };
+		FC3932482006F9E900190705 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		FC5A55732002057E00FFB5A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC84A2B42002D97D002CB10E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,6 +342,7 @@
 				FCC2279B20046B420050804D /* SignServiece.swift */,
 				FCC2279F200492600050804D /* TemplateListServiece.swift */,
 				FCC528DD20062B8C006DEF40 /* CommunityListServiece.swift */,
+				FC3932482006F9E900190705 /* NetworkStatus.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				FCFAC8231FFFD4D300493A51 /* RandomColor.swift */,
 				FCC227A12005079D0050804D /* ConvertUTCtoLocal.swift */,
 				FCC227A32005100A0050804D /* IntToMMSS.swift */,
+				FC318383200706B5005CEE57 /* UIApplicationExtenson.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -566,14 +572,12 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MMPlayerView/MMPlayerView.framework",
 				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -585,14 +589,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMPlayerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -743,10 +745,12 @@
 				FCC528DE20062B8C006DEF40 /* CommunityListServiece.swift in Sources */,
 				FCFAC8241FFFD4D300493A51 /* RandomColor.swift in Sources */,
 				FC2CBD6E1FFCCF8B00A34961 /* CommunityViewController.swift in Sources */,
+				FC3932492006F9E900190705 /* NetworkStatus.swift in Sources */,
 				FC2CBD6A1FFCCF5C00A34961 /* MyVideoViewController.swift in Sources */,
 				FCFAC80B1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift in Sources */,
 				FC2CBD801FFCE1C000A34961 /* Reusable.swift in Sources */,
 				FC34A2081FFFE18700F3C567 /* SceneCollectionViewCell.swift in Sources */,
+				FC318384200706B5005CEE57 /* UIApplicationExtenson.swift in Sources */,
 				FC2CBD781FFCE18A00A34961 /* InProgressViewController.swift in Sources */,
 				FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */,
 				FCC227922003884C0050804D /* LogInViewController.swift in Sources */,

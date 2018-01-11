@@ -79,13 +79,17 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         super.viewWillAppear(true)
         categoryVisible(target: categoryConstraints, value: 0)
         openCategory = false
+        
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidLoad()
         for button in sortButton {
             if button == latestButton{
                 templateListSortAction(button)
             }
         }
     }
-
     
     func categoryVisible(target: [NSLayoutConstraint] ,value: CGFloat){
         for item in target {
@@ -127,12 +131,12 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         } else {
             self.sort = .popularity
         }
-        requestTemplateList(position: .top)
+        requestTemplateList()
         
         //self.view.layoutIfNeeded()
     }
     
-    func requestTemplateList(position: UITableViewScrollPosition) {
+    func requestTemplateList() {
         let parameter: [String:Any] = ["type" : self.selectedCategory.rawValue,
                                        "cursor" : self.cursor]
         let sortValue = self.sort.rawValue
@@ -151,17 +155,6 @@ class HomeViewController: ViewController, ViewControllerProtocol {
                     })
                     
                     self.homeVideoTableView.reloadData()
-                    switch position {
-                    case .top :
-                        let indexPath = IndexPath(row: 0, section: 0)
-                        self.homeVideoTableView.scrollToRow(at: indexPath, at: .top, animated: true)
-                    case .none:
-                        break
-                    case .middle:
-                        break
-                    case .bottom:
-                        break
-                    }
                 }
                 catch (let err) {
                     print(err.localizedDescription)
@@ -233,7 +226,8 @@ extension HomeViewController: UICollectionViewDelegate {
             cell.reload()            
         }
         selectedCategory = category[indexPath.row]
-        requestTemplateList(position: .top)
+        requestTemplateList()
+        self.homeVideoTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         print("Category DeSelected Index : \(indexPath)")

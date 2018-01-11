@@ -76,6 +76,13 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite_white" translatesAutoresizingMaskIntoConstraints="NO" id="SUg-0a-TUU">
+                        <rect key="frame" x="317" y="20" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="SUg-0a-TUU" secondAttribute="height" multiplier="1:1" id="fZU-QU-LYd"/>
+                            <constraint firstAttribute="width" constant="20" id="miW-tT-oOn"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="AZ5-tq-5Pr" firstAttribute="bottom" secondItem="Av6-OM-fIn" secondAttribute="bottom" id="5z6-10-ufP"/>
@@ -84,6 +91,7 @@
                     <constraint firstItem="f0H-Fz-IoN" firstAttribute="height" secondItem="SSL-0T-olL" secondAttribute="height" id="9SO-QK-VLE"/>
                     <constraint firstItem="AZ5-tq-5Pr" firstAttribute="trailing" secondItem="Av6-OM-fIn" secondAttribute="trailing" id="ESp-hM-wyY"/>
                     <constraint firstItem="8Rp-qZ-FuR" firstAttribute="centerY" secondItem="3Qv-iK-6x6" secondAttribute="centerY" id="LZ4-b1-pk3"/>
+                    <constraint firstAttribute="trailing" secondItem="SUg-0a-TUU" secondAttribute="trailing" constant="15" id="MZl-sK-jrL"/>
                     <constraint firstItem="f0H-Fz-IoN" firstAttribute="leading" secondItem="ezR-b7-eye" secondAttribute="leading" id="Mva-hk-yUk"/>
                     <constraint firstItem="Dz4-yX-hSP" firstAttribute="top" secondItem="3Qv-iK-6x6" secondAttribute="bottom" constant="8.5" id="Noc-Vj-9Fb"/>
                     <constraint firstItem="SSL-0T-olL" firstAttribute="leading" secondItem="f0H-Fz-IoN" secondAttribute="trailing" constant="5" id="PCe-oa-FVa"/>
@@ -93,6 +101,7 @@
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SSL-0T-olL" secondAttribute="trailing" constant="15" id="WBf-gJ-gQT"/>
                     <constraint firstAttribute="trailing" secondItem="Av6-OM-fIn" secondAttribute="trailing" id="WDu-FP-LbI"/>
                     <constraint firstItem="3Qv-iK-6x6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="a8I-bV-xol"/>
+                    <constraint firstItem="SUg-0a-TUU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="crY-WQ-iMD"/>
                     <constraint firstItem="ezR-b7-eye" firstAttribute="leading" secondItem="Dz4-yX-hSP" secondAttribute="leading" id="ehs-HB-8fa"/>
                     <constraint firstItem="Dz4-yX-hSP" firstAttribute="leading" secondItem="3Qv-iK-6x6" secondAttribute="leading" id="eqN-OC-lzf"/>
                     <constraint firstAttribute="trailing" secondItem="8Rp-qZ-FuR" secondAttribute="trailing" constant="15" id="fHz-A2-msY"/>
@@ -114,6 +123,7 @@
                 <outlet property="categoryLabel" destination="3Qv-iK-6x6" id="57P-zV-C9t"/>
                 <outlet property="contentLabel" destination="ezR-b7-eye" id="S9P-q7-Ttc"/>
                 <outlet property="dateLabel" destination="8Rp-qZ-FuR" id="NKi-jr-Ifl"/>
+                <outlet property="favoriteImage" destination="SUg-0a-TUU" id="Z5b-Hi-o1e"/>
                 <outlet property="percentLabel" destination="jGA-SV-nqU" id="NL9-xr-po0"/>
                 <outlet property="renderingImageView" destination="AZ5-tq-5Pr" id="9WW-Oy-Qi2"/>
                 <outlet property="thumbnail" destination="Av6-OM-fIn" id="a2I-4j-aRr"/>
@@ -126,6 +136,7 @@
     <resources>
         <image name="16-9-dummy-image6" width="1600" height="900"/>
         <image name="clock" width="12" height="12"/>
+        <image name="favorite_white" width="20" height="18"/>
         <image name="rendering" width="375" height="210"/>
     </resources>
 </document>

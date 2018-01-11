@@ -11,6 +11,7 @@ import Kingfisher
 import SwiftyJSON
 import MMPlayerView
 import AVKit
+import Toast_Swift
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var playerView: MMPlayerView!
@@ -46,6 +47,10 @@ class DetailViewController: UIViewController {
                 let dataJSON = JSON(data)
                 if let content = dataJSON["data"]["template_content"] as JSON? {
                     self.contentLabel.text = content.string
+                }
+                if let bookmarked = dataJSON["data"]["template_bookmarkTemplate"] as JSON? {
+                    let img = bookmarked.int == 1 ?  #imageLiteral(resourceName: "favorite_white") : #imageLiteral(resourceName: "favorite_clear")
+                    self.bookMark.setImage(img, for: .normal)
                 }
                 if let videoURL = dataJSON["data"]["template_video"] as JSON?{
                     print("비디오 URL : \(videoURL)")
@@ -94,7 +99,8 @@ class DetailViewController: UIViewController {
         titleLabel.text = info?.template_title
         hashLabel.text = info?.template_hashtag
         timeLabel.text = info?.template_length.IntToMMSS()
-        bookMark.imageView?.image = info?.template_hits == 1 ?  #imageLiteral(resourceName: "favorite_white") : #imageLiteral(resourceName: "favorite_clear")
+        
+        //bookMark.imageView?.image = info?.template_hits == 1 ?  #imageLiteral(resourceName: "favorite_white") : #imageLiteral(resourceName: "favorite_clear")
         if let thumbnail = info?.template_thumbnail {
             let imgView = UIImageView()
             imgView.kf.setImage(with: URL(string: thumbnail))
@@ -109,8 +115,21 @@ class DetailViewController: UIViewController {
             case .Success(let data):
                 guard let data = data as? Data else {return}
                 let dataJSON = JSON(data)
-                
+                if let bookmark = dataJSON["bookmark"] as JSON? {
+                    var img = UIImage()
+                    if bookmark.int == 1 {
+                        img = #imageLiteral(resourceName: "favorite_white")
+                        
+                        self.view.makeToast("찜하였습니다", duration: 1.0, position: .center, style: ToastStyle())
+                    }
+                    else {
+                        img = #imageLiteral(resourceName: "favorite_clear")
+                        self.view.makeToast("찜을 취소하였습니다", duration: 1.0, position: .center, style: ToastStyle())
+                    }
+                    self.bookMark.setImage(img, for: .normal)
+                }
             case .Failure(_):
+                self.view.makeToast("찜 변경이 실패하였습니다", duration: 1.0, position: .center, style: ToastStyle())
                 break
             }
         }

@@ -34,7 +34,7 @@ class MyVideoViewController: ViewController {
         controllerArray.append(controller3)
         
         // Customize menu (Optional)
-        let menuHeight:CGFloat = 50.0
+        let menuHeight:CGFloat = super.view.frame.height * 0.075// 50.0
         
         let parameters: [CAPSPageMenuOption] = [
             .scrollMenuBackgroundColor(UIColor.clear),
@@ -43,9 +43,9 @@ class MyVideoViewController: ViewController {
             .unselectedMenuItemLabelColor(UIColor(red: 104/255, green: 104/255, blue: 104/255, alpha: 1)  ),
             .menuItemFont(UIFont(name: "HelveticaNeue", size: 12.0)!),
             .menuHeight(menuHeight),
-            .menuItemWidth(100),
+            .menuItemWidth(80),
             .menuMargin(0),
-            .selectionIndicatorHeight(3.0),
+            .selectionIndicatorHeight(0),
             .bottomMenuHairlineColor(UIColor.black),
             .menuItemWidthBasedOnTitleTextWidth(false),
             .selectedMenuItemLabelColor(UIColor.black)
