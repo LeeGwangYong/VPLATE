@@ -9,10 +9,13 @@
 import UIKit
 import SwiftyJSON
 import Kingfisher
+import PageMenu
 
 class CreatorViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var sceneCollectionView: UICollectionView!
     @IBOutlet weak var sceneImageView: UIImageView!
+    @IBOutlet weak var pageMenuView: UIView!
+    
     var thumbnailImage: UIImage!
     var templateID: Int!
     var sceneURL: [String] = []
@@ -34,23 +37,69 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
         } else {
             // Fallback on earlier versions
         }
+        setUpPageMenu()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.sceneCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+        //self.sceneCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
     }
 
+    var pageMenu: CAPSPageMenu?
+    func setUpPageMenu(){
+        // Initialize view controllers to display and place in array
+        var controllerArray : [UIViewController] = []
+        
+        let controller1: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
+        controller1.title = "VIDEO"
+        controller1.parentNavigation = self.navigationController
+        controllerArray.append(controller1)
+        
+        let controller2: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
+        controller2.title = "PICTURE"
+        controller2.parentNavigation = self.navigationController
+        controllerArray.append(controller2)
+        
+        
+        let font = UIFont(name:"HelveticaNeue-Bold", size: 16.0)!
+        
+        let menuHeight:CGFloat = super.view.frame.height * 0.05// 50.0
+        let parameters: [CAPSPageMenuOption] = [
+            .scrollMenuBackgroundColor(UIColor.white),
+            .viewBackgroundColor(UIColor.white),
+            .selectionIndicatorColor(UIColor.black),
+            .unselectedMenuItemLabelColor(UIColor.black.withAlphaComponent(0.38) ),
+            .menuItemFont(font),
+            .menuHeight(menuHeight),
+            .menuMargin(0),
+            .menuItemWidth(100),
+            .selectionIndicatorHeight(0),
+            .bottomMenuHairlineColor(UIColor.white),
+            .menuItemWidthBasedOnTitleTextWidth(false),
+            .selectedMenuItemLabelColor(UIColor.black),]
+        
+        
+        // Initialize scroll menu
+        
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray,
+                                frame: CGRect(x: 0.0, y: 0.0, width: self.pageMenuView.frame.width, height: self.pageMenuView.frame.height),
+                                pageMenuOptions: parameters)
+        
+        for subview in (pageMenu?.view.subviews)! {
+            if let scroll = subview as? UIScrollView {
+                scroll.isScrollEnabled = false
+            }
+        }
+        self.pageMenuView.addSubview(pageMenu!.view)
+    }
+    
     func fetchTemplateInform() {
-        //13.124.195.255:3003/account/template/inform/scene?templateid={ templateid }
-
         TemplateListServiece.getTemplateList(url: "account/template/inform/scene/", method: .get, parameter: ["templateid" : templateID], header: Token.getToken()) { (response) in
             switch response {
             case .Success (let data):
                 guard let data = data as? Data else {return}
                 let dataJSON = JSON(data)
-                let decoder = JSONDecoder()
-                let urls = dataJSON["data"].arrayValue//.arrayValue
+                let urls = dataJSON["data"].arrayValue
                 self.sceneURL = urls.map({ (jsonData) -> String in
                     guard let jsonData = jsonData as JSON? else {return ""}
                     guard let url = jsonData.string else {return ""}
@@ -72,6 +121,7 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
         self.present(self.picker, animated: true, completion: nil)
     }
 }
+
 extension CreatorViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = self.sceneCollectionView.cellForItem(at: indexPath) as! SceneCollectionViewCell

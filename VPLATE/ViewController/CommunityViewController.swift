@@ -23,7 +23,7 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         let layer = MMPlayerLayer()
         layer.cacheType = .memory(count: 30)
         layer.coverFitType = .fitToPlayerView
-        layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        layer.videoGravity = AVLayerVideoGravity.resizeAspect
         layer.replace(cover: CoverA.instantiateFromNib())
         return layer
     }()

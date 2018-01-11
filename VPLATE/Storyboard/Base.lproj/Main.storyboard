@@ -78,7 +78,7 @@
                         <viewLayoutGuide key="safeArea" id="6sf-6c-iOY"/>
                     </view>
                     <navigationItem key="navigationItem" id="fW0-fb-bCY">
-                        <barButtonItem key="rightBarButtonItem" title="카테고리" id="Lye-YG-gKZ">
+                        <barButtonItem key="rightBarButtonItem" image="icon_category_text" id="Lye-YG-gKZ">
                             <color key="tintColor" red="0.40000000000000002" green="0.13725490196078433" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="openCategoryAction:" destination="DoL-oq-hio" id="wnk-Oc-1Kl"/>
@@ -323,7 +323,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wHh-da-fVu">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wHh-da-fVu">
                                 <rect key="frame" x="0.0" y="211" width="375" height="46.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3fX-fe-h2J">
@@ -363,20 +363,39 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Trimming Video"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWK-n6-YDp">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dnb-Vt-5PT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsL-8m-VRV">
+                                <rect key="frame" x="0.0" y="257.5" width="375" height="359.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jUM-gI-4EB" firstAttribute="trailing" secondItem="Pqz-Ax-vju" secondAttribute="trailing" id="Asx-th-oe5"/>
+                            <constraint firstItem="jUM-gI-4EB" firstAttribute="bottom" secondItem="xWK-n6-YDp" secondAttribute="bottom" id="BQh-5b-c98"/>
                             <constraint firstItem="jUM-gI-4EB" firstAttribute="trailing" secondItem="wHh-da-fVu" secondAttribute="trailing" id="Ea4-IY-VeI"/>
                             <constraint firstItem="Pqz-Ax-vju" firstAttribute="top" secondItem="9be-cc-SLI" secondAttribute="top" id="Evn-Ld-dGt"/>
                             <constraint firstItem="wHh-da-fVu" firstAttribute="height" secondItem="9be-cc-SLI" secondAttribute="height" multiplier="0.07" id="FV0-TG-prt"/>
+                            <constraint firstItem="jUM-gI-4EB" firstAttribute="trailing" secondItem="dsL-8m-VRV" secondAttribute="trailing" id="IdZ-kz-IuO"/>
+                            <constraint firstItem="dsL-8m-VRV" firstAttribute="leading" secondItem="jUM-gI-4EB" secondAttribute="leading" id="LNF-a9-7zV"/>
                             <constraint firstItem="wHh-da-fVu" firstAttribute="leading" secondItem="jUM-gI-4EB" secondAttribute="leading" id="Lu0-c4-xmb"/>
+                            <constraint firstItem="dsL-8m-VRV" firstAttribute="top" secondItem="wHh-da-fVu" secondAttribute="bottom" id="OFZ-jh-YCX"/>
                             <constraint firstItem="wHh-da-fVu" firstAttribute="top" secondItem="Pqz-Ax-vju" secondAttribute="bottom" id="RdO-Ew-i3P"/>
+                            <constraint firstItem="xWK-n6-YDp" firstAttribute="leading" secondItem="jUM-gI-4EB" secondAttribute="leading" id="bT9-BN-o75"/>
+                            <constraint firstItem="jUM-gI-4EB" firstAttribute="trailing" secondItem="xWK-n6-YDp" secondAttribute="trailing" id="bpj-pl-oX5"/>
                             <constraint firstItem="Pqz-Ax-vju" firstAttribute="leading" secondItem="jUM-gI-4EB" secondAttribute="leading" id="cit-mU-RO4"/>
+                            <constraint firstItem="xWK-n6-YDp" firstAttribute="top" secondItem="dsL-8m-VRV" secondAttribute="bottom" id="wMv-Zz-vbV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jUM-gI-4EB"/>
                     </view>
                     <connections>
+                        <outlet property="pageMenuView" destination="dsL-8m-VRV" id="zsB-pZ-32O"/>
                         <outlet property="sceneCollectionView" destination="wHh-da-fVu" id="6rA-gJ-YeN"/>
                         <outlet property="sceneImageView" destination="Pqz-Ax-vju" id="yII-Ig-hnl"/>
                     </connections>
@@ -614,16 +633,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Rr5-ZF-ehv">
-                                <rect key="frame" x="132" y="100.5" width="112.5" height="142.5"/>
+                                <rect key="frame" x="134.5" y="105" width="106" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Rr5-ZF-ehv" secondAttribute="height" multiplier="11:14" id="lol-oG-aFL"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6pm-rD-36X">
-                                <rect key="frame" x="58.5" y="330" width="259" height="164"/>
+                                <rect key="frame" x="11.5" y="330" width="353" height="164"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4f-0b-rZd">
-                                        <rect key="frame" x="0.0" y="0.0" width="259" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="rtb-lM-ADL"/>
                                         </constraints>
@@ -633,14 +652,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pka-eX-l1M">
-                                        <rect key="frame" x="0.0" y="58" width="259" height="48"/>
+                                        <rect key="frame" x="0.0" y="58" width="353" height="48"/>
                                         <state key="normal" image="kakao"/>
                                         <connections>
                                             <action selector="kakaoLoginAction:" destination="40l-nY-aYI" eventType="touchUpInside" id="ep7-67-EPm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4I-vO-gsY">
-                                        <rect key="frame" x="0.0" y="116" width="259" height="48"/>
+                                        <rect key="frame" x="0.0" y="116" width="353" height="48"/>
                                         <state key="normal" image="signin"/>
                                         <connections>
                                             <action selector="signUpAction:" destination="40l-nY-aYI" eventType="touchUpInside" id="aK2-3K-52X"/>
@@ -667,11 +686,11 @@
                             <constraint firstItem="gq2-nl-6HB" firstAttribute="trailing" secondItem="IQo-lO-At3" secondAttribute="trailing" id="GlU-pO-Yct"/>
                             <constraint firstItem="gq2-nl-6HB" firstAttribute="bottom" secondItem="IQo-lO-At3" secondAttribute="bottom" id="LRh-3Y-lC4"/>
                             <constraint firstItem="gq2-nl-6HB" firstAttribute="bottom" secondItem="ACw-46-FBy" secondAttribute="bottom" constant="40" id="M03-c4-aCu"/>
+                            <constraint firstItem="Rr5-ZF-ehv" firstAttribute="width" secondItem="t4f-0b-rZd" secondAttribute="width" multiplier="0.3" id="QtS-N5-fOD"/>
                             <constraint firstItem="Rr5-ZF-ehv" firstAttribute="centerY" secondItem="gq2-nl-6HB" secondAttribute="centerY" multiplier="0.5" id="WaW-yJ-itL"/>
                             <constraint firstItem="IQo-lO-At3" firstAttribute="leading" secondItem="gq2-nl-6HB" secondAttribute="leading" id="X9i-M4-H5X"/>
                             <constraint firstItem="6pm-rD-36X" firstAttribute="centerX" secondItem="gq2-nl-6HB" secondAttribute="centerX" id="YDm-0I-4xS"/>
                             <constraint firstItem="Rr5-ZF-ehv" firstAttribute="centerX" secondItem="gq2-nl-6HB" secondAttribute="centerX" id="ZKJ-Cc-aQ5"/>
-                            <constraint firstItem="Rr5-ZF-ehv" firstAttribute="width" secondItem="IQo-lO-At3" secondAttribute="width" multiplier="0.3" id="avE-CE-eDs"/>
                             <constraint firstItem="aU7-Ug-174" firstAttribute="top" secondItem="6pm-rD-36X" secondAttribute="bottom" constant="18" id="g7Z-hi-FyU"/>
                             <constraint firstItem="IQo-lO-At3" firstAttribute="top" secondItem="gq2-nl-6HB" secondAttribute="top" id="hjj-Ib-Oti"/>
                             <constraint firstItem="ACw-46-FBy" firstAttribute="centerX" secondItem="gq2-nl-6HB" secondAttribute="centerX" id="mT3-zu-Kwc"/>
@@ -811,6 +830,7 @@
         <image name="doyouhaveaccount" width="126" height="16"/>
         <image name="facebook" width="259" height="55"/>
         <image name="favorite_clear" width="21" height="18"/>
+        <image name="icon_category_text" width="48" height="13"/>
         <image name="icon_person" width="97" height="97"/>
         <image name="kakao" width="259" height="55"/>
         <image name="logo" width="92" height="134"/>

@@ -56,9 +56,10 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //navigateSignIn()
     }
     override func viewDidAppear(_ animated: Bool) {
-        navigateSignIn()
+        
     }
     
     @IBAction func facebookAction(_ sender: UIButton) {
@@ -89,8 +90,10 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
             case .success(let graphResponse) :
                 self.userData = graphResponse
                 print("Facebook User Data : \(self.userData)")
-                guard let email = self.userData?.id else {return}
-                self.signIn(email: email, pw: fbToken.userID, fcmKey: nil)
+                guard let uid = FBSDKAccessToken.current().userID else {return}
+                guard let name = self.userData?.name else {return}
+                let email = "\(name)\(uid.suffix(4))@vplate.cf"
+                self.signIn(email: email, pw: uid, fcmKey: nil)
             case .failed :
                 break
             }
@@ -110,7 +113,7 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
     //delete token : fbLoginManager.logOut()
     
     func signIn(email: String, pw: String, fcmKey: String?){
-        let parameter = ["email" : email,
+        let parameter: [String: String?] = ["email" : email,
                          "outside_key" : pw,
                          "fcm_key" : fcmKey]
         SignService.getSignData(url: "account/signin", parameter: parameter) { (result) in
@@ -141,8 +144,11 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
     
     func signUp() {
         guard let userData = userData else {return}
+        guard let uid = FBSDKAccessToken.current().userID else {return}
+        guard let name = self.userData?.name else {return}
+        let email = "\(name)\(uid.suffix(4))@vplate.cf"
         let parameter: [String : Any] = ["type" : 2,
-                                            "email" : userData.id,
+                                            "email" : email,
                                             "name" : userData.name,
                                             "nickname" : userData.name,
                                             "profile" : userData.profileURL,
@@ -151,7 +157,7 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
             switch result {
             case .Success(let response):
                 //print(response)
-                self.signIn(email: "Email", pw: FBSDKAccessToken.current().userID, fcmKey: nil)
+                self.signIn(email: email, pw: FBSDKAccessToken.current().userID, fcmKey: nil)
             case .Failure(let failureCode):
                 print("Sing Up Failure : \(failureCode)")
                 if failureCode >= 500 { print("Disconnect Network")}

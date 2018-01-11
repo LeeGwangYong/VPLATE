@@ -37,6 +37,7 @@ class DetailViewController: UIViewController, ViewControllerProtocol {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.playerView.player?.pause()
+        //self.playerView.player.init()
     }
     
     func fetchTemplateInform() {
