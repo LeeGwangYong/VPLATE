@@ -11,7 +11,7 @@ enum  ClipType {
 }
 
 struct TemplateInfo {
-    let clipNum: Int
+    var clipNum: Int
     let scene: [[Int : ClipInfo]]
 }
 
@@ -21,19 +21,27 @@ struct ClipInfo {
     var constraint: Double = 0.0
 }
 
-
+struct TypeData{
+    var type: ClipType
+    var data: Any
+}
 
 class CreatorViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var sceneCollectionView: UICollectionView!
     @IBOutlet weak var sceneImageView: UIImageView!
     @IBOutlet weak var pageMenuView: UIView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
-    static var requestData: [Any] = []
+    static var requestData: [Int:TypeData?] = [:]
+    static var displayData: [Int:UIImage?] = [:]
     var info: TemplateInfo?
     {
         didSet{
             if let num = self.info?.clipNum {
-                CreatorViewController.requestData = Array(repeating: Any?.self, count: num)
+                for i in 1..<num+1 {
+                    CreatorViewController.requestData[i] = nil
+                    CreatorViewController.displayData[i] = nil
+                }
             }
         }
     }
@@ -44,7 +52,7 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
     var templateID: Int!
     var sceneURL: [String] = []
     var scenes: [[ClipInfo]] = [[ClipInfo]]()
-    
+    var rightBarButton: UIBarButtonItem = UIBarButtonItem()
     override func viewDidLoad() {
         
         //[95 - clipNum : 10
@@ -55,31 +63,30 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
         //              [9: .text(10), 10: .text(13)]]
         
         var sceneInfo: [ClipInfo] = []
-        sceneInfo.append( ClipInfo(index: 1, type: .video, constraint: 10) )
-        sceneInfo.append( ClipInfo(index: 2, type: .video, constraint: 13) )
+        sceneInfo.append( ClipInfo(index: 1, type: .text, constraint: 4) )
+        sceneInfo.append( ClipInfo(index: 2, type: .video, constraint: 6) )
         scenes.append(sceneInfo)
         sceneInfo.removeAll()
         sceneInfo.append(ClipInfo(index: 3, type: .video, constraint: 6))
-        sceneInfo.append(ClipInfo(index: 4, type: .picture, constraint: 9))
+        sceneInfo.append(ClipInfo(index: 4, type: .picture, constraint: 16/9))
         scenes.append(sceneInfo)
         sceneInfo.removeAll()
-        sceneInfo.append(ClipInfo(index: 5, type: .picture, constraint: 12))
-        sceneInfo.append(ClipInfo(index: 6, type: .picture, constraint: 17))
+        sceneInfo.append(ClipInfo(index: 5, type: .text, constraint: 10))
+        sceneInfo.append(ClipInfo(index: 6, type: .text, constraint: 15))
         scenes.append(sceneInfo)
         sceneInfo.removeAll()
-        sceneInfo.append(ClipInfo(index: 6, type: .picture, constraint: 17))
-        sceneInfo.append(ClipInfo(index: 8, type: .video, constraint: 9))
+        sceneInfo.append(ClipInfo(index: 6, type: .picture, constraint: 1/1))
+        sceneInfo.append(ClipInfo(index: 8, type: .video, constraint: 3))
         scenes.append(sceneInfo)
         sceneInfo.removeAll()
-        sceneInfo.append(ClipInfo(index: 9, type: .video, constraint: 10))
-        sceneInfo.append(ClipInfo(index: 10, type: .video, constraint: 13))
+        sceneInfo.append(ClipInfo(index: 9, type: .video, constraint: 5))
+        sceneInfo.append(ClipInfo(index: 10, type: .video, constraint: 5))
         scenes.append(sceneInfo)
         sceneInfo.removeAll()
         
         super.viewDidLoad()
         self.navigationItem.title = TitleEnum.creator.rawValue
         setUpCollectionView(collectionView: sceneCollectionView, cell: SceneCollectionViewCell.self)
-    
         
         sceneImageView.image = thumbnailImage
         fetchTemplateInform()
@@ -90,7 +97,32 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
         }
         
         setUpPageMenu(index: 0)
+        rightBarButton = UIBarButtonItem(title: "제작하기", style: .plain, target: self, action: #selector(createRequest))
+        navigationItem.rightBarButtonItem = rightBarButton
+        DispatchQueue.main.async {
+            let filtered = CreatorViewController.requestData.filter({ (key , value) -> Bool in
+                if value != nil {return true}
+                else {return false}
+            })
+            if filtered.count == self.info?.clipNum {
+                self.rightBarButton.isEnabled = true
+            }
+            else {self.rightBarButton.isEnabled = false}
+        }
     }
+    
+    @objc func createRequest(){
+        print("탭 탭")
+    }
+    
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        CreatorViewController.displayData = [:]
+        CreatorViewController.requestData = [:]
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -98,30 +130,35 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
     }
     
     var pageMenu: CAPSPageMenu?
+    
+    func createController(type: ClipType, index: Int) -> UIViewController{
+        let controller: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
+        controller.type = type
+        let scene = scenes[index].filter { (value) -> Bool in
+            return value.type == type ? true: false
+        }
+        controller.parentNavigation = self.navigationController
+        controller.editData = scene
+        controller.delegate = self
+        switch type {
+        case .picture:
+            controller.title = "PICTURE"
+        case .video :
+            controller.title = "VIDEO"
+        case .text:
+            controller.title = "TEXT"
+        default:
+            break
+        }
+        return controller
+    }
+    
     func setUpPageMenu(index: Int){
         // Initialize view controllers to display and place in array
         var controllerArray : [UIViewController] = []
-        
-        let controller1: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
-        controller1.title = "VIDEO"
-        controller1.parentNavigation = self.navigationController
-        var scene = scenes[index].filter { (value) -> Bool in
-            return value.type == ClipType.video ? true: false
-        }
-        controller1.editData = scene
-        controller1.type = ClipType.video
-        controllerArray.append(controller1)
-        
-        let controller2: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
-        controller2.title = "PICTURE"
-        controller2.parentNavigation = self.navigationController
-        scene = scenes[index].filter { (value) -> Bool in
-            return value.type == ClipType.picture ? true: false
-        }
-        controller2.editData = scene
-        controller2.type = ClipType.picture
-        controllerArray.append(controller2)
-        
+        controllerArray.append(createController(type: .video, index: index))
+        controllerArray.append(createController(type: .picture, index: index))
+        controllerArray.append(createController(type: .text, index: index))
         
         let font = UIFont(name:"HelveticaNeue-Bold", size: 16.0)!
         

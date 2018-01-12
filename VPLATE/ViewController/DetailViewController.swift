@@ -3,8 +3,7 @@
 //  VPLATE
 //
 //  Created by 이광용 on 2018. 1. 10..
-//  Copyright © 2018년 이광용. All rights reserved.
-//
+//  Copyright © 2018년 이광용. All rights reservedvar/
 
 import UIKit
 import Kingfisher
@@ -12,6 +11,7 @@ import SwiftyJSON
 import MMPlayerView
 import AVKit
 import Toast_Swift
+
 
 class DetailViewController: UIViewController, ViewControllerProtocol {
     @IBOutlet weak var playerView: MMPlayerView!
@@ -30,7 +30,7 @@ class DetailViewController: UIViewController, ViewControllerProtocol {
     var thumbImage: UIImage = #imageLiteral(resourceName: "16-9-dummy-image6")
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = false
+        //self.tabBarController?.tabBar.isHidden = false
         
     }
     
@@ -52,6 +52,9 @@ class DetailViewController: UIViewController, ViewControllerProtocol {
                 if let bookmarked = dataJSON["data"]["template_bookmarkTemplate"] as JSON? {
                     let img = bookmarked.int == 1 ?  #imageLiteral(resourceName: "favorite_white") : #imageLiteral(resourceName: "favorite_clear")
                     self.bookMark.setImage(img, for: .normal)
+                }
+                if let clip = dataJSON["data"]["template_clip"] as JSON? {
+                    self.info?.template_clip = clip.int
                 }
                 if let videoURL = dataJSON["data"]["template_video"] as JSON?{
                     print("비디오 URL : \(videoURL)")
@@ -87,13 +90,14 @@ class DetailViewController: UIViewController, ViewControllerProtocol {
         super.viewDidAppear(animated)
         fetchTemplateInform()
         playerView.cacheType = .memory(count: 30)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tabBarController?.tabBar.isHidden = true
-        self.title = TitleEnum.detail.rawValue
-        
+
+        //self.tabBarController?.tabBar.isHidden = true
+        self.title = "" //TitleEnum.detail.rawValue
+        self.navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "icon_detailpage"))
         id = info?.template_id
         categoryLabel.text = info?.template_type
         dateLabel.text = info?.template_uploadtime.convertStringDate()
@@ -105,7 +109,10 @@ class DetailViewController: UIViewController, ViewControllerProtocol {
         if let thumbnail = info?.template_thumbnail {
             let imgView = UIImageView()
             imgView.kf.setImage(with: URL(string: thumbnail))
-            self.thumbImage = imgView.image!
+            if let image = imgView.image {
+                self.thumbImage = image
+            }
+            
         }
         ratioLabel.text = "16 : 9"
         mediaLabel.text = "(준비 중)"
@@ -140,7 +147,19 @@ class DetailViewController: UIViewController, ViewControllerProtocol {
         let vc: CreatorViewController = getNextViewController(viewController: CreatorViewController.self) as! CreatorViewController
         vc.templateID = self.info?.template_id
         vc.thumbnailImage = self.thumbImage
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.info?.clipNum = (self.info?.template_clip)!
+        
+        if self.info?.template_id == 108 {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        else {
+            self.view.makeToast("""
+본 템플릿은 준비 중입니다.
+'Camcoder Concept' 템플릿을 이용하세요.
+""", duration: 3, position: .center, title: "경고", image: nil, style: ToastStyle.init() , completion: nil)
+        }
+        
     }
 }
     

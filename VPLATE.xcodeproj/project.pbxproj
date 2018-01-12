@@ -10,6 +10,8 @@
 		7A0DAE61321F8B761932F8F9 /* Pods_VPLATE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF5AD641EF7C8B61EC44E49 /* Pods_VPLATE.framework */; };
 		C02F0E1D09374B77C8DF5808 /* Pods_VPLATEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DDD327578F1AD0BAF11091 /* Pods_VPLATEUITests.framework */; };
 		E7956C4CC0FF13298A913F10 /* Pods_VPLATETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A739AA386C0B69C09E9673 /* Pods_VPLATETests.framework */; };
+		FC240A6420092C8F007C2DF2 /* EditorTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC240A6220092C8F007C2DF2 /* EditorTextCollectionViewCell.swift */; };
+		FC240A6520092C8F007C2DF2 /* EditorTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC240A6320092C8F007C2DF2 /* EditorTextCollectionViewCell.xib */; };
 		FC2B128A2008A73200AF6BE7 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B12892008A73200AF6BE7 /* RealmData.swift */; };
 		FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD671FFCCEC000A34961 /* HomeViewController.swift */; };
 		FC2CBD6A1FFCCF5C00A34961 /* MyVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD691FFCCF5C00A34961 /* MyVideoViewController.swift */; };
@@ -124,6 +126,8 @@
 		7BDA60E779A65500EA851A5E /* Pods-VPLATETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATETests/Pods-VPLATETests.debug.xcconfig"; sourceTree = "<group>"; };
 		87AD9349226C10FB6B787E93 /* Pods-VPLATE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATE.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE.release.xcconfig"; sourceTree = "<group>"; };
 		983E81E8A0FC6D9B7E7EEBED /* Pods-VPLATE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE.debug.xcconfig"; sourceTree = "<group>"; };
+		FC240A6220092C8F007C2DF2 /* EditorTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTextCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC240A6320092C8F007C2DF2 /* EditorTextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditorTextCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC2B12892008A73200AF6BE7 /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		FC2CBD671FFCCEC000A34961 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FC2CBD691FFCCF5C00A34961 /* MyVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVideoViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +307,8 @@
 				FC34A2071FFFE18700F3C567 /* SceneCollectionViewCell.xib */,
 				FC61995B2007C36F00041477 /* EditorCollectionViewCell.swift */,
 				FC61995C2007C36F00041477 /* EditorCollectionViewCell.xib */,
+				FC240A6220092C8F007C2DF2 /* EditorTextCollectionViewCell.swift */,
+				FC240A6320092C8F007C2DF2 /* EditorTextCollectionViewCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -598,6 +604,7 @@
 				FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */,
 				FC2CBD7D1FFCE1A800A34961 /* CompletionViewController.xib in Resources */,
 				FC34A21D2001C1A000F3C567 /* CoverA.xib in Resources */,
+				FC240A6520092C8F007C2DF2 /* EditorTextCollectionViewCell.xib in Resources */,
 				FCFAC8221FFFCFB900493A51 /* CategoryCollectionViewCell.xib in Resources */,
 				FC34A2091FFFE18700F3C567 /* SceneCollectionViewCell.xib in Resources */,
 				FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */,
@@ -854,6 +861,7 @@
 				FCC528E020063ECD006DEF40 /* RoundedImageView.swift in Sources */,
 				FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */,
 				FC318389200720E8005CEE57 /* HomePageViewController.swift in Sources */,
+				FC240A6420092C8F007C2DF2 /* EditorTextCollectionViewCell.swift in Sources */,
 				FC2CBD701FFCCF9200A34961 /* SettingViewController.swift in Sources */,
 				FC2CBD901FFCFCE000A34961 /* CollectionViewDetectCurrentCell.swift in Sources */,
 				FC2CBD821FFCE91F00A34961 /* TitleEnum.swift in Sources */,

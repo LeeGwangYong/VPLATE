@@ -71,13 +71,13 @@ class HomeViewController: ViewController, ViewControllerProtocol {
         } else {
             // Fallback on earlier versions
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         categoryVisible(target: categoryConstraints, value: 0)
         openCategory = false
-        
     }
     
     

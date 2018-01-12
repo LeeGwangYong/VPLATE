@@ -35,7 +35,8 @@
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWE-ja-3pw">
                     <rect key="frame" x="28" y="23.5" width="308" height="29"/>
-                    <string key="text">영상 제작을 위해선 빈 부분이 없이 씬에 들어갈 비디오, 영상, 텍스트를 첨부해주세요</string>
+                    <string key="text">영상 제작을 위해선 빈 부분이 없이 
+씬에 들어갈 비디오, 영상, 텍스트를 첨부해주세요</string>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>

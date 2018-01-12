@@ -84,6 +84,7 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = getNextViewController(viewController: DetailViewController.self) as! DetailViewController
         vc.info = templateList[indexPath.row]
+        vc.hidesBottomBarWhenPushed = true
         self.parentNavigation?.pushViewController(vc, animated: true)
     }
  

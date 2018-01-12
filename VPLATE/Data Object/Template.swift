@@ -17,6 +17,7 @@ struct Template: Codable {
     let template_id: Int
     let template_hashtag: String
     let template_uploadtime: String
+    var template_clip: Int?
     let template_content: String?
 }
 

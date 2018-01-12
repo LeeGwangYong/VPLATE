@@ -16,6 +16,9 @@ import Photos
 class TrimmingViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var playerView: UIView!
     @IBOutlet weak var trimmerView: TrimmerView!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
     var player: AVPlayer?
     var asset: AVAsset!
     var playbackTimeCheckerTimer: Timer?
@@ -29,6 +32,7 @@ class TrimmingViewController: UIViewController, UINavigationControllerDelegate, 
         guard let duration = duration else {return}
         trimmerView.minDuration = duration
         trimmerView.maxDuration = duration
+        timeLabel.text = Int(duration).IntToMMSS()
         trimmerView.delegate = self
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -156,10 +160,7 @@ class TrimmingViewController: UIViewController, UINavigationControllerDelegate, 
     }
     
     @IBAction func trimAction(_ sender: Any) {
-       
-        trimVideo(asset: asset, startTime: trimmerView.startTime, endTime: trimmerView.endTime)
-        
-        //trimVideo(asset: asset, startTime: trimmerView.startTime, endTime: trimmerView.endTime)
+       trimVideo(asset: asset, startTime: trimmerView.startTime, endTime: trimmerView.endTime)
     }
     
 }

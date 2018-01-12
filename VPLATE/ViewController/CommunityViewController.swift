@@ -47,6 +47,7 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         videoCollectionView.removeObserver(self, forKeyPath: "contentOffset")   
     }
     
@@ -128,13 +129,13 @@ class CommunityViewController: ViewController, ViewControllerProtocol {
         }
         if let nextCell = self.videoCollectionView.cellForItem(at: IndexPath(row: index.row + 1, section: 0) ) {
             
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.15, animations: {
                 nextCell.contentView.alpha = 0.3
             })
         }
         
         if let currentCell = self.videoCollectionView.cellForItem(at: index) as? CommunityVideoCollectionViewCell{
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.15, animations: {
                 currentCell.contentView.alpha = 1.0
             })
             

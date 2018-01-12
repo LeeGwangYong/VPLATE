@@ -11,6 +11,7 @@ import Foundation
 extension Int {
     func IntToMMSS() -> String{
         let m = String(format: "%02d", self % 3600 / 60)
-        return "\(m):\((self % 3600) % 60)"
+        let s = String(format: "%02d", self % 3600 % 60)
+        return "\(m):\(s)"
     }
 }
