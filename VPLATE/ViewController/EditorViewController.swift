@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
+import MobileCoreServices
+import Toast_Swift
 
 class EditorViewController: AssetSelectorViewController, ViewControllerProtocol {
     @IBOutlet weak var editorCollectionView: UICollectionView!
@@ -14,22 +17,23 @@ class EditorViewController: AssetSelectorViewController, ViewControllerProtocol 
     var parentNavigation: UINavigationController?
     var videoURL: [String] = []
     var imageDatas: [UIImage] = []
-    var editData: EditorDetailData? {
+    var editData: CreatorViewController.EditorDetailData? {
         didSet {
-            let count = editData?.indexRatio.count
-            cropper.delegate = self
+            let count = editData?.indexInform.count
             
             switch editData?.type{
             case .video?:
                 for _ in 0 ..< count! {
                     imageDatas.append( #imageLiteral(resourceName: "ic_movie_creation_white_48px") )
                 }
+                picker.mediaTypes = [kUTTypeMovie as String]
+                picker.allowsEditing = false
             case .picture?:
                 for _ in 0 ..< count! {
                     imageDatas.append( #imageLiteral(resourceName: "ic_image_white_48px") )
                 }
-                self.picker.sourceType = .photoLibrary
                 cropper.picker = picker
+                picker.mediaTypes = [kUTTypeImage as String]
                 break
             case .text?:
                 break
@@ -45,35 +49,78 @@ class EditorViewController: AssetSelectorViewController, ViewControllerProtocol 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpCollectionView(collectionView: editorCollectionView, cell: EditorCollectionViewCell.self)
-    }
-    
-    @objc func selectCell(indexPath: IndexPath) {
-        selectedIndex = indexPath
-        self.parentNavigation?.present(self.picker, animated: true, completion: nil)
+        cropper.delegate = self
+        picker.delegate = self
+        picker.sourceType = .savedPhotosAlbum
     }
     
     @objc func tapped(sender: UITapGestureRecognizer) {
         let tapLocation = sender.location(in: self.editorCollectionView)
         guard let indexPath = self.editorCollectionView.indexPathForItem(at: tapLocation) else {return}
         self.selectedIndex = indexPath
-        guard let data = editData?.indexRatio[indexPath.row + 1] else {return}
-        self.cropper.cropRatio = data!
+        
+        guard let dic = editData?.indexInform else {return}
+        guard let data = Array(dic)[indexPath.row].value as Double? else {return}
+        self.cropper.cropRatio = CGFloat(data)
+        
         self.parentNavigation?.present(self.picker, animated: true, completion: nil)
-        //let cell = self.editorCollectionView.cellForItem(at: indexPath!) as! EditorCollectionViewCell
+    }
+    
+    override func loadAsset(_ asset: AVAsset, index: IndexPath) {
+        guard let duration = self.editData?.indexInform[(index.row + 1)] else {return}
+        if asset.duration > CMTime(seconds: duration, preferredTimescale: CMTimeScale(600)) {
+            let trimmerVC: TrimmingViewController = TrimmingViewController(nibName: TrimmingViewController.reuseIdentifier, bundle: nil)
+            
+            trimmerVC.asset = asset
+            trimmerVC.duration = duration
+            trimmerVC.delegate = self
+            
+            self.parentNavigation?.present(trimmerVC, animated: true, completion: nil)
+            //pushViewController(trimmerVC, animated: true)
+        }
+        else {
+            self.view.makeToast( """
+영상의 길이가 너무 짧습니다.
+다른 영상을 선택해주세요.
+""", duration: 3, position: .center, style: ToastStyle())
+        }
+    }
+    
+    func getAssetData(asset: AVAsset, url: URL) {
+        imageDatas[selectedIndex.row] = url.getThumbnailImage()!
+        self.editorCollectionView.reloadData()
     }
 }
 
-extension EditorViewController: UIImageCropperProtocol{
+extension EditorViewController: UIImageCropperProtocol, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func didCropImage(originalImage: UIImage?, croppedImage: UIImage?) {
         print(selectedIndex)
         imageDatas[selectedIndex.row] = croppedImage!
         self.editorCollectionView.reloadData()
     }
     
-    
     func didCancel() {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let mediaType = info[UIImagePickerControllerMediaType] as! NSString
+        if let videoURL = info[UIImagePickerControllerMediaURL] as! URL? {
+            self.parentNavigation?.dismiss(animated: true, completion: {
+                if mediaType == kUTTypeMovie {
+                    self.loadAsset(AVAsset(url: videoURL), index: self.selectedIndex)
+                }
+            })
+        }
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            self.cropper.image = image.fixOrientation()
+            self.picker.present(cropper, animated: true, completion: nil)
+            //didCropImage(originalImage: image, croppedImage: <#T##UIImage?#>)
+        }
+        
+    }
+    
 }
 
 extension EditorViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -91,8 +138,8 @@ extension EditorViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EditorCollectionViewCell.reuseIdentifier, for: indexPath) as! EditorCollectionViewCell
         let tap = UITapGestureRecognizer(target: self, action: #selector(EditorViewController.tapped(sender:)))
         cell.imageView.addGestureRecognizer(tap)
-    
         cell.imageView.image = imageDatas[indexPath.row]
+        cell.data = "\(indexPath.row)"
         return cell
     }
 }

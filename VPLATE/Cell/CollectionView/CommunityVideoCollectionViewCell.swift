@@ -30,7 +30,7 @@ class CommunityVideoCollectionViewCell: UICollectionViewCell {
             }
             self.contentLabel.text = info?.content
             if let videoString = info?.uploadvideo, let url = URL(string: videoString) {
-                self.imgView.image = getThumbnailImage(forUrl: url)
+                self.imgView.image = url.getThumbnailImage()
             }
         }
     }
@@ -48,20 +48,6 @@ class CommunityVideoCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    func getThumbnailImage(forUrl url: URL) -> UIImage? {
-        let asset: AVAsset = AVAsset(url: url)
-        let imageGenerator = AVAssetImageGenerator(asset: asset)
-        
-        do {
-            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(1, 60) , actualTime: nil)
-            return UIImage(cgImage: thumbnailImage)
-        } catch let error {
-            print(error)
-        }
-        
-        return nil
     }
 
 }

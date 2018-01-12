@@ -35,7 +35,7 @@ struct EditorData {
 
 struct EditorDetailData {
     let type: EditorType
-    let indexRatio: [Int : CGFloat?]
+    let indexInform: [Int : Double] // length or ratio
 }
 
 

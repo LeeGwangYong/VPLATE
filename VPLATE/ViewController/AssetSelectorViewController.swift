@@ -24,7 +24,7 @@ class AssetSelectorViewController: UIViewController {
         }
     }
     
-    func loadAsset(_ asset: AVAsset) {
+    func loadAsset(_ asset: AVAsset, index: IndexPath) {
         //URL To AVAsset : AVAsset(url: URL)
         
         // override in subclass

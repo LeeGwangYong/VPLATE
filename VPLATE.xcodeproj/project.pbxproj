@@ -44,6 +44,9 @@
 		FC6199622007E12000041477 /* InsertImageToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6199612007E12000041477 /* InsertImageToString.swift */; };
 		FC6199642007EE4700041477 /* EditorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6199632007EE4700041477 /* EditorData.swift */; };
 		FC619966200811F700041477 /* AssetSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC619965200811F700041477 /* AssetSelectorViewController.swift */; };
+		FC619969200812A700041477 /* TrimmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC619967200812A700041477 /* TrimmingViewController.swift */; };
+		FC61996A200812A700041477 /* TrimmingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC619968200812A700041477 /* TrimmingViewController.xib */; };
+		FC61996C200859A900041477 /* GetThumbnailFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61996B200859A900041477 /* GetThumbnailFromURL.swift */; };
 		FC84A2B52002D97D002CB10E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84A2B42002D97D002CB10E /* PageViewController.swift */; };
 		FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */; };
 		FC946E021FF8F66F00D6616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E001FF8F66F00D6616B /* Main.storyboard */; };
@@ -136,6 +139,9 @@
 		FC6199612007E12000041477 /* InsertImageToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertImageToString.swift; sourceTree = "<group>"; };
 		FC6199632007EE4700041477 /* EditorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorData.swift; sourceTree = "<group>"; };
 		FC619965200811F700041477 /* AssetSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSelectorViewController.swift; sourceTree = "<group>"; };
+		FC619967200812A700041477 /* TrimmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimmingViewController.swift; sourceTree = "<group>"; };
+		FC619968200812A700041477 /* TrimmingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrimmingViewController.xib; sourceTree = "<group>"; };
+		FC61996B200859A900041477 /* GetThumbnailFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThumbnailFromURL.swift; sourceTree = "<group>"; };
 		FC84A2B42002D97D002CB10E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		FC946DF91FF8F66F00D6616B /* VPLATE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPLATE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946DFC1FF8F66F00D6616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -388,6 +394,8 @@
 				FC6199572007C25B00041477 /* EditorViewController.swift */,
 				FC6199582007C25B00041477 /* EditorViewController.xib */,
 				FC619965200811F700041477 /* AssetSelectorViewController.swift */,
+				FC619967200812A700041477 /* TrimmingViewController.swift */,
+				FC619968200812A700041477 /* TrimmingViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -412,6 +420,7 @@
 				FCC227A32005100A0050804D /* IntToMMSS.swift */,
 				FC318383200706B5005CEE57 /* UIApplicationExtenson.swift */,
 				FC6199612007E12000041477 /* InsertImageToString.swift */,
+				FC61996B200859A900041477 /* GetThumbnailFromURL.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -557,6 +566,7 @@
 				FCFAC80C1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.xib in Resources */,
 				FC2CBD8E1FFCF33C00A34961 /* VideoTableViewCell.xib in Resources */,
 				FC5A55742002057F00FFB5A3 /* Assets.xcassets in Resources */,
+				FC61996A200812A700041477 /* TrimmingViewController.xib in Resources */,
 				FC61995A2007C25B00041477 /* EditorViewController.xib in Resources */,
 				FC61995E2007C36F00041477 /* EditorCollectionViewCell.xib in Resources */,
 				FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */,
@@ -772,6 +782,7 @@
 				FC946DFD1FF8F66F00D6616B /* AppDelegate.swift in Sources */,
 				FCC227A22005079D0050804D /* ConvertUTCtoLocal.swift in Sources */,
 				FC2CBD6C1FFCCF8100A34961 /* SelectedVideoViewController.swift in Sources */,
+				FC619969200812A700041477 /* TrimmingViewController.swift in Sources */,
 				FC2CBD921FFD1EAF00A34961 /* ViewControllerProtocol.swift in Sources */,
 				FC2CBD841FFCEC7700A34961 /* UIColorToUIImage.swift in Sources */,
 				FCC528DE20062B8C006DEF40 /* CommunityListServiece.swift in Sources */,
@@ -787,6 +798,7 @@
 				FC2CBD781FFCE18A00A34961 /* InProgressViewController.swift in Sources */,
 				FC6199592007C25B00041477 /* EditorViewController.swift in Sources */,
 				FCFAC80E1FFE1E0200493A51 /* TabbarViewController.swift in Sources */,
+				FC61996C200859A900041477 /* GetThumbnailFromURL.swift in Sources */,
 				FCC227922003884C0050804D /* LogInViewController.swift in Sources */,
 				FCC2279020037D900050804D /* UIImageCropper.swift in Sources */,
 				FC619966200811F700041477 /* AssetSelectorViewController.swift in Sources */,

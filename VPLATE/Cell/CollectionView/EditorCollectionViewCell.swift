@@ -12,16 +12,16 @@ class EditorCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var numberView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
-    
+    var data: String?
     override func awakeFromNib() {
         super.awakeFromNib()
         imageView.isUserInteractionEnabled = true
-        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(printTap)) )
+        //imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(printTap)) )
         //profileImageButton.addTarget(self, selector: #selector(userPhotoTaped), action: .touchUpInside)
 
     }
     @objc func printTap() {
-        print("Image Tap")
+        print("Image Tap\(data)")
     }
 
 }

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrimmingViewController" customModule="VPLATE" customModuleProvider="target">
+            <connections>
+                <outlet property="playerView" destination="nWZ-Oa-zsu" id="Byd-hu-wac"/>
+                <outlet property="trimmerView" destination="zHs-2Z-IW1" id="vKf-pb-aoZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWZ-Oa-zsu">
+                    <rect key="frame" x="0.0" y="70" width="375" height="463.5"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHs-2Z-IW1" customClass="TrimmerView" customModule="PryntTrimmerView">
+                    <rect key="frame" x="0.0" y="533.5" width="375" height="133.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se8-T9-vPx">
+                    <rect key="frame" x="162" y="277" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="2WT-DT-oQj"/>
+                        <constraint firstAttribute="width" secondItem="Se8-T9-vPx" secondAttribute="height" multiplier="1:1" id="sFj-6e-cp6"/>
+                    </constraints>
+                    <state key="normal" image="ic_play_circle_filled"/>
+                    <connections>
+                        <action selector="playAction:" destination="-1" eventType="touchUpInside" id="2ja-jN-F6K"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOK-8q-1pX">
+                    <rect key="frame" x="319" y="30" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="trimAction:" destination="-1" eventType="touchUpInside" id="p0C-Gc-tkg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zHs-2Z-IW1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0ZO-wm-9Q4"/>
+                <constraint firstItem="zHs-2Z-IW1" firstAttribute="top" secondItem="nWZ-Oa-zsu" secondAttribute="bottom" id="1Gy-sc-pWE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nWZ-Oa-zsu" secondAttribute="trailing" id="7bf-Zs-Pa9"/>
+                <constraint firstItem="zHs-2Z-IW1" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="PNu-Gp-xBl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VOK-8q-1pX" secondAttribute="trailing" constant="10" id="Uw5-r3-Yv0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zHs-2Z-IW1" secondAttribute="bottom" id="V4H-bV-eUz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zHs-2Z-IW1" secondAttribute="trailing" id="W6O-zi-agi"/>
+                <constraint firstItem="nWZ-Oa-zsu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XVM-z5-Vam"/>
+                <constraint firstItem="Se8-T9-vPx" firstAttribute="centerY" secondItem="nWZ-Oa-zsu" secondAttribute="centerY" id="bOG-Ec-90o"/>
+                <constraint firstItem="Se8-T9-vPx" firstAttribute="centerX" secondItem="nWZ-Oa-zsu" secondAttribute="centerX" id="ccP-dC-ghI"/>
+                <constraint firstItem="VOK-8q-1pX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="l6q-4X-T7E"/>
+                <constraint firstItem="nWZ-Oa-zsu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="opW-Q8-yJb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_play_circle_filled" width="30" height="30"/>
+    </resources>
+</document>

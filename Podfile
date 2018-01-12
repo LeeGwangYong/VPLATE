@@ -16,7 +16,6 @@ target 'VPLATE' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'Toast-Swift', '~> 3.0.1'
-  pod 'AEAccordion'
 
   target 'VPLATETests' do
     inherit! :search_paths

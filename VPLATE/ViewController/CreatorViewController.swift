@@ -16,7 +16,54 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var sceneImageView: UIImageView!
     @IBOutlet weak var pageMenuView: UIView!
     
-    var editData: EditorDetailData?
+    //var editData: EditorDetailData?
+    
+    struct Editors {
+        let template_type: String
+        let template_length: Int
+        let template_thumbnail: String
+        let template_hits: Int
+        let template_title: String
+        let template_id: Int
+        let template_hashtag: String
+        let template_uploadtime: String
+        let template_content: String?
+        let editor_Scenes: [EditorData]?
+    }
+    
+    struct EditorData {
+        let sceneNumber: Int
+        let clips: [Any]
+        let detail: [EditorDetailData]
+    }
+    
+struct EditorDetailData {
+        let type: EditorType
+        let indexInform: [Int : Double] // length or ratio
+    }
+
+    func setData() {
+        var editorDetails1: [EditorDetailData] = []
+        var editorDetailData1 = EditorDetailData(type: .video, indexInform: [1 : 5, 3: 6])
+        editorDetails1.append(editorDetailData1)
+        editorDetailData1 = EditorDetailData(type: .picture, indexInform: [2: Double(16/9), 5: Double(9/16)])
+        editorDetails1.append(editorDetailData1)
+        
+        var editorDetails2: [EditorDetailData] = []
+        var editorDetailData2 = EditorDetailData(type: .video, indexInform: [6 : 5])
+        editorDetails2.append(editorDetailData2)
+        editorDetailData2 = EditorDetailData(type: .picture, indexInform: [7: Double(16/9), 10: Double(9/16), 11: Double(4/3)])
+        editorDetails2.append(editorDetailData2)
+        
+        editorDatas.append(EditorData(sceneNumber: 1, clips: [], detail: editorDetails1))
+        editorDatas.append(EditorData(sceneNumber: 2, clips: [], detail: editorDetails2))
+        editorDatas.append(EditorData(sceneNumber: 3, clips: [], detail: editorDetails1))
+        editorDatas.append(EditorData(sceneNumber: 4, clips: [], detail: editorDetails2))
+        editorDatas.append(EditorData(sceneNumber: 5, clips: [], detail: editorDetails2))
+        editorDatas.append(EditorData(sceneNumber: 6, clips: [], detail: editorDetails1))
+        editorDatas.append(EditorData(sceneNumber: 7, clips: [], detail: editorDetails1))
+    }
+    var editorDatas: [EditorData] = []
     
     
     var thumbnailImage: UIImage!
@@ -27,6 +74,7 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
     let cropper = UIImageCropper(cropRatio: 16/9)
     
     override func viewDidLoad() {
+        setData()
         super.viewDidLoad()
         self.navigationItem.title = TitleEnum.creator.rawValue
         setUpCollectionView(collectionView: sceneCollectionView, cell: SceneCollectionViewCell.self)
@@ -43,10 +91,10 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
             // Fallback on earlier versions
         }
         
-        self.editData = EditorDetailData(type: .picture,
-                                                          indexRatio: [1 : CGFloat(16.0/9.0),
-                                                                       2 : CGFloat(9.0/16.0)])
-        setUpPageMenu()
+//        self.editData = EditorDetailData(type: .video,
+//                                         indexInform: [1 : 5,
+//                                                       2 : 2])
+        setUpPageMenu(index: 0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,23 +103,23 @@ class CreatorViewController: ViewController, ViewControllerProtocol {
     }
 
     var pageMenu: CAPSPageMenu?
-    func setUpPageMenu(){
+    func setUpPageMenu(index: Int){
         // Initialize view controllers to display and place in array
         var controllerArray : [UIViewController] = []
         
         let controller1: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
         controller1.title = "VIDEO"
         controller1.parentNavigation = self.navigationController
-        if self.editData?.type == EditorType.video {
-            controller1.editData = self.editData
+        if self.editorDatas[index].detail[0].type == EditorType.video {
+            controller1.editData = self.editorDatas[index].detail[0]
         }
         controllerArray.append(controller1)
         
         let controller2: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
         controller2.title = "PICTURE"
         controller2.parentNavigation = self.navigationController
-        if self.editData?.type == EditorType.picture {
-            controller2.editData = self.editData
+        if self.editorDatas[index].detail[1].type == EditorType.picture {
+            controller2.editData = self.editorDatas[index].detail[1]
         }
         controllerArray.append(controller2)
         
@@ -142,6 +190,8 @@ extension CreatorViewController: UICollectionViewDelegate {
         let cell = self.sceneCollectionView.cellForItem(at: indexPath) as! SceneCollectionViewCell
         cell.reload()
         self.sceneImageView.image = cell.imageView.image
+        setUpPageMenu(index: indexPath.row)
+        
     }
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = self.sceneCollectionView.cellForItem(at: indexPath) as! SceneCollectionViewCell? {

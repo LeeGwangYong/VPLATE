@@ -56,7 +56,7 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigateSignIn()
+        navigateSignIn()
     }
     override func viewDidAppear(_ animated: Bool) {
         
