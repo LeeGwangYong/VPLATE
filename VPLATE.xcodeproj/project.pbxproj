@@ -10,6 +10,7 @@
 		7A0DAE61321F8B761932F8F9 /* Pods_VPLATE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF5AD641EF7C8B61EC44E49 /* Pods_VPLATE.framework */; };
 		C02F0E1D09374B77C8DF5808 /* Pods_VPLATEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DDD327578F1AD0BAF11091 /* Pods_VPLATEUITests.framework */; };
 		E7956C4CC0FF13298A913F10 /* Pods_VPLATETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A739AA386C0B69C09E9673 /* Pods_VPLATETests.framework */; };
+		FC2B128A2008A73200AF6BE7 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B12892008A73200AF6BE7 /* RealmData.swift */; };
 		FC2CBD681FFCCEC000A34961 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD671FFCCEC000A34961 /* HomeViewController.swift */; };
 		FC2CBD6A1FFCCF5C00A34961 /* MyVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD691FFCCF5C00A34961 /* MyVideoViewController.swift */; };
 		FC2CBD6C1FFCCF8100A34961 /* SelectedVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CBD6B1FFCCF8100A34961 /* SelectedVideoViewController.swift */; };
@@ -42,7 +43,6 @@
 		FC61995D2007C36F00041477 /* EditorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61995B2007C36F00041477 /* EditorCollectionViewCell.swift */; };
 		FC61995E2007C36F00041477 /* EditorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC61995C2007C36F00041477 /* EditorCollectionViewCell.xib */; };
 		FC6199622007E12000041477 /* InsertImageToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6199612007E12000041477 /* InsertImageToString.swift */; };
-		FC6199642007EE4700041477 /* EditorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6199632007EE4700041477 /* EditorData.swift */; };
 		FC619966200811F700041477 /* AssetSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC619965200811F700041477 /* AssetSelectorViewController.swift */; };
 		FC619969200812A700041477 /* TrimmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC619967200812A700041477 /* TrimmingViewController.swift */; };
 		FC61996A200812A700041477 /* TrimmingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC619968200812A700041477 /* TrimmingViewController.xib */; };
@@ -53,6 +53,11 @@
 		FC946E071FF8F66F00D6616B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC946E051FF8F66F00D6616B /* LaunchScreen.storyboard */; };
 		FC946E121FF8F66F00D6616B /* VPLATETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946E111FF8F66F00D6616B /* VPLATETests.swift */; };
 		FC946E1D1FF8F66F00D6616B /* VPLATEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC946E1C1FF8F66F00D6616B /* VPLATEUITests.swift */; };
+		FCAAAB882008F25D0043F8CA /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAAAB872008F25D0043F8CA /* DummyData.swift */; };
+		FCAC2BC02008D5D800CF8F89 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAC2BBE2008D5D500CF8F89 /* RealmSwift.framework */; };
+		FCAC2BC12008D5D800CF8F89 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCAC2BBE2008D5D500CF8F89 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCAC2BC22008D5D800CF8F89 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAC2BBF2008D5D800CF8F89 /* Realm.framework */; };
+		FCAC2BC32008D5D800CF8F89 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCAC2BBF2008D5D800CF8F89 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCC2278F20037D900050804D /* UIImage+FixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2278D20037D900050804D /* UIImage+FixOrientation.swift */; };
 		FCC2279020037D900050804D /* UIImageCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2278E20037D900050804D /* UIImageCropper.swift */; };
 		FCC227922003884C0050804D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC227912003884C0050804D /* LogInViewController.swift */; };
@@ -61,7 +66,6 @@
 		FCC227A0200492600050804D /* TemplateListServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2279F200492600050804D /* TemplateListServiece.swift */; };
 		FCC227A22005079D0050804D /* ConvertUTCtoLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC227A12005079D0050804D /* ConvertUTCtoLocal.swift */; };
 		FCC227A42005100A0050804D /* IntToMMSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC227A32005100A0050804D /* IntToMMSS.swift */; };
-		FCC227A82005ADB80050804D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC227A72005ADB80050804D /* DummyData.swift */; };
 		FCC528DA2005C5F4006DEF40 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC528D92005C5F4006DEF40 /* DetailViewController.swift */; };
 		FCC528DC20062AF7006DEF40 /* CommunityVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC528DB20062AF7006DEF40 /* CommunityVideo.swift */; };
 		FCC528DE20062B8C006DEF40 /* CommunityListServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC528DD20062B8C006DEF40 /* CommunityListServiece.swift */; };
@@ -95,6 +99,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FCAC2BC42008D5D800CF8F89 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FCAC2BC32008D5D800CF8F89 /* Realm.framework in Embed Frameworks */,
+				FCAC2BC12008D5D800CF8F89 /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1BD8E7F4243E00CE94EB03A1 /* Pods-VPLATETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATETests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATETests/Pods-VPLATETests.release.xcconfig"; sourceTree = "<group>"; };
 		1BF5AD641EF7C8B61EC44E49 /* Pods_VPLATE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPLATE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +124,7 @@
 		7BDA60E779A65500EA851A5E /* Pods-VPLATETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATETests/Pods-VPLATETests.debug.xcconfig"; sourceTree = "<group>"; };
 		87AD9349226C10FB6B787E93 /* Pods-VPLATE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATE.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE.release.xcconfig"; sourceTree = "<group>"; };
 		983E81E8A0FC6D9B7E7EEBED /* Pods-VPLATE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPLATE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE.debug.xcconfig"; sourceTree = "<group>"; };
+		FC2B12892008A73200AF6BE7 /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		FC2CBD671FFCCEC000A34961 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FC2CBD691FFCCF5C00A34961 /* MyVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVideoViewController.swift; sourceTree = "<group>"; };
 		FC2CBD6B1FFCCF8100A34961 /* SelectedVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedVideoViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +157,6 @@
 		FC61995B2007C36F00041477 /* EditorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC61995C2007C36F00041477 /* EditorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditorCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC6199612007E12000041477 /* InsertImageToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertImageToString.swift; sourceTree = "<group>"; };
-		FC6199632007EE4700041477 /* EditorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorData.swift; sourceTree = "<group>"; };
 		FC619965200811F700041477 /* AssetSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSelectorViewController.swift; sourceTree = "<group>"; };
 		FC619967200812A700041477 /* TrimmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimmingViewController.swift; sourceTree = "<group>"; };
 		FC619968200812A700041477 /* TrimmingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrimmingViewController.xib; sourceTree = "<group>"; };
@@ -154,6 +173,9 @@
 		FC946E181FF8F66F00D6616B /* VPLATEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPLATEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC946E1C1FF8F66F00D6616B /* VPLATEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPLATEUITests.swift; sourceTree = "<group>"; };
 		FC946E1E1FF8F66F00D6616B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCAAAB872008F25D0043F8CA /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		FCAC2BBE2008D5D500CF8F89 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		FCAC2BBF2008D5D800CF8F89 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		FCC2278D20037D900050804D /* UIImage+FixOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+FixOrientation.swift"; sourceTree = "<group>"; };
 		FCC2278E20037D900050804D /* UIImageCropper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCropper.swift; sourceTree = "<group>"; };
 		FCC227912003884C0050804D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +184,6 @@
 		FCC2279F200492600050804D /* TemplateListServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateListServiece.swift; sourceTree = "<group>"; };
 		FCC227A12005079D0050804D /* ConvertUTCtoLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertUTCtoLocal.swift; sourceTree = "<group>"; };
 		FCC227A32005100A0050804D /* IntToMMSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntToMMSS.swift; sourceTree = "<group>"; };
-		FCC227A72005ADB80050804D /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		FCC528D92005C5F4006DEF40 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FCC528DB20062AF7006DEF40 /* CommunityVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVideo.swift; sourceTree = "<group>"; };
 		FCC528DD20062B8C006DEF40 /* CommunityListServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityListServiece.swift; sourceTree = "<group>"; };
@@ -184,6 +205,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCAC2BC22008D5D800CF8F89 /* Realm.framework in Frameworks */,
+				FCAC2BC02008D5D800CF8F89 /* RealmSwift.framework in Frameworks */,
 				7A0DAE61321F8B761932F8F9 /* Pods_VPLATE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +320,8 @@
 		FC946DF01FF8F66F00D6616B = {
 			isa = PBXGroup;
 			children = (
+				FCAC2BBF2008D5D800CF8F89 /* Realm.framework */,
+				FCAC2BBE2008D5D500CF8F89 /* RealmSwift.framework */,
 				FC946DFB1FF8F66F00D6616B /* VPLATE */,
 				FC946E101FF8F66F00D6616B /* VPLATETests */,
 				FC946E1B1FF8F66F00D6616B /* VPLATEUITests */,
@@ -439,10 +464,10 @@
 			isa = PBXGroup;
 			children = (
 				FC2CBD811FFCE91F00A34961 /* TitleEnum.swift */,
-				FCC227A72005ADB80050804D /* DummyData.swift */,
 				FCFAC8171FFF6F6600493A51 /* Template.swift */,
 				FCC528DB20062AF7006DEF40 /* CommunityVideo.swift */,
-				FC6199632007EE4700041477 /* EditorData.swift */,
+				FC2B12892008A73200AF6BE7 /* RealmData.swift */,
+				FCAAAB872008F25D0043F8CA /* DummyData.swift */,
 			);
 			path = "Data Object";
 			sourceTree = "<group>";
@@ -460,6 +485,7 @@
 				FC946DF71FF8F66F00D6616B /* Resources */,
 				42A5C9A0272B9E47409D79F0 /* [CP] Embed Pods Frameworks */,
 				5412B21591DC9DAA9F6E8A53 /* [CP] Copy Pods Resources */,
+				FCAC2BC42008D5D800CF8F89 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -604,7 +630,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VPLATE/Pods-VPLATE-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AEAccordion/AEAccordion.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -617,12 +642,13 @@
 				"${BUILT_PRODUCTS_DIR}/MMPlayerView/MMPlayerView.framework",
 				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEAccordion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -635,6 +661,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMPlayerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
@@ -787,8 +815,10 @@
 				FC2CBD841FFCEC7700A34961 /* UIColorToUIImage.swift in Sources */,
 				FCC528DE20062B8C006DEF40 /* CommunityListServiece.swift in Sources */,
 				FCFAC8241FFFD4D300493A51 /* RandomColor.swift in Sources */,
+				FCAAAB882008F25D0043F8CA /* DummyData.swift in Sources */,
 				FC2CBD6E1FFCCF8B00A34961 /* CommunityViewController.swift in Sources */,
 				FC3932492006F9E900190705 /* NetworkStatus.swift in Sources */,
+				FC2B128A2008A73200AF6BE7 /* RealmData.swift in Sources */,
 				FC2CBD6A1FFCCF5C00A34961 /* MyVideoViewController.swift in Sources */,
 				FC6199622007E12000041477 /* InsertImageToString.swift in Sources */,
 				FCFAC80B1FFDFCC600493A51 /* CommunityVideoCollectionViewCell.swift in Sources */,
@@ -817,9 +847,7 @@
 				FCC2278F20037D900050804D /* UIImage+FixOrientation.swift in Sources */,
 				FCFAC8101FFE258700493A51 /* TabBarController.swift in Sources */,
 				FC34A20F200056DD00F3C567 /* CreatorViewController.swift in Sources */,
-				FCC227A82005ADB80050804D /* DummyData.swift in Sources */,
 				FCC528DA2005C5F4006DEF40 /* DetailViewController.swift in Sources */,
-				FC6199642007EE4700041477 /* EditorData.swift in Sources */,
 				FCFAC8211FFFCFB900493A51 /* CategoryCollectionViewCell.swift in Sources */,
 				FC2CBD8D1FFCF33C00A34961 /* VideoTableViewCell.swift in Sources */,
 				FC84A2B52002D97D002CB10E /* PageViewController.swift in Sources */,
@@ -997,6 +1025,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = VPLATE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1014,6 +1046,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EPWV8KDDJE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = VPLATE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

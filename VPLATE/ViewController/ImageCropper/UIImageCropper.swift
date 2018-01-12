@@ -141,7 +141,8 @@ public class UIImageCropper: UIViewController, UIImagePickerControllerDelegate, 
         if picker!.sourceType != .camera { //hide retake/cancel when using camera as camera has its own preview
             let cancelButton = UIButton(type: .custom)
             cancelButton.translatesAutoresizingMaskIntoConstraints = false
-            cancelButton.setTitle(cancelButtonText, for: .normal)
+            cancelButton.setImage(#imageLiteral(resourceName: "photo_library"), for: .normal)
+            //cancelButton.setTitle(cancelButtonText, for: .normal)
             cancelButton.addTarget(self, action: #selector(cropCancel), for: .touchUpInside)
             bottomView.addSubview(cancelButton)
             let centerCancelXConst = NSLayoutConstraint(item: cancelButton, attribute: .centerX, relatedBy: .equal, toItem: bottomView, attribute: .centerX, multiplier: 0.5, constant: 0)
@@ -151,7 +152,8 @@ public class UIImageCropper: UIViewController, UIImagePickerControllerDelegate, 
         }
         let cropButton = UIButton(type: .custom)
         cropButton.translatesAutoresizingMaskIntoConstraints = false
-        cropButton.setTitle(cropButtonText, for: .normal)
+        cropButton.setImage(#imageLiteral(resourceName: "crop"), for: .normal)
+        //cropButton.setTitle(cropButtonText, for: .normal)
         cropButton.addTarget(self, action: #selector(cropDone), for: .touchUpInside)
         bottomView.addSubview(cropButton)
         let centerCropXConst = NSLayoutConstraint(item: cropButton, attribute: .centerX, relatedBy: .equal, toItem: bottomView, attribute: .centerX, multiplier: cropCenterXMultiplier, constant: 0)

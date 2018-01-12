@@ -1,87 +1,85 @@
-//
-//  CreatorViewController.swift
-//  VPLATE
-//
-//  Created by 이광용 on 2018. 1. 6..
-//  Copyright © 2018년 이광용. All rights reserved.
-//
 
 import UIKit
 import SwiftyJSON
 import Kingfisher
 import PageMenu
 
+
+
+enum  ClipType {
+    case video, picture, text
+}
+
+struct TemplateInfo {
+    let clipNum: Int
+    let scene: [[Int : ClipInfo]]
+}
+
+struct ClipInfo {
+    var index: Int = 0
+    var type: ClipType = ClipType.picture
+    var constraint: Double = 0.0
+}
+
+
+
 class CreatorViewController: ViewController, ViewControllerProtocol {
     @IBOutlet weak var sceneCollectionView: UICollectionView!
     @IBOutlet weak var sceneImageView: UIImageView!
     @IBOutlet weak var pageMenuView: UIView!
     
-    //var editData: EditorDetailData?
-    
-    struct Editors {
-        let template_type: String
-        let template_length: Int
-        let template_thumbnail: String
-        let template_hits: Int
-        let template_title: String
-        let template_id: Int
-        let template_hashtag: String
-        let template_uploadtime: String
-        let template_content: String?
-        let editor_Scenes: [EditorData]?
+    static var requestData: [Any] = []
+    var info: TemplateInfo?
+    {
+        didSet{
+            if let num = self.info?.clipNum {
+                CreatorViewController.requestData = Array(repeating: Any?.self, count: num)
+            }
+        }
     }
-    
-    struct EditorData {
-        let sceneNumber: Int
-        let clips: [Any]
-        let detail: [EditorDetailData]
-    }
-    
-struct EditorDetailData {
-        let type: EditorType
-        let indexInform: [Int : Double] // length or ratio
-    }
-
-    func setData() {
-        var editorDetails1: [EditorDetailData] = []
-        var editorDetailData1 = EditorDetailData(type: .video, indexInform: [1 : 5, 3: 6])
-        editorDetails1.append(editorDetailData1)
-        editorDetailData1 = EditorDetailData(type: .picture, indexInform: [2: Double(16/9), 5: Double(9/16)])
-        editorDetails1.append(editorDetailData1)
-        
-        var editorDetails2: [EditorDetailData] = []
-        var editorDetailData2 = EditorDetailData(type: .video, indexInform: [6 : 5])
-        editorDetails2.append(editorDetailData2)
-        editorDetailData2 = EditorDetailData(type: .picture, indexInform: [7: Double(16/9), 10: Double(9/16), 11: Double(4/3)])
-        editorDetails2.append(editorDetailData2)
-        
-        editorDatas.append(EditorData(sceneNumber: 1, clips: [], detail: editorDetails1))
-        editorDatas.append(EditorData(sceneNumber: 2, clips: [], detail: editorDetails2))
-        editorDatas.append(EditorData(sceneNumber: 3, clips: [], detail: editorDetails1))
-        editorDatas.append(EditorData(sceneNumber: 4, clips: [], detail: editorDetails2))
-        editorDatas.append(EditorData(sceneNumber: 5, clips: [], detail: editorDetails2))
-        editorDatas.append(EditorData(sceneNumber: 6, clips: [], detail: editorDetails1))
-        editorDatas.append(EditorData(sceneNumber: 7, clips: [], detail: editorDetails1))
-    }
-    var editorDatas: [EditorData] = []
+    // = Array(repeating: [Int:ClipInfo?].self, count: 3)
     
     
     var thumbnailImage: UIImage!
     var templateID: Int!
     var sceneURL: [String] = []
-    
-    let picker = UIImagePickerController()
-    let cropper = UIImageCropper(cropRatio: 16/9)
+    var scenes: [[ClipInfo]] = [[ClipInfo]]()
     
     override func viewDidLoad() {
-        setData()
+        
+        //[95 - clipNum : 10
+        //      scene : [1: .text(10), 2: .text(13)],
+        //              [3: .video(6), 4: .text(9)],
+        //              [5: .text(12), 6: .text(17)],
+        //              [7: .video(6), 8: .text(9)],
+        //              [9: .text(10), 10: .text(13)]]
+        
+        var sceneInfo: [ClipInfo] = []
+        sceneInfo.append( ClipInfo(index: 1, type: .video, constraint: 10) )
+        sceneInfo.append( ClipInfo(index: 2, type: .video, constraint: 13) )
+        scenes.append(sceneInfo)
+        sceneInfo.removeAll()
+        sceneInfo.append(ClipInfo(index: 3, type: .video, constraint: 6))
+        sceneInfo.append(ClipInfo(index: 4, type: .picture, constraint: 9))
+        scenes.append(sceneInfo)
+        sceneInfo.removeAll()
+        sceneInfo.append(ClipInfo(index: 5, type: .picture, constraint: 12))
+        sceneInfo.append(ClipInfo(index: 6, type: .picture, constraint: 17))
+        scenes.append(sceneInfo)
+        sceneInfo.removeAll()
+        sceneInfo.append(ClipInfo(index: 6, type: .picture, constraint: 17))
+        sceneInfo.append(ClipInfo(index: 8, type: .video, constraint: 9))
+        scenes.append(sceneInfo)
+        sceneInfo.removeAll()
+        sceneInfo.append(ClipInfo(index: 9, type: .video, constraint: 10))
+        sceneInfo.append(ClipInfo(index: 10, type: .video, constraint: 13))
+        scenes.append(sceneInfo)
+        sceneInfo.removeAll()
+        
         super.viewDidLoad()
         self.navigationItem.title = TitleEnum.creator.rawValue
         setUpCollectionView(collectionView: sceneCollectionView, cell: SceneCollectionViewCell.self)
-        
-        cropper.picker = picker
-        cropper.delegate = self
-        cropper.cropRatio = 16/9
+    
         
         sceneImageView.image = thumbnailImage
         fetchTemplateInform()
@@ -91,9 +89,6 @@ struct EditorDetailData {
             // Fallback on earlier versions
         }
         
-//        self.editData = EditorDetailData(type: .video,
-//                                         indexInform: [1 : 5,
-//                                                       2 : 2])
         setUpPageMenu(index: 0)
     }
     
@@ -101,7 +96,7 @@ struct EditorDetailData {
         super.viewDidAppear(animated)
         //self.sceneCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
     }
-
+    
     var pageMenu: CAPSPageMenu?
     func setUpPageMenu(index: Int){
         // Initialize view controllers to display and place in array
@@ -110,17 +105,21 @@ struct EditorDetailData {
         let controller1: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
         controller1.title = "VIDEO"
         controller1.parentNavigation = self.navigationController
-        if self.editorDatas[index].detail[0].type == EditorType.video {
-            controller1.editData = self.editorDatas[index].detail[0]
+        var scene = scenes[index].filter { (value) -> Bool in
+            return value.type == ClipType.video ? true: false
         }
+        controller1.editData = scene
+        controller1.type = ClipType.video
         controllerArray.append(controller1)
         
         let controller2: EditorViewController = EditorViewController(nibName: EditorViewController.reuseIdentifier, bundle: nil)
         controller2.title = "PICTURE"
         controller2.parentNavigation = self.navigationController
-        if self.editorDatas[index].detail[1].type == EditorType.picture {
-            controller2.editData = self.editorDatas[index].detail[1]
+        scene = scenes[index].filter { (value) -> Bool in
+            return value.type == ClipType.picture ? true: false
         }
+        controller2.editData = scene
+        controller2.type = ClipType.picture
         controllerArray.append(controller2)
         
         
@@ -170,18 +169,11 @@ struct EditorDetailData {
                 }).filter({ (str) -> Bool in
                     return str == "" ? false : true
                 })
-                
-                self.sceneCollectionView.reloadData()
-
+                self.sceneCollectionView.reloadData()                
             case .Failure(_):
                 break
             }
         }
-    }
-    
-    @IBAction func takePicture(_ sender: UIButton) {
-        self.picker.sourceType = .photoLibrary
-        self.present(self.picker, animated: true, completion: nil)
     }
 }
 
@@ -220,14 +212,5 @@ extension CreatorViewController: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
-    }
-}
-
-extension CreatorViewController: UIImageCropperProtocol{
-    func didCropImage(originalImage: UIImage?, croppedImage: UIImage?) {
-        sceneImageView.image = croppedImage
-    }
-    func didCancel() {
-        picker.dismiss(animated: true, completion: nil)
     }
 }

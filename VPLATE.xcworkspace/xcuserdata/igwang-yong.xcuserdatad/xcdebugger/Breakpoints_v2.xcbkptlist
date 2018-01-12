@@ -9,86 +9,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.271172"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "CreatorViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VPLATE.CreatorViewController.sceneCollectionView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UICollectionView&gt;"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537100047.853518"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "79">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VPLATE.CreatorViewController.sceneCollectionView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UICollectionView&gt;"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537100047.857452"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VPLATE.CreatorViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; VPLATE.CreatorViewController"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537100047.860051"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "63">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VPLATE.CreatorViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;VPLATE.CreatorViewController&gt;"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537100047.861954"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.271706"
+            timestampString = "537448472.999416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -104,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.2718821"
+            timestampString = "537448472.999495"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
@@ -120,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.272032"
+            timestampString = "537448472.999557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
@@ -136,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.272132"
+            timestampString = "537448472.999606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
@@ -152,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/Network/TemplateListServiece.swift"
-            timestampString = "537351321.195172"
+            timestampString = "537448472.999678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -168,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.272375"
+            timestampString = "537448472.999748"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
@@ -184,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.272565"
+            timestampString = "537448472.9998029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -216,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/Network/TemplateListServiece.swift"
-            timestampString = "537351321.195646"
+            timestampString = "537448472.999911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -232,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/Network/TemplateListServiece.swift"
-            timestampString = "537351321.19576"
+            timestampString = "537448472.999963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -248,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/Network/TemplateListServiece.swift"
-            timestampString = "537351321.195865"
+            timestampString = "537448473.000011"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -264,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/Network/TemplateListServiece.swift"
-            timestampString = "537351321.195937"
+            timestampString = "537448473.0000581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -406,7 +328,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.716832"
+            timestampString = "537461511.500591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -454,7 +376,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.716953"
+            timestampString = "537461511.500718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
@@ -470,7 +392,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.717039"
+            timestampString = "537461511.500806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
@@ -502,7 +424,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.717273"
+            timestampString = "537461511.500916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
@@ -518,7 +440,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.71735"
+            timestampString = "537461511.501016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -534,7 +456,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.273808"
+            timestampString = "537448473.00036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
@@ -550,7 +472,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.274029"
+            timestampString = "537448473.000409"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "116"
@@ -566,7 +488,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.274213"
+            timestampString = "537448473.000456"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
@@ -582,7 +504,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.274385"
+            timestampString = "537448473.000499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "160"
@@ -598,7 +520,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.274596"
+            timestampString = "537448473.000544"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "121"
@@ -651,7 +573,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
             endingLineNumber = "15"
-            landmarkName = "getSignInData(url:parameter:completion:)"
+            landmarkName = "getSignData(url:parameter:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -667,7 +589,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
-            landmarkName = "getSignInData(url:parameter:completion:)"
+            landmarkName = "getSignData(url:parameter:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -678,7 +600,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.2749749"
+            timestampString = "537448473.000627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "158"
@@ -886,7 +808,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.276114"
+            timestampString = "537448473.0008399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "150"
@@ -902,7 +824,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.276329"
+            timestampString = "537448473.000887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "159"
@@ -918,7 +840,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.276517"
+            timestampString = "537448473.0009331"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -934,7 +856,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.276683"
+            timestampString = "537448473.000976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -950,7 +872,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.2768331"
+            timestampString = "537448473.001078"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "146"
@@ -966,7 +888,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.276938"
+            timestampString = "537448473.00115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
@@ -982,7 +904,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.720378"
+            timestampString = "537461511.5014991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -998,7 +920,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.720499"
+            timestampString = "537461511.5016119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
@@ -1046,7 +968,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.720589"
+            timestampString = "537461511.501709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "116"
@@ -1062,7 +984,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.720679"
+            timestampString = "537461511.501797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
@@ -1078,7 +1000,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/DetailViewController.swift"
-            timestampString = "537421944.720866"
+            timestampString = "537461511.501881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -1302,11 +1224,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/HomePageViewController.swift"
-            timestampString = "537432100.252773"
+            timestampString = "537448473.00149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "fetchTemplateList()"
             landmarkType = "7">
             <Locations>
@@ -1350,7 +1272,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/HomePageViewController.swift"
-            timestampString = "537432100.252889"
+            timestampString = "537448473.001562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/HomePageViewController.swift"
+            timestampString = "537448473.001621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
@@ -1366,27 +1304,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/HomePageViewController.swift"
-            timestampString = "537432100.252954"
+            timestampString = "537448473.001675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/HomePageViewController.swift"
-            timestampString = "537432100.253016"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1446,23 +1368,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/HomePageViewController.swift"
-            timestampString = "537432100.253281"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "fetchTemplateList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/HomePageViewController.swift"
-            timestampString = "537432100.2533441"
+            timestampString = "537448473.001788"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -1478,11 +1384,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/HomePageViewController.swift"
-            timestampString = "537432100.253426"
+            timestampString = "537448473.00185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchTemplateList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/HomePageViewController.swift"
+            timestampString = "537448473.0019031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "fetchTemplateList()"
             landmarkType = "7">
             <Locations>
@@ -1542,7 +1464,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/SettingViewController.swift"
-            timestampString = "537417533.759544"
+            timestampString = "537461511.502635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5"
@@ -1635,7 +1557,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.280393"
+            timestampString = "537448473.002161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -1650,56 +1572,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.280589"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "fetchTemplateInform()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (VPLATE.Result&lt;Any&gt;) -&gt; () in VPLATE.CreatorViewController.fetchTemplateInform() -&gt; ()"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537361558.806046"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (VPLATE.Result&lt;Any&gt;) -&gt; () in VPLATE.CreatorViewController.fetchTemplateInform() -&gt; ()"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537361558.808126"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "180">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "VPLATE/Network/TemplateListServiece.swift"
-            timestampString = "537351321.203407"
+            timestampString = "537448473.0027471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -1715,7 +1589,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/Network/TemplateListServiece.swift"
-            timestampString = "537351321.203897"
+            timestampString = "537448473.002893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -1730,184 +1604,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.281455"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "fetchTemplateInform()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.282196"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "fetchTemplateInform()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (VPLATE.Result&lt;Any&gt;) -&gt; () in VPLATE.CreatorViewController.fetchTemplateInform() -&gt; ()"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537361485.1940531"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "1532">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (VPLATE.Result&lt;Any&gt;) -&gt; () in VPLATE.CreatorViewController.fetchTemplateInform() -&gt; ()"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537361485.196918"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "1712">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.282815"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.28363"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.284351"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.284819"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "fetchTemplateInform()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VPLATE.CreatorViewController.fetchTemplateInform() -&gt; ()"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537361558.824083"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (VPLATE.Result&lt;Any&gt;) -&gt; () in VPLATE.CreatorViewController.fetchTemplateInform() -&gt; ()"
-                  moduleName = "VPLATE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/CreatorViewController.swift"
-                  timestampString = "537361558.82602"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.285269"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "fetchTemplateInform()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.285813"
+            timestampString = "537448473.0074739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
@@ -1923,7 +1621,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.285942"
+            timestampString = "537448473.0075721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
@@ -1939,7 +1637,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.286086"
+            timestampString = "537448473.007641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
@@ -1955,7 +1653,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.286254"
+            timestampString = "537448473.007704"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
@@ -1971,7 +1669,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/LogInViewController.swift"
-            timestampString = "537433647.286415"
+            timestampString = "537448473.007768"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "136"
@@ -1986,56 +1684,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.2865421"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "setUpPageMenu(index:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.286734"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "setUpPageMenu(index:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.286888"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/TrimmingViewController.swift"
-            timestampString = "537433647.287058"
+            timestampString = "537461003.089005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -2051,7 +1701,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/TrimmingViewController.swift"
-            timestampString = "537433647.2873141"
+            timestampString = "537461003.089166"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -2083,7 +1733,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/TrimmingViewController.swift"
-            timestampString = "537433647.287618"
+            timestampString = "537461003.089384"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -2099,28 +1749,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/TrimmingViewController.swift"
-            timestampString = "537433647.287828"
+            timestampString = "537461003.0895309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
             endingLineNumber = "110"
             landmarkName = "trimVideo(asset:startTime:endTime:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/CreatorViewController.swift"
-            timestampString = "537433647.288069"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "setUpPageMenu(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2147,7 +1781,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/TrimmingViewController.swift"
-            timestampString = "537433647.2882921"
+            timestampString = "537461003.089692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
@@ -2163,7 +1797,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/TrimmingViewController.swift"
-            timestampString = "537433647.288365"
+            timestampString = "537461003.089824"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
@@ -2179,11 +1813,267 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/EditorViewController.swift"
-            timestampString = "537433647.28845"
+            timestampString = "537461511.503033"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
+            landmarkName = "EditorViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/EditorViewController.swift"
+            timestampString = "537461511.503455"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "EditorViewController"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/EditorViewController.swift"
+            timestampString = "537461511.5038151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/EditorViewController.swift"
+            timestampString = "537461511.504146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "EditorViewController"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/ImageCropper/UIImageCropper.swift"
+            timestampString = "537436865.454684"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "cropDone()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/ImageCropper/UIImageCropper.swift"
+            timestampString = "537436865.454797"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "cropDone()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/ImageCropper/UIImageCropper.swift"
+            timestampString = "537436865.454959"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/EditorViewController.swift"
+            timestampString = "537461511.5045609"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/Data Object/RealmData.swift"
+            timestampString = "537461511.504873"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/EditorViewController.swift"
+            timestampString = "537461511.504945"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/EditorViewController.swift"
+            timestampString = "537461511.505278"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "editData"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VPLATE.EditorViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; VPLATE.EditorViewController"
+                  moduleName = "VPLATE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/EditorViewController.swift"
+                  timestampString = "537461511.799673"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "748">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VPLATE.EditorViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;VPLATE.EditorViewController&gt;"
+                  moduleName = "VPLATE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igwang-yong/%E1%84%8B%E1%85%A2%E1%86%B8%E1%84%8C%E1%85%A2%E1%86%B7-VPLATE/VPLATE/VPLATE/ViewController/EditorViewController.swift"
+                  timestampString = "537461511.8017091"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "708">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/CreatorViewController.swift"
+            timestampString = "537461511.505679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "setUpPageMenu(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/CreatorViewController.swift"
+            timestampString = "537461511.505792"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "setUpPageMenu(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/CreatorViewController.swift"
+            timestampString = "537461511.5059"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "setUpPageMenu(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VPLATE/ViewController/EditorViewController.swift"
+            timestampString = "537461524.85551"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "editData"
             landmarkType = "24">
          </BreakpointContent>
@@ -2195,108 +2085,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VPLATE/ViewController/EditorViewController.swift"
-            timestampString = "537433647.288554"
+            timestampString = "537461544.3919179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "didCropImage(originalImage:croppedImage:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/EditorViewController.swift"
-            timestampString = "537433647.288658"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/EditorViewController.swift"
-            timestampString = "537433647.288777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/ImageCropper/UIImageCropper.swift"
-            timestampString = "537434578.567987"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "cropDone()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/ImageCropper/UIImageCropper.swift"
-            timestampString = "537434578.5739371"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
-            landmarkName = "cropDone()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/ImageCropper/UIImageCropper.swift"
-            timestampString = "537434578.574375"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VPLATE/ViewController/EditorViewController.swift"
-            timestampString = "537433647.289993"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,9 +11,6 @@ import UIKit
 class SettingViewController: ViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = TitleEnum.setting.rawValue
-        // Do any additional setup after loading the view.
+       super.viewDidLoad()
     }
-
 }

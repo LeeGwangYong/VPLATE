@@ -17,19 +17,20 @@ class EditorViewController: AssetSelectorViewController, ViewControllerProtocol 
     var parentNavigation: UINavigationController?
     var videoURL: [String] = []
     var imageDatas: [UIImage] = []
-    var editData: CreatorViewController.EditorDetailData? {
+    static var datas:[Int:Data] = [:]
+    var type: ClipType!
+    var editData: [ClipInfo]! {
         didSet {
-            let count = editData?.indexInform.count
-            
-            switch editData?.type{
+            let count = editData.count
+            switch type{
             case .video?:
-                for _ in 0 ..< count! {
+                for _ in 0 ..< count {
                     imageDatas.append( #imageLiteral(resourceName: "ic_movie_creation_white_48px") )
                 }
                 picker.mediaTypes = [kUTTypeMovie as String]
                 picker.allowsEditing = false
             case .picture?:
-                for _ in 0 ..< count! {
+                for _ in 0 ..< count {
                     imageDatas.append( #imageLiteral(resourceName: "ic_image_white_48px") )
                 }
                 cropper.picker = picker
@@ -58,16 +59,15 @@ class EditorViewController: AssetSelectorViewController, ViewControllerProtocol 
         let tapLocation = sender.location(in: self.editorCollectionView)
         guard let indexPath = self.editorCollectionView.indexPathForItem(at: tapLocation) else {return}
         self.selectedIndex = indexPath
-        
-        guard let dic = editData?.indexInform else {return}
-        guard let data = Array(dic)[indexPath.row].value as Double? else {return}
-        self.cropper.cropRatio = CGFloat(data)
+        guard let data = editData![indexPath.row] as ClipInfo? else {return}
+        self.cropper.cropRatio = CGFloat(data.constraint)
         
         self.parentNavigation?.present(self.picker, animated: true, completion: nil)
     }
     
     override func loadAsset(_ asset: AVAsset, index: IndexPath) {
-        guard let duration = self.editData?.indexInform[(index.row + 1)] else {return}
+        guard let clip = self.editData[index.row] as ClipInfo? else {return}
+        let duration = clip.constraint
         if asset.duration > CMTime(seconds: duration, preferredTimescale: CMTimeScale(600)) {
             let trimmerVC: TrimmingViewController = TrimmingViewController(nibName: TrimmingViewController.reuseIdentifier, bundle: nil)
             
@@ -76,7 +76,6 @@ class EditorViewController: AssetSelectorViewController, ViewControllerProtocol 
             trimmerVC.delegate = self
             
             self.parentNavigation?.present(trimmerVC, animated: true, completion: nil)
-            //pushViewController(trimmerVC, animated: true)
         }
         else {
             self.view.makeToast( """
@@ -113,10 +112,8 @@ extension EditorViewController: UIImageCropperProtocol, UIImagePickerControllerD
             })
         }
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            
             self.cropper.image = image.fixOrientation()
             self.picker.present(cropper, animated: true, completion: nil)
-            //didCropImage(originalImage: image, croppedImage: <#T##UIImage?#>)
         }
         
     }
@@ -131,7 +128,7 @@ extension EditorViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //guard let data = editData else {return 0}
-        return imageDatas.count
+        return editData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

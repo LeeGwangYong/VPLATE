@@ -14,6 +14,7 @@ class HomePageViewController: UIViewController, ViewControllerProtocol {
     @IBOutlet weak var nonImageView: UIImageView!
     var parentNavigation: UINavigationController?
     var templateList: [Template] = []
+    
     var sort: Sort!
     var cursor = 0
     
