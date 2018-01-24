@@ -82,6 +82,8 @@ class LogInViewController: UIViewController, ViewControllerProtocol {
             print("Facebook Token Error")
             return
         }
+//        print(fbToken.userID)
+//        print(fbToken.tokenString)
         
         let connection = GraphRequestConnection()
         connection.add(UserDataRequest()) {
